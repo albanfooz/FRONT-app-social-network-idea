@@ -16,7 +16,7 @@ import { FrontPageComponent } from './components/front-page/front-page.component
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { IdeaPostComponent } from './idea-post/idea-post.component';
+import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 
 @NgModule({
   declarations: [
