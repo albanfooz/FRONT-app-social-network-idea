@@ -21,7 +21,7 @@ import { MatMenuModule } from '@angular/material/menu';
   declarations: [
     AppComponent,
     NavComponent,
-    FrontPageComponent
+    FrontPageComponent,
     BarIconsIdeeComponent
   ],
   imports: [
