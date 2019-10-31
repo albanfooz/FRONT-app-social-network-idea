@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { BarIconsIdeeComponent } from './bar-icons-idee/bar-icons-idee.component';
 import { FrontPageComponent } from './components/front-page/front-page.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -21,6 +22,7 @@ import { MatMenuModule } from '@angular/material/menu';
     AppComponent,
     NavComponent,
     FrontPageComponent
+    BarIconsIdeeComponent
   ],
   imports: [
     BrowserModule,
