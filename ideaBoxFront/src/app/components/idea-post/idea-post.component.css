@@ -1,0 +1,28 @@
+mat-card-title {
+    width: max-content;
+}
+
+.myCardTitle {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
+
+.more-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+img {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+}
+
+.ideaContent{
+    padding-left:10px;
+}
+app-bar-icons-idee{
+    background-color: coral;
+}

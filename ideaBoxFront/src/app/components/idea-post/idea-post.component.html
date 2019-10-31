@@ -1,32 +1,29 @@
-<mat-grid-list cols="2" rowHeight="3:1">
+<mat-grid-list cols="2" rowHeight="200px">
     <mat-grid-tile>
-        <img src="https://picsum.photos/600/200?random={{i}}" />
-
-
-    </mat-grid-tile>
-    <mat-grid-tile rowspan="2">
+        <mat-card-title>
+            <span class="myCardTitle">{{card.title}}</span>
             
-        {{card.content}}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque dictum risus in vehicula.
-        Aenean congue, massa a suscipit consequat, metus massa mattis sapien, at elementum metus ante a ante. Morbi id
-        neque ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vel diam sitis pulvinar,
-        cursus id nunc. Maecenas consectetur libero ut nibh luctus, vel finibus odio consectetur.
+        </mat-card-title>
+        <img src="https://picsum.photos/400/200?random={{i}}" />
+    </mat-grid-tile>
+    <mat-grid-tile>
+<div class="ideaContent">
 
-        <mat-grid-tile-footer><button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                 <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
                 <button mat-menu-item>Expand</button>
                 <button mat-menu-item>Remove</button>
             </mat-menu>
-        </mat-grid-tile-footer>
+        {{card.content}}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque dictum risus in vehicula.
+        Aenean congue, massa a suscipit consequat, metus massa mattis sapien, at elementum metus ante a ante. Morbi id
+        neque ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vel diam sitis pulvinar,
+        cursus id nunc. Maecenas consectetur libero ut nibh luctus, vel finibus odio consectetur.
+    </div>
     </mat-grid-tile>
-
-    <mat-grid-tile>
-        <mat-grid-tile-header>
-            {{card.title}}
-            
-        </mat-grid-tile-header>
-
-    </mat-grid-tile>
+<!--<mat-grid-tile colspan="2">
+<app-bar-icons-idee></app-bar-icons-idee>
+</mat-grid-tile>-->
 </mat-grid-list>
