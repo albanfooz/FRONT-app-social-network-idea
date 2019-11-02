@@ -15,12 +15,14 @@ import { FrontPageComponent } from './components/front-page/front-page.component
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { PastilleCategorieComponent } from './pastille-categorie/pastille-categorie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    FrontPageComponent
+    FrontPageComponent,
+    PastilleCategorieComponent
   ],
   imports: [
     BrowserModule,
