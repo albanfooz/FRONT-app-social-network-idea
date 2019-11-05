@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PastilleCategorieComponent } from './pastille-categorie.component';
+import { PageInscriptionComponent } from './page-inscription.component';
 
-describe('PastilleCategorieComponent', () => {
-  let component: PastilleCategorieComponent;
-  let fixture: ComponentFixture<PastilleCategorieComponent>;
+describe('PageInscriptionComponent', () => {
+  let component: PageInscriptionComponent;
+  let fixture: ComponentFixture<PageInscriptionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PastilleCategorieComponent ]
+      declarations: [ PageInscriptionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PastilleCategorieComponent);
+    fixture = TestBed.createComponent(PageInscriptionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

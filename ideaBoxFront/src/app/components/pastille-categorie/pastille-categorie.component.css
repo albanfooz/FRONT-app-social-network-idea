@@ -1,0 +1,9 @@
+mat-chip {
+    max-width: 150px ;
+    word-spacing: 1rem;
+ }
+
+ mat-icon {
+     padding-right : 9px;
+ }
+

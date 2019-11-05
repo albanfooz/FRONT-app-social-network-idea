@@ -7,26 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pastille-categorie.component.css']
 })
 export class PastilleCategorieComponent implements OnInit {
-  nomPastilleCategorieTechnologie : String;
-  nomPastilleCategorieEntreprenariat : String;
+  nomPastilleCategorieEntreprenariat:String;
+
+  /*
+  nomPastilleCategorieTechnologie:String;
   nomPastilleCategorieEtudeFormation : String;
   nomPastilleCategorieJeux : String;
   nomPastilleCategorieEntreAide: String;
   nomPastilleCategorieNature : String;
   nomPastilleCategorieEcologie : String;
   nomPastilleCategorie : String;
-  imgPastilleCategorie : ImageData;
+  */
 
-  constructor() { 
+  constructor() {
+    this.nomPastilleCategorieEntreprenariat = 'Entreprenariat';
+
+    /*
     this.nomPastilleCategorieTechnologie = '  Technologie';
-    this.nomPastilleCategorieEntreprenariat = '  Entreprenariat';
     this.nomPastilleCategorieEtudeFormation = '  Etude/Formation';
     this.nomPastilleCategorieJeux = '  Jeux';
     this.nomPastilleCategorieEntreAide = '  Entre-Aide';
     this.nomPastilleCategorieNature = '  Nature';
-    this.nomPastilleCategorieEcologie = '  Ecologie'; 
-
-
+    this.nomPastilleCategorieEcologie = '  Ecologie'; */
   }
 
   ngOnInit() {}
