@@ -1,0 +1,5 @@
+/**
+*
+*pastille categorie est un composant qui sert à assigner un nom de catégorie ainsi qu'une icone à chaque idée
+*
+**/
