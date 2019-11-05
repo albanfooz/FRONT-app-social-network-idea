@@ -12,11 +12,21 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { BarIconsIdeeComponent } from './components/bar-icons-idee/bar-icons-idee.component';
+import { FrontPageComponent } from './components/front-page/front-page.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
+import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    PageInscriptionComponent
+    PastilleCategorieComponent,
+    FrontPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +39,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatIconModule,
     MatListModule,
     FlexLayoutModule
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
