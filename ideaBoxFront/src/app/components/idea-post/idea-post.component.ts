@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class IdeaPostComponent implements OnInit {
   @Input() i:number;
-  @Input('card') card;
+  @Input('card') card: any;
   constructor() { }
 
   ngOnInit() {

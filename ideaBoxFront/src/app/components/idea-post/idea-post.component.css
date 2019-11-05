@@ -23,6 +23,10 @@ img {
 .ideaContent{
     padding-left:10px;
 }
-app-bar-icons-idee{
-    background-color: coral;
+
+app-pastille-categorie{
+    position: absolute;
+    top: 5px;
+    right: 50px;
+
 }
