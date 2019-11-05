@@ -16,13 +16,16 @@ import { FrontPageComponent } from './components/front-page/front-page.component
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
+import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
+    PageInscriptionComponent
+    PastilleCategorieComponent,
     FrontPageComponent,
-    BarIconsIdeeComponent
   ],
   imports: [
     BrowserModule,
