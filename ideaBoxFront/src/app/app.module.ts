@@ -11,17 +11,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BarIconsIdeeComponent } from './components/bar-icons-idee/bar-icons-idee.component';
 import { FrontPageComponent } from './components/front-page/front-page.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { IdeaPostComponent } from './components/idea-post/idea-post.component';
+import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
+import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
+    PageInscriptionComponent,
+    PastilleCategorieComponent,
     FrontPageComponent,
     BarIconsIdeeComponent,
     IdeaPostComponent
@@ -35,6 +40,8 @@ import { IdeaPostComponent } from './components/idea-post/idea-post.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
+    MatListModule,
+    FlexLayoutModule,
     MatListModule,
     MatGridListModule,
     MatCardModule,
