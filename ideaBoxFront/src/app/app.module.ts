@@ -24,7 +24,7 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
   declarations: [
     AppComponent,
     NavComponent,
-    PageInscriptionComponent
+    PageInscriptionComponent,
     PastilleCategorieComponent,
     FrontPageComponent,
   ],
@@ -38,7 +38,7 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
     MatListModule,
     MatGridListModule,
     MatCardModule,
