@@ -7,7 +7,7 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
 
 
 const routes: Routes = [
-  {path:'', component:FrontPageComponent},
+  {path: '', component: FrontPageComponent},
   {path: 'pastille-categorie', component : PastilleCategorieComponent},
   {path: 'page-inscription', component : PageInscriptionComponent}
 ];
