@@ -24,6 +24,7 @@ import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { IdeaFullComponent } from './components/idea-full/idea-full.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { IdeaFullComponent } from './components/idea-full/idea-full.component';
     IdeaPostComponent,
     PageIdeaComponent,
     PageNotFoundComponent,
+    FrontPageComponent,
     IdeaFullComponent
   ],
   imports: [
