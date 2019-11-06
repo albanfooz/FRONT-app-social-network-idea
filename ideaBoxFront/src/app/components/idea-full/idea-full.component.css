@@ -15,14 +15,14 @@ mat-card-title {
 }
 
 img {
-    position: absolute;
-    top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
     left: 0px;
 }
 
 .ideaContent{
     padding-left:10px;
-    height: max-content;
 }
 
 app-pastille-categorie{

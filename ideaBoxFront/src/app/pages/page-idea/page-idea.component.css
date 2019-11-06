@@ -15,3 +15,7 @@
   .dashboard-card-content {
     text-align: center;
   }
+  mat-card{
+    margin: auto;
+    max-width: 1000px;
+}
