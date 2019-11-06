@@ -3,7 +3,7 @@
 <button mat-icon-button aria-label="icon-button upvote" (click)="like()">
         <mat-icon class="{{social.vote ? 'material-icons' : 'material-icons-outlined'}}">thumb_up</mat-icon>
     </button>
-
+<!--ajouter entre le + et - le nombre de like en fonction de vote en bdd-->
     <button mat-icon-button aria-label="icon-button downvote" (click)="dislike()">
         <mat-icon class="{{social.vote===false ? 'material-icons' : 'material-icons-outlined'}}">thumb_down</mat-icon>
     </button>
