@@ -20,6 +20,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
+import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
     PastilleCategorieComponent,
     FrontPageComponent,
     BarIconsIdeeComponent,
-    IdeaPostComponent
+    IdeaPostComponent,
+    PageIdeaComponent
   ],
   imports: [
     BrowserModule,
