@@ -22,6 +22,7 @@ import { PastilleCategorieComponent } from './components/pastille-categorie/past
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
 import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { IdeaFullComponent } from './components/idea-full/idea-full.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     BarIconsIdeeComponent,
     IdeaPostComponent,
     PageIdeaComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    IdeaFullComponent
   ],
   imports: [
     BrowserModule,
