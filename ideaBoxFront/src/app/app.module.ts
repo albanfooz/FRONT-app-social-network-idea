@@ -30,7 +30,7 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
     PastilleCategorieComponent,
     FrontPageComponent,
     BarIconsIdeeComponent,
-    IdeaPostComponent
+    IdeaPostComponent,
     FrontPageComponent,
     BarIconsIdeeComponent
   ],
