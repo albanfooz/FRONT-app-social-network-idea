@@ -2,7 +2,7 @@
     <mat-grid-tile>
         <mat-card-title>
             <span class="myCardTitle">{{card.title}}</span>
-            <img src="https://picsum.photos/400/200?random={{i}}" />
+            <img src="https://picsum.photos/400/200?random={{i}}" /><!-- TODO ; Fetch image from database-->
         </mat-card-title>
     </mat-grid-tile>
     <mat-grid-tile>
@@ -13,7 +13,8 @@
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
                 <button mat-menu-item>Expand</button>
-                <button mat-menu-item>Remove</button>
+                <button mat-menu-item>Masquer</button>
+                <button>mat-menu-ite</button>
             </mat-menu>
             {{card.content}}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque dictum risus in vehicula.

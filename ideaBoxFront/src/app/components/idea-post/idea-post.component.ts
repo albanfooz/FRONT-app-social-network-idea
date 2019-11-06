@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./idea-post.component.css']
 })
 export class IdeaPostComponent implements OnInit {
-  @Input() i:number;
-  @Input('card') card: any;
+  @Input() i: number;
+  @Input() card: any;
   constructor() { }
 
   ngOnInit() {
