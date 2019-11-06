@@ -1,0 +1,29 @@
+<mat-grid-list cols="2" rowHeight="280px">
+    <mat-grid-tile>
+        <mat-card-title>
+            <span class="myCardTitle">{{card.title}}</span>
+            <img src="https://picsum.photos/400/200?random={{i}}" />
+        </mat-card-title>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="ideaContent">
+            
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+                <button mat-menu-item>Expand</button>
+                <button mat-menu-item>Remove</button>
+            </mat-menu>
+            {{card.content}}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque dictum risus in vehicula.
+            Aenean congue, massa a suscipit consequat, metus massa mattis sapien, at elementum metus ante a ante. Morbi id
+            neque ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vel diam sitis pulvinar,
+            cursus id nunc. Maecenas consectetur libero ut nibh luctus, vel finibus odio consectetur.
+        </div>
+    </mat-grid-tile>
+    <app-pastille-categorie></app-pastille-categorie>
+<!--<mat-grid-tile colspan="2">
+<app-bar-icons-idee></app-bar-icons-idee>
+</mat-grid-tile>-->
+</mat-grid-list>

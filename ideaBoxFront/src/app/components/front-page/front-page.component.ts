@@ -13,21 +13,21 @@ export class FrontPageComponent {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Card 1', cols: 1, rows: 1 , content:'This is the Content'},
-          { title: 'Card 2', cols: 1, rows: 1 , content:'This is the Content'},
-          { title: 'Card 3', cols: 1, rows: 1 , content:'This is the Content'},
-          { title: 'Card 4', cols: 1, rows: 1 , content:'This is the Content'}
+          { title: 'Card 1', cols: 2, rows: 1, content: 'This is the Content' },
+          { title: 'Card 2', cols: 2, rows: 1, content: 'This is the Content' },
+          { title: 'Card 3', cols: 2, rows: 1, content: 'This is the Content' },
+          { title: 'Card 4', cols: 2, rows: 1, content: 'This is the Content' }
         ];
       }
 
       return [
-        { title: 'Card 1', cols: 2, rows: 1, content:'This is the Content' },
-        { title: 'Card 2', cols: 2, rows: 1, content:'This is the Content' },
-        { title: 'Card 3', cols: 2, rows: 1 , content:'This is the Content' },
-        { title: 'Card 4', cols: 2, rows: 1 , content:'This is the Content'}
+        { title: 'Card 1', cols: 2, rows: 1, content: 'This is the Content' },
+        { title: 'Card 2', cols: 2, rows: 1, content: 'This is the Content' },
+        { title: 'Card 3', cols: 2, rows: 1, content: 'This is the Content' },
+        { title: 'Card 4', cols: 2, rows: 1, content: 'This is the Content' }
       ];
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) { }
 }
