@@ -20,23 +20,25 @@ img {
     left: 0px;
 }
 
-.ideaContent{
-    padding-left:10px;
+.ideaContent {
+    padding-left: 10px;
 }
 
-app-pastille-categorie{
+app-pastille-categorie {
     position: absolute;
     top: 5px;
     right: 50px;
 
 }
-app-bar-icons-idee{
+
+app-bar-icons-idee {
     position: absolute;
     bottom: 0px;
-    left: 5px; 
+    left: 5px;
 }
-app-bouton-collaborateur{
+
+app-bouton-collaborateur {
     position: absolute;
     bottom: 0px;
-    left: 5px; 
+    left: 100px;
 }
