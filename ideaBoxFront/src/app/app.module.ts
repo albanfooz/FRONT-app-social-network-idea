@@ -13,13 +13,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BarIconsIdeeComponent } from './components/bar-icons-idee/bar-icons-idee.component';
-import { FrontPageComponent } from './components/front-page/front-page.component';
+import { FrontPageComponent } from './pages/front-page/front-page.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
+import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { IdeaFullComponent } from './components/idea-full/idea-full.component';
 
 
 @NgModule({
@@ -31,8 +34,10 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
     FrontPageComponent,
     BarIconsIdeeComponent,
     IdeaPostComponent,
+    PageIdeaComponent,
+    PageNotFoundComponent,
     FrontPageComponent,
-    BarIconsIdeeComponent
+    IdeaFullComponent
   ],
   imports: [
     BrowserModule,
