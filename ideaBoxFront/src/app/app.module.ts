@@ -43,7 +43,7 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     PageNotFoundComponent,
     FrontPageComponent,
     BarIconsIdeeComponent,
-    SearchbarComponent
+    SearchbarComponent,
     IdeaFullComponent,
     CommentaireComponent,
     InputCommentaireComponent,
