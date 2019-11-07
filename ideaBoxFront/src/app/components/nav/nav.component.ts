@@ -10,12 +10,18 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class NavComponent {
 
+  links = [
+    { pageName: 'Link', pageLink: '#' },
+    { pageName: 'Zelda', pageLink: '#' },
+    { pageName: 'Ganondorf', pageLink: '#' }
+  ];
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
 }
