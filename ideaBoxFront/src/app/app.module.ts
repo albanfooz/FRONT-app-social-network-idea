@@ -20,7 +20,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
-
+import { ListeCollaborateursProjetComponent } from './components/liste-collaborateurs-projet/liste-collaborateurs-projet.component';
+import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { PopUpDetailsComponent } from './components/popup-collaborateurs/pop-up-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,8 +35,14 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
     FrontPageComponent,
     BarIconsIdeeComponent,
     IdeaPostComponent,
+<<<<<<< Updated upstream
     FrontPageComponent,
     BarIconsIdeeComponent
+=======
+    ListeCollaborateursProjetComponent,
+    CollaborateurComponent,
+    PopUpDetailsComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
@@ -48,7 +58,8 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
