@@ -1,15 +1,16 @@
 mat-card-title {
     width: max-content;
 }
-.ideaHeader{
+
+.ideaHeader {
     width: 100%;
     text-align: center;
 }
 
 .myCardTitle {
     position: absolute;
-    top: 5px;
-    left: 10px;
+    top: 15px;
+    left: 20px;
 }
 
 .more-button {
@@ -18,7 +19,7 @@ mat-card-title {
     right: 0px;
 }
 
-img{
+img {
     margin-top: 50px;
 }
 
