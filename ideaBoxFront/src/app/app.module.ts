@@ -20,6 +20,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
+import { MatInputModule } from '@angular/material/input';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
@@ -44,6 +46,8 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     PageNotFoundComponent,
     FrontPageComponent,
     BarIconsIdeeComponent,
+    SearchbarComponent
+    BarIconsIdeeComponent,
     CollaborateurComponent,
     PopupListCollaborateursComponent,
     IdeaFullComponent,
@@ -65,6 +69,8 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     MatListModule,
     MatGridListModule,
     MatCardModule,
+    MatMenuModule,
+    MatInputModule
     MatMenuModule,
     MatDialogModule
   ],

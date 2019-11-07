@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'page-inscription', component: PageInscriptionComponent },
   { path: 'popup-list-collaborateurs', component: PopupListCollaborateursComponent },
   { path: 'pastille-categorie', component: PastilleCategorieComponent },
+  { path: 'inscription', component: PageInscriptionComponent }
   { path: 'idea-page', component: PageIdeaComponent },
   { path: 'commentaire', component: CommentaireComponent },
   { path: '**', component: PageNotFoundComponent }
