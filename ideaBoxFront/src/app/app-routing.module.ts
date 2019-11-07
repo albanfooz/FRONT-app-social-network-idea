@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FrontPageComponent } from './components/front-page/front-page.component';
+import { FrontPageComponent } from './pages/front-page/front-page.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
