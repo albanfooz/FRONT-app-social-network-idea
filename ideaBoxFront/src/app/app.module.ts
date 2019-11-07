@@ -23,7 +23,6 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
 import { ListeCollaborateursProjetComponent } from './components/liste-collaborateurs-projet/liste-collaborateurs-projet.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { PopUpDetailsComponent } from './components/popup-collaborateurs/pop-up-details.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -35,14 +34,11 @@ import { FormsModule } from '@angular/forms';
     FrontPageComponent,
     BarIconsIdeeComponent,
     IdeaPostComponent,
-<<<<<<< Updated upstream
     FrontPageComponent,
-    BarIconsIdeeComponent
-=======
+    BarIconsIdeeComponent,
     ListeCollaborateursProjetComponent,
     CollaborateurComponent,
-    PopUpDetailsComponent
->>>>>>> Stashed changes
+
   ],
   imports: [
     BrowserModule,

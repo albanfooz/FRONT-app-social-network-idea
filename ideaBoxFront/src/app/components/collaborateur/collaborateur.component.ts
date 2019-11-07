@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import { PopUpDetailsComponent } from '../popup-collaborateurs/pop-up-details.component';
+//import { PopUpListCollaborateursComponent  } from '../popup-list-collaborateurs/popup-list-collaborateurs.component';
 
 
 @Component({
@@ -16,11 +16,11 @@ export class CollaborateurComponent {
   }
 
 openDialog() {
-  const dialogRef = this.dialog.open(PopUpDetailsComponent);
+  /*const dialogRef = this.dialog.open(PopUpListCollaborateursComponent );
 
   dialogRef.afterClosed().subscribe(result => {
     console.log(`Dialog result: ${result}`);
-  });
+  });*/
 }
 }
 
