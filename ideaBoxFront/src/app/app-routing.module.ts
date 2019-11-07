@@ -13,8 +13,8 @@ const routes: Routes = [
   { path: 'pastille-categorie', component: PastilleCategorieComponent },
   { path: 'page-inscription', component: PageInscriptionComponent },
   { path: 'idea-page', component: PageIdeaComponent },
+  { path: 'commentaire', component: CommentaireComponent },
   { path: '**', component: PageNotFoundComponent }
-  {path: 'commentaire', component : CommentaireComponent}
 ];
 
 @NgModule({
