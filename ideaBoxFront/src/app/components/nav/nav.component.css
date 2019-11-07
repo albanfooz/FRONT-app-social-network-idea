@@ -29,3 +29,20 @@
   min-height: calc(100% - 64px) !important;
   height: calc(100% - 64px) !important;
 }
+
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+#titre {
+
+  margin-right:5px;
+}
+
+#slogan {
+
+  font-size: 0.65em;
+  margin-right:20px;
+  font-style: italic;
+  text-decoration: underline;
+}

@@ -11,9 +11,9 @@ import { map, shareReplay } from 'rxjs/operators';
 export class NavComponent {
 
   links = [
-    { pageName: 'Link', pageLink: '#' },
-    { pageName: 'Zelda', pageLink: '#' },
-    { pageName: 'Ganondorf', pageLink: '#' }
+    { pageName: 'Link', pageLink: '/Link' },
+    { pageName: 'Zelda', pageLink: '/Zelda' },
+    { pageName: 'Ganondorf', pageLink: '/Ganondorf' }
   ];
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
