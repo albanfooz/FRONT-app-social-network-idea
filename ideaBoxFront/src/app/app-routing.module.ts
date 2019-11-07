@@ -13,10 +13,9 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 const routes: Routes = [
   { path: '', component: FrontPageComponent },
   { path: 'collaborateur', component: CollaborateurComponent },
-  { path: 'page-inscription', component: PageInscriptionComponent },
   { path: 'popup-list-collaborateurs', component: PopupListCollaborateursComponent },
   { path: 'pastille-categorie', component: PastilleCategorieComponent },
-  { path: 'inscription', component: PageInscriptionComponent }
+  { path: 'inscription', component: PageInscriptionComponent },
   { path: 'idea-page', component: PageIdeaComponent },
   { path: 'commentaire', component: CommentaireComponent },
   { path: '**', component: PageNotFoundComponent }

@@ -46,7 +46,7 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     PageNotFoundComponent,
     FrontPageComponent,
     BarIconsIdeeComponent,
-    SearchbarComponent
+    SearchbarComponent,
     BarIconsIdeeComponent,
     CollaborateurComponent,
     PopupListCollaborateursComponent,
@@ -70,7 +70,7 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatInputModule
+    MatInputModule,
     MatMenuModule,
     MatDialogModule
   ],
