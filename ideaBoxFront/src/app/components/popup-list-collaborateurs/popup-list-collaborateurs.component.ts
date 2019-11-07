@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CollaborateurService } from 'src/app/service/CollaborateurService';
+import { CollaborateurPopUp } from 'src/app/model/collaborateurPopUp';
 
 @Component({
   selector: 'app-popup-list-collaborateurs',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./popup-list-collaborateurs.component.css']
 })
 export class PopupListCollaborateursComponent implements OnInit {
+  private collaborateurList: Array<CollaborateurPopUp>;
+  constructor(private collaborateurService: CollaborateurService) {
 
-  constructor() { }
+  }
 
   ngOnInit() {
+    this.collaborateurList = this.collaborateurService.recupereList();
   }
 
 }

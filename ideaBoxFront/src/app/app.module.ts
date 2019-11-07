@@ -20,9 +20,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
-import { ListeCollaborateursProjetComponent } from './components/liste-collaborateurs-projet/liste-collaborateurs-projet.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { PopupListCollaborateursComponent } from './components/popup-list-collaborateurs/popup-list-collaborateurs.component';
 
@@ -37,7 +36,6 @@ import { PopupListCollaborateursComponent } from './components/popup-list-collab
     IdeaPostComponent,
     FrontPageComponent,
     BarIconsIdeeComponent,
-    ListeCollaborateursProjetComponent,
     CollaborateurComponent,
     PopupListCollaborateursComponent,
 
