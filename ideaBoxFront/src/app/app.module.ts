@@ -22,13 +22,16 @@ import { PastilleCategorieComponent } from './components/pastille-categorie/past
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
 import { MatInputModule } from '@angular/material/input';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { PopupListCollaborateursComponent } from './components/popup-list-collaborateurs/popup-list-collaborateurs.component';
 import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { IdeaFullComponent } from './components/idea-full/idea-full.component';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
 import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
-
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     FrontPageComponent,
     BarIconsIdeeComponent,
     SearchbarComponent
+    BarIconsIdeeComponent,
+    CollaborateurComponent,
+    PopupListCollaborateursComponent,
     IdeaFullComponent,
     CommentaireComponent,
     InputCommentaireComponent,
@@ -65,6 +71,8 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     MatCardModule,
     MatMenuModule,
     MatInputModule
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
