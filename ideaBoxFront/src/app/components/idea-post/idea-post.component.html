@@ -3,15 +3,17 @@
 
     </mat-card-title>
     <mat-card-subtitle>UserName</mat-card-subtitle>
-    <app-pastille-categorie></app-pastille-categorie>
-    <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-        <mat-icon>more_vert</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu" xPosition="before">
-        <button mat-menu-item>Expand</button>
-        <button mat-menu-item>Masquer</button>
-        <button mat-menu-item>Test</button>
-    </mat-menu>
+    <div fxFlex>
+        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item>Expand</button>
+            <button mat-menu-item>Masquer</button>
+            <button mat-menu-item>Test</button>
+        </mat-menu>
+        <app-pastille-categorie></app-pastille-categorie>
+</div>
 </mat-card-header>
 
 <img mat-card-image src="https://picsum.photos/400/200?random={{i}}" /><!-- TODO ; Fetch image from database-->
