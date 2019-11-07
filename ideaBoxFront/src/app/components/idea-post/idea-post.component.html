@@ -1,34 +1,32 @@
-<mat-grid-list cols="2" rowHeight="280px">
-    <mat-grid-tile>
-        <mat-card-title>
-            <span class="myCardTitle">{{card.title}}</span>
-            <img src="https://picsum.photos/400/200?random={{i}}" /><!-- TODO ; Fetch image from database-->
-        </mat-card-title>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <div class="ideaContent">
+<mat-card-header>
+    <mat-card-title class="myCardTitle">{{card.title}}
 
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-                <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-                <button mat-menu-item>Expand</button>
-                <button mat-menu-item>Masquer</button>
-                <button mat-menu-item>Test</button>
-            </mat-menu>
-            {{card.content}}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque dictum risus in vehicula.
-            Aenean congue, massa a suscipit consequat, metus massa mattis sapien, at elementum metus ante a ante. Morbi
-            id
-            neque ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vel diam sitis pulvinar,
-            cursus id nunc. Maecenas consectetur libero ut nibh luctus, vel finibus odio consectetur.
-        </div>
-    </mat-grid-tile>
+    </mat-card-title>
+    <mat-card-subtitle>UserName</mat-card-subtitle>
     <app-pastille-categorie></app-pastille-categorie>
+    <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item>Expand</button>
+        <button mat-menu-item>Masquer</button>
+        <button mat-menu-item>Test</button>
+    </mat-menu>
+</mat-card-header>
+
+<img mat-card-image src="https://picsum.photos/400/200?random={{i}}" /><!-- TODO ; Fetch image from database-->
+<mat-card-content>
+
+    
+
+    {{card.content}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque dictum risus in vehicula.
+    Aenean congue, massa a suscipit consequat, metus massa mattis sapien, at elementum metus ante a ante. Morbi
+    id
+    neque ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vel diam sitis pulvinar,
+    cursus id nunc. Maecenas consectetur libero ut nibh luctus, vel finibus odio consectetur.
+</mat-card-content>
+<mat-card-actions>
     <app-bar-icons-idee></app-bar-icons-idee>
     <app-bouton-collaborateur></app-bouton-collaborateur>
-
-    <!--<mat-grid-tile colspan="2">
-<app-bar-icons-idee></app-bar-icons-idee>
-</mat-grid-tile>-->
-</mat-grid-list>
+</mat-card-actions>

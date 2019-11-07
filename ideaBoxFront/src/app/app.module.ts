@@ -32,6 +32,7 @@ import { IdeaFullComponent } from './components/idea-full/idea-full.component';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
 import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
+import {MatRippleModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     MatMenuModule,
     MatInputModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

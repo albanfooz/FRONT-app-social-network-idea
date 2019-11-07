@@ -1,44 +1,14 @@
-mat-card-title {
-    width: max-content;
+mat-card-header {
+    width: 100%;
 }
 
-.myCardTitle {
-    position: absolute;
-    top: 0px;
-    left: 5px;
-}
 
 .more-button {
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    float: right;
 }
 
-img {
-    position: absolute;
-    top: 40px;
-    left: 0px;
-}
-
-.ideaContent {
-    padding-left: 10px;
-}
 
 app-pastille-categorie {
-    position: absolute;
-    top: 5px;
-    right: 50px;
+    float: right;
 
-}
-
-app-bar-icons-idee {
-    position: absolute;
-    bottom: 0px;
-    left: 5px;
-}
-
-app-bouton-collaborateur {
-    position: absolute;
-    bottom: 0px;
-    left: 175px;
 }
