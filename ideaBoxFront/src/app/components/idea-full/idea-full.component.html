@@ -1,0 +1,52 @@
+<div class="ideaHeader">
+        <mat-card-title>
+            <span class="myCardTitle">{{card.title}}</span>
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+                <button mat-menu-item>Expand</button>
+                <button mat-menu-item>Masquer</button>
+            </mat-menu>
+        </mat-card-title>
+        <img src="https://picsum.photos/950/400?random={{i}}" /><!-- TODO ; Fetch image from database-->
+    </div>
+    <mat-divider ></mat-divider>
+        <div class="ideaContent">
+
+            {{card.content}}
+            <p>Et et veniam pariatur elit ipsum do. Laboris commodo Lorem incididunt amet id deserunt in. Nostrud quis
+                non ullamco aute laboris nisi dolore esse officia laborum anim amet et pariatur.</p>
+            <p>Nisi officia consectetur ex ad reprehenderit consectetur. Excepteur sunt in enim anim quis esse deserunt
+                culpa elit mollit culpa. Consectetur duis aute ut voluptate laborum consequat voluptate cillum dolor
+                deserunt eu in enim. Consequat reprehenderit labore aliqua laborum sit aute commodo. Sunt enim commodo
+                exercitation mollit fugiat qui ipsum deserunt. Eu Lorem non commodo nostrud officia tempor ipsum
+                proident aliqua enim culpa cillum nostrud.</p>
+            <p>Magna enim consequat irure elit sint aute sint esse exercitation ea reprehenderit. Consequat exercitation
+                exercitation do dolor laboris laboris tempor quis incididunt. Id pariatur veniam laboris mollit do ipsum
+                culpa reprehenderit occaecat mollit cupidatat laborum nulla ut. Proident veniam consequat amet labore
+                officia irure irure. Labore quis cupidatat culpa culpa incididunt. Exercitation dolor amet officia
+                mollit.</p>
+            <p>Cillum dolore ipsum ea tempor do eu elit quis reprehenderit consequat anim esse mollit proident.
+                Adipisicing excepteur irure anim cillum sint do quis ullamco nostrud. Dolor est commodo eiusmod ex
+                laborum eu dolor magna quis ullamco est adipisicing qui culpa. Commodo ad velit culpa irure anim. Id
+                deserunt qui et sit enim culpa velit minim mollit. In proident aute occaecat et.</p>
+            <p>Et et veniam pariatur elit ipsum do. Laboris commodo Lorem incididunt amet id deserunt in. Nostrud quis
+                non ullamco aute laboris nisi dolore esse officia laborum anim amet et pariatur.</p>
+            <p>Nisi officia consectetur ex ad reprehenderit consectetur. Excepteur sunt in enim anim quis esse deserunt
+                culpa elit mollit culpa. Consectetur duis aute ut voluptate laborum consequat voluptate cillum dolor
+                deserunt eu in enim. Consequat reprehenderit labore aliqua laborum sit aute commodo. Sunt enim commodo
+                exercitation mollit fugiat qui ipsum deserunt. Eu Lorem non commodo nostrud officia tempor ipsum
+                proident aliqua enim culpa cillum nostrud.</p>
+            <p>Magna enim consequat irure elit sint aute sint esse exercitation ea reprehenderit. Consequat exercitation
+                exercitation do dolor laboris laboris tempor quis incididunt. Id pariatur veniam laboris mollit do ipsum
+                culpa reprehenderit occaecat mollit cupidatat laborum nulla ut. Proident veniam consequat amet labore
+                officia irure irure. Labore quis cupidatat culpa culpa incididunt. Exercitation dolor amet officia
+                mollit.</p>
+            <p>Cillum dolore ipsum ea tempor do eu elit quis reprehenderit consequat anim esse mollit proident.
+                Adipisicing excepteur irure anim cillum sint do quis ullamco nostrud. Dolor est commodo eiusmod ex
+                laborum eu dolor magna quis ullamco est adipisicing qui culpa. Commodo ad velit culpa irure anim. Id
+                deserunt qui et sit enim culpa velit minim mollit. In proident aute occaecat et.</p>
+        </div>
+    <app-bar-icons-idee></app-bar-icons-idee>
+    <app-pastille-categorie></app-pastille-categorie>

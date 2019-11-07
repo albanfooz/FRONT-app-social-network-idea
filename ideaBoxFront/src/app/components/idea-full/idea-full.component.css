@@ -1,0 +1,43 @@
+mat-card-title {
+    width: max-content;
+}
+.ideaHeader{
+    width: 100%;
+    text-align: center;
+}
+
+.myCardTitle {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.more-button {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+}
+
+img{
+    margin-top: 50px;
+}
+
+
+.ideaContent {
+    margin-top: 20px;
+    padding-left: 10px;
+    margin-bottom: 50px;
+}
+
+app-pastille-categorie {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+
+}
+
+app-bar-icons-idee {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
