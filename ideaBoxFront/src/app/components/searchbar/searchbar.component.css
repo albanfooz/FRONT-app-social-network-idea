@@ -1,0 +1,9 @@
+mat-form-field {
+
+  font-size:0.75em;
+}
+
+mat-form-field mat-icon {
+
+  vertical-align: middle;
+}
