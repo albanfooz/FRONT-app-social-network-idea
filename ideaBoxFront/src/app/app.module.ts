@@ -21,6 +21,7 @@ import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
 import { MatInputModule } from '@angular/material/input';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { MatInputModule } from '@angular/material/input';
     BarIconsIdeeComponent,
     IdeaPostComponent,
     FrontPageComponent,
-    BarIconsIdeeComponent
+    BarIconsIdeeComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
