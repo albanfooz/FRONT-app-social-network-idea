@@ -26,7 +26,8 @@ import { IdeaFullComponent } from './components/idea-full/idea-full.component';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
 import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
-
+import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     IdeaFullComponent,
     CommentaireComponent,
     InputCommentaireComponent,
-    BoutonCollaborateurComponent
+    BoutonCollaborateurComponent,
+    ListeCommentairesComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,9 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
