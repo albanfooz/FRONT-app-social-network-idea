@@ -13,7 +13,8 @@ export class NavComponent {
   links = [
     { pageName: 'Link', pageLink: '/Link' },
     { pageName: 'Zelda', pageLink: '/Zelda' },
-    { pageName: 'Ganondorf', pageLink: '/Ganondorf' }
+    { pageName: 'Ganondorf', pageLink: '/Ganondorf' },
+    { pageName: 'S\'inscrire', pageLink: '/inscription' }
   ];
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
