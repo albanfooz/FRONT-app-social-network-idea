@@ -21,6 +21,8 @@ import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
+import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
+import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { CommentaireComponent } from './components/commentaire/commentaire.compo
     BarIconsIdeeComponent,
     IdeaPostComponent,
     FrontPageComponent,
-    CommentaireComponent
+    CommentaireComponent,
+    InputCommentaireComponent,
+    BoutonCollaborateurComponent
   ],
   imports: [
     BrowserModule,
