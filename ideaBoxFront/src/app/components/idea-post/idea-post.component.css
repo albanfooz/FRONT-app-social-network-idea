@@ -30,3 +30,8 @@ app-pastille-categorie{
     right: 50px;
 
 }
+app-bar-icons-idee{
+    position: absolute;
+    bottom: 0px;
+    left: 5px; 
+}

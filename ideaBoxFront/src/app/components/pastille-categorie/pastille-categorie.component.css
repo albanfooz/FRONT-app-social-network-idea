@@ -1,9 +1,12 @@
 mat-chip {
     max-width: 150px ;
     word-spacing: 1rem;
+    cursor: pointer;
  }
 
  mat-icon {
      padding-right : 9px;
  }
+
+ 
 

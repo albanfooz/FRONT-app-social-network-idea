@@ -21,6 +21,7 @@ import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,9 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
     PastilleCategorieComponent,
     FrontPageComponent,
     BarIconsIdeeComponent,
-    IdeaPostComponent
+    IdeaPostComponent,
+    FrontPageComponent,
+    BarIconsIdeeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,17 @@
-<mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+<button mat-icon-button aria-label="icon-button upvote" (click)="like()">
+        <mat-icon class="{{social.vote ? 'material-icons' : 'material-icons-outlined'}}">thumb_up</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="icon-button downvote" (click)="dislike()">
+        <mat-icon class="{{social.vote===false ? 'material-icons' : 'material-icons-outlined'}}">thumb_down</mat-icon>
+    </button>
+
+    <button mat-icon-button aria-label="icon-button comment" (click)="openComment()">
+            <mat-icon class="material-icons-outlined">insert_comment</mat-icon>
+        </button>
+
+<button mat-icon-button aria-label="icon-button collaborateur" (click)="demandeCollaborateur()">
+        <mat-icon class="{{social.collaborateur ? 'material-icons' : 'material-icons-outlined'}}" >person_add_outline</mat-icon>
+    </button>
