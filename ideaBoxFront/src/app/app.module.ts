@@ -40,7 +40,7 @@ import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/
     PageIdeaComponent,
     PageNotFoundComponent,
     FrontPageComponent,
-    IdeaFullComponent
+    IdeaFullComponent,
     CommentaireComponent,
     InputCommentaireComponent,
     BoutonCollaborateurComponent
