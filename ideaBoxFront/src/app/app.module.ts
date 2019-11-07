@@ -24,6 +24,7 @@ import { ListeCollaborateursProjetComponent } from './components/liste-collabora
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { PopupListCollaborateursComponent } from './components/popup-list-collaborateurs/popup-list-collaborateurs.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     BarIconsIdeeComponent,
     ListeCollaborateursProjetComponent,
     CollaborateurComponent,
+    PopupListCollaborateursComponent,
 
   ],
   imports: [
