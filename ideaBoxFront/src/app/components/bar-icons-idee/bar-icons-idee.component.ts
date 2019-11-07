@@ -9,9 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class BarIconsIdeeComponent implements OnInit {
   social: Social = {
     vote: null,
-    comment: null,
-    collaborateur: null,
-    iconCommentaire: 'chat_bubble_outline',
+    comment: null
   };
 
   constructor() { }
@@ -28,13 +26,8 @@ export class BarIconsIdeeComponent implements OnInit {
   openComment() {
     console.log("ouverture de l'idée, placement dans les commentaires");
   }
-  demandeCollaborateur() {
-    this.social.collaborateur ? this.social.collaborateur = null : this.social.collaborateur = true;
-  }
 }
 interface Social {
   vote: boolean;
   comment: boolean;
-  collaborateur: boolean;
-  iconCommentaire: string;
 }

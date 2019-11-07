@@ -23,6 +23,9 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
 import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { IdeaFullComponent } from './components/idea-full/idea-full.component';
+import { CommentaireComponent } from './components/commentaire/commentaire.component';
+import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
+import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 
 
 @NgModule({
@@ -38,6 +41,9 @@ import { IdeaFullComponent } from './components/idea-full/idea-full.component';
     PageNotFoundComponent,
     FrontPageComponent,
     IdeaFullComponent
+    CommentaireComponent,
+    InputCommentaireComponent,
+    BoutonCollaborateurComponent
   ],
   imports: [
     BrowserModule,
