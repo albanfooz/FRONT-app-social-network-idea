@@ -1,0 +1,11 @@
+<h3 mat-dialog-title>Liste des Collaborateurs</h3>
+<mat-dialog-content class="mat-typography">
+
+    <ul *ngFor="let item of collaborateurList">
+        <li> <img src="{{item.img}}"> ,{{item.pseudo}}</li>
+    </ul>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>

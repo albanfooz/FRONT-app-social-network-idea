@@ -1,9 +1,7 @@
 <div class="grid-container">
-    <h1 class="mat-h1">Front Page</h1>
-    <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-list cols="2" rowHeight="600px">
       <mat-grid-tile *ngFor="let card of cards | async;let i =index" [colspan]="card.cols" [rowspan]="card.rows">
-        <mat-card class="dashboard-card">
-
+        <mat-card class="dashboard-card" tabindex='i'>
              <app-idea-post [i]='i' [card]='card'></app-idea-post>
         </mat-card>
       </mat-grid-tile>
