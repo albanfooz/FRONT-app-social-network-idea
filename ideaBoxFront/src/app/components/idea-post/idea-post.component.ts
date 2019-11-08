@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IdeeService } from 'src/app/services/IdeeService';
+import { IdeeModel } from 'src/app/models/IdeeModel';
+
 
 @Component({
   selector: 'app-idea-post',
@@ -8,7 +11,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class IdeaPostComponent implements OnInit {
   @Input() i: number;
   @Input() card: any;
-  constructor() { }
+  @Input() idee: IdeeModel;
+  constructor() {
+  }
 
   ngOnInit() {
   }
