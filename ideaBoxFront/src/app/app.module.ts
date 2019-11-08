@@ -21,7 +21,7 @@ import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
 import { MatInputModule } from '@angular/material/input';
-import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { SearchbarComponent, SearchbarPopupComponent } from './components/searchbar/searchbar.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
@@ -32,7 +32,7 @@ import { IdeaFullComponent } from './components/idea-full/idea-full.component';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
 import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
-import {MatRippleModule} from '@angular/material/core';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,8 @@ import {MatRippleModule} from '@angular/material/core';
     IdeaFullComponent,
     CommentaireComponent,
     InputCommentaireComponent,
-    BoutonCollaborateurComponent
+    BoutonCollaborateurComponent,
+    SearchbarPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -74,9 +75,11 @@ import {MatRippleModule} from '@angular/material/core';
     MatInputModule,
     MatMenuModule,
     MatDialogModule,
-    MatRippleModule
+    MatRippleModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SearchbarPopupComponent]
 })
 export class AppModule { }

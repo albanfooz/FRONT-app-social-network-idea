@@ -1,4 +1,4 @@
 <mat-form-field>
     <mat-icon matPrefix>search</mat-icon>
-    <input matInput type=text placeholder="Rechercher" />
+    <input matInput type=text (keyup.enter)="openDialog()" [(ngModel)]="searchinput" placeholder="Rechercher" />
 </mat-form-field>
