@@ -7,6 +7,12 @@ export class IdeeService {
 
     }
 
-    //eventuellement
-    // modifier()
+    // eventuellement
+    modifier(idee: IdeeModel) {
+
+    }
+
+    supprimer(idee: IdeeModel) {
+
+    }
 }
