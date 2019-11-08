@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IdeeService } from 'src/app/services/IdeeService';
 import { IdeeModel } from 'src/app/models/IdeeModel';
 
 
@@ -10,7 +9,6 @@ import { IdeeModel } from 'src/app/models/IdeeModel';
 })
 export class IdeaPostComponent implements OnInit {
   @Input() i: number;
-  @Input() card: any;
   @Input() idee: IdeeModel;
   constructor() {
   }

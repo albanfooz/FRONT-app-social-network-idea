@@ -6,24 +6,30 @@ import { Injectable } from '@angular/core';
 export class IdeeService {
 
     // Bouchon : dev list idee;
-    idees: Array<IdeeModel> = [
+    // tslint:disable-next-line: variable-name
+    private _idees: Array<IdeeModel> = [
         { _id: 1, _titre: 'First Idea', _content: 'A content', _originalPosteur: 'alban_fooz_dev', _score: 100 }
     ];
 
     constructor() {
+        // Bouchon : dev list idee;
         for (let index = 2; index < 12; index++) {
-            this.idees.push(
+            this._idees.push(
                 {
                     _id: index,
-                    _titre: index + 'First Idea',
+                    _titre: 'Idea Number ' + index,
                     _content: 'A content',
                     _originalPosteur: 'alban_fooz_dev',
-                    _score: Math.floor((Math.random() * 100) + 1)
+                    _score: Math.floor((Math.random() * 100) + 1),
+                    _image: 'https://picsum.photos/800/400?random=' + index
                 }
             );
         }
     }
 
+    public get idees(): Array<IdeeModel> {
+        return this._idees;
+    }
 
 
     ajouter(idee: IdeeModel) {
