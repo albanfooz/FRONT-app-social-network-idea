@@ -34,6 +34,7 @@ import { InputCommentaireComponent } from './components/input-commentaire/input-
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 import { MatRippleModule } from '@angular/material/core';
 import { MenuConnexionComponent } from './components/menu-connexion/menu-connexion.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,7 @@ import { MenuConnexionComponent } from './components/menu-connexion/menu-connexi
     MatRippleModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
   entryComponents: [SearchbarPopupComponent]
 })
