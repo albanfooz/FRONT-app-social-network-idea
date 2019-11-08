@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-menu-connexion',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuConnexionComponent implements OnInit {
 
-  constructor() { }
+  @Input() posmenu: string;
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  testSession() {
+
+
+    console.log('test session');
   }
 
 }

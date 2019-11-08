@@ -24,6 +24,7 @@
     "@angular/router": "~8.2.12",
     "@material/icon-button": "^4.0.0",
     "hammerjs": "^2.0.8",
+    "ngx-cookie-service": "^2.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
