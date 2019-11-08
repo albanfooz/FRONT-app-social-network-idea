@@ -10,7 +10,6 @@ import { CollaborateurPopUp } from 'src/app/model/collaborateurPopUp';
 export class PopupListCollaborateursComponent implements OnInit {
   private collaborateurList: Array<CollaborateurPopUp>;
   constructor(private collaborateurService: CollaborateurService) {
-
   }
 
   ngOnInit() {

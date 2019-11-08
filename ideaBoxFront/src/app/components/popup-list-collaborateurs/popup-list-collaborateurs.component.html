@@ -2,7 +2,9 @@
 <mat-dialog-content class="mat-typography">
 
     <ul *ngFor="let item of collaborateurList">
-        <li> <img src="{{item.img}}"> ,{{item.pseudo}}</li>
+        <li>
+            <img src="{{item.img}}"> {{item.pseudo}}
+        </li>
     </ul>
 
 </mat-dialog-content>

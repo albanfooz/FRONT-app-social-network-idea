@@ -1,0 +1,9 @@
+img{
+    max-width: 15%;
+    max-height: 15%;
+    padding-right : 9px;
+}
+.mat-dialog-content {
+    align-items: stretch;
+  }
+
