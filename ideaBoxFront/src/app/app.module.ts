@@ -20,7 +20,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
-import { MatInputModule } from '@angular/material/input';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -33,6 +32,8 @@ import { CommentaireComponent } from './components/commentaire/commentaire.compo
 import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 import {MatRippleModule} from '@angular/material/core';
+import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import {MatRippleModule} from '@angular/material/core';
     IdeaFullComponent,
     CommentaireComponent,
     InputCommentaireComponent,
-    BoutonCollaborateurComponent
+    BoutonCollaborateurComponent,
+    ListeCommentairesComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +73,7 @@ import {MatRippleModule} from '@angular/material/core';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    MatFormFieldModule,
     MatInputModule,
     MatMenuModule,
     MatDialogModule,

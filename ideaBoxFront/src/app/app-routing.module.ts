@@ -4,6 +4,7 @@ import { FrontPageComponent } from './pages/front-page/front-page.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
+import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { PopupListCollaborateursComponent } from './components/popup-list-collaborateurs/popup-list-collaborateurs.component';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
@@ -17,7 +18,7 @@ const routes: Routes = [
   { path: 'pastille-categorie', component: PastilleCategorieComponent },
   { path: 'inscription', component: PageInscriptionComponent },
   { path: 'idea-page', component: PageIdeaComponent },
-  { path: 'commentaire', component: CommentaireComponent },
+  { path: 'commentaire', component: ListeCommentairesComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
