@@ -11,7 +11,6 @@ import { IdeeService } from 'src/app/services/IdeeService';
 export class FrontPageComponent {
 
   constructor(private ideeService: IdeeService) {
-    console.log(this.ideeService.idees);
 
   }
 }
