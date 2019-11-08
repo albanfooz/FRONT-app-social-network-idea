@@ -33,6 +33,7 @@ import { CommentaireComponent } from './components/commentaire/commentaire.compo
 import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 import { MatRippleModule } from '@angular/material/core';
+import { MenuConnexionComponent } from './components/menu-connexion/menu-connexion.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { MatRippleModule } from '@angular/material/core';
     CommentaireComponent,
     InputCommentaireComponent,
     BoutonCollaborateurComponent,
-    SearchbarPopupComponent
+    SearchbarPopupComponent,
+    MenuConnexionComponent
   ],
   imports: [
     BrowserModule,
