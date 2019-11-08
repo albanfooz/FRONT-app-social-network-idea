@@ -1,6 +1,6 @@
 .grid-container {
   margin: auto;
-  max-width: 1000px;
+  max-width: 633px;
 }
 
 .dashboard-card {
@@ -9,12 +9,6 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
-}
-
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
 }
 
 .dashboard-card-content {

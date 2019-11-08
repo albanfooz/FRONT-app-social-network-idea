@@ -31,6 +31,7 @@ import { IdeaFullComponent } from './components/idea-full/idea-full.component';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
 import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
+import {MatRippleModule} from '@angular/material/core';
 import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
@@ -74,7 +75,9 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatMenuModule,
+    MatDialogModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
