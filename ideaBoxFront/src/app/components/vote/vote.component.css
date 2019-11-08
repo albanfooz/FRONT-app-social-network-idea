@@ -1,0 +1,13 @@
+.downVote .material-icons{
+    color:red;
+}
+.upVote .material-icons{
+    color:#065FD4;
+}
+.material-icons-outlined{
+    color:#909090;
+}
+.compteurVote{
+    color:#909090;
+    font-weight: 500; 
+}
