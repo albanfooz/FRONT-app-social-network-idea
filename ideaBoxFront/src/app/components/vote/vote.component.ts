@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VoteService } from 'src/app/service/VoteService';
+import { VoteService } from 'src/app/services/VoteService';
 
 @Component({
   selector: 'app-vote',
@@ -29,7 +29,7 @@ export class VoteComponent implements OnInit {
       positif: this.social.vote,
       idMembre: 1
     });
-    console.log(obs);
+    //FIXME : réparer l'url
     //obs.subscribe((resultat) => { console.log(resultat); });
   }
 }

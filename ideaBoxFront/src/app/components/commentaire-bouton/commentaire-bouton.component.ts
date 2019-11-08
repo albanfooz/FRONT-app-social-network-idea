@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-commentaire-bouton',
@@ -6,17 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commentaire-bouton.component.css']
 })
 export class CommentaireBoutonComponent implements OnInit {
+  constructor(private router: Router) { }
   social: Social = {
     comment: null
   };
 
-  constructor() { }
 
   ngOnInit() {
   }
 
   openComment() {
-    console.log("ouverture de l'idée, placement dans les commentaires");
+    this.router.navigateByUrl('idea-page');
+    setTimeout(() => { document.getElementById('texteCom').focus(); }, 10);
+    console.log('ouverture de l\'idée, placement dans les commentaires');
   }
 }
 interface Social {
