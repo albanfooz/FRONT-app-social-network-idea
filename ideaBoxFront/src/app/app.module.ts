@@ -31,9 +31,12 @@ import { IdeaFullComponent } from './components/idea-full/idea-full.component';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
 import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
-import {MatRippleModule} from '@angular/material/core';
+import { MatRippleModule } from '@angular/material/core';
 import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { VoteComponent } from './components/vote/vote.component';
+import { CommentaireBoutonComponent } from './components/commentaire-bouton/commentaire-bouton.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,9 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     CommentaireComponent,
     InputCommentaireComponent,
     BoutonCollaborateurComponent,
-    ListeCommentairesComponent
+    ListeCommentairesComponent,
+    VoteComponent,
+    CommentaireBoutonComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +82,8 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     MatInputModule,
     MatMenuModule,
     MatDialogModule,
-    MatRippleModule
+    MatRippleModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
