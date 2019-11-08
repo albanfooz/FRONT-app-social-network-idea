@@ -1,12 +1,2 @@
-<button class="upVote" mat-icon-button aria-label="icon-button upvote" (click)="like()">
-    <mat-icon class="{{social.vote ? 'material-icons' : 'material-icons-outlined'}}">thumb_up</mat-icon>
-</button>
-<!--appel de la variable de conteur de vote-->
-<span class="compteurVote">35.5k</span>
-<button class="downVote" mat-icon-button aria-label="icon-button downvote" (click)="dislike()">
-    <mat-icon class="{{social.vote===false ? 'material-icons' : 'material-icons-outlined'}}">thumb_down</mat-icon>
-</button>
-
-<button mat-icon-button aria-label="icon-button comment" (click)="openComment()">
-    <mat-icon class="material-icons-outlined">insert_comment</mat-icon>
-</button>
+<app-vote></app-vote>
+<app-commentaire-bouton></app-commentaire-bouton>
