@@ -1,5 +1,6 @@
 <mat-card-header>
-    <mat-card-title class="myCardTitle">{{idee._titre}}
+    <mat-card-title class="myCardTitle" [routerLink]="['idea', idee._id]" routerLinkActive="router-link-active">
+        {{idee._titre}}
 
     </mat-card-title>
     <mat-card-subtitle>{{idee._originalPosteur}}</mat-card-subtitle>
@@ -15,8 +16,10 @@
         <app-pastille-categorie></app-pastille-categorie>
     </div>
 </mat-card-header>
-<img mat-card-image src="{{idee._image}}" />
-<mat-card-content>
+<img mat-card-image src="{{idee._image}}"  [routerLink]="['idea', idee._id]"
+routerLinkActive="router-link-active"/>
+<mat-card-content [routerLink]="['idea', idee._id]"
+routerLinkActive="router-link-active"> 
     {{idee._content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque dictum risus in vehicula.
     Aenean congue, massa a suscipit consequat, metus massa mattis sapien, at elementum metus ante a ante. Morbi

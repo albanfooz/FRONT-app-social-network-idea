@@ -1,8 +1,7 @@
 <div class="grid-container">
   <mat-grid-list cols="2" rowHeight="600px">
     <mat-grid-tile *ngFor="let idee of ideeService.idees; let i =index" [colspan]="2" [rowspan]="1">
-      <mat-card class="dashboard-card" tabindex="i" [routerLink]="['idea', idee._id]"
-      routerLinkActive="router-link-active">
+      <mat-card class="dashboard-card" tabindex="i">
         <app-idea-post [i]='i' [idee]='idee'></app-idea-post>
       </mat-card>
     </mat-grid-tile>
