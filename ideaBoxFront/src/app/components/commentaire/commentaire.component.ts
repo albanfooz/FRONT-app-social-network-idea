@@ -6,17 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commentaire.component.css']
 })
 export class CommentaireComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  comment: boolean = false;
   coments = [
     { photoMembre: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", membre: "nom membre", contenu: "commentaire du membre" },
     { photoMembre: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", membre: "nom membre", contenu: "commentaire du membre" },
     { photoMembre: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", membre: "nom membre", contenu: "commentaire du membre" },
     { photoMembre: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", membre: "nom membre", contenu: "commentaire du membre" }
   ];
+  openComment: Function;
+
+  constructor() { }
+
+  ngOnInit() {
+    this.openComment = this.open.bind(this)
+  }
+
+  open() {
+    this.comment = !this.comment
+  }
+
+
 
 }

@@ -1,6 +1,6 @@
 <mat-card *ngFor="let coment of coments">
     <section class="entete"><img
-            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" />Test
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" />Nom membre
         <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
             <mat-icon>more_vert</mat-icon>
         </button>
@@ -14,5 +14,7 @@
         t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
         deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
         similique sunt in culpa</mat-card-content>
-    <app-bar-icons-idee></app-bar-icons-idee>
+    <app-bar-icons-idee [openComment]="openComment"></app-bar-icons-idee>
+    <app-input-commentaire *ngIf="comment"></app-input-commentaire>
+
 </mat-card>

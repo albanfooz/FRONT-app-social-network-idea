@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { IdeeModel } from 'src/app/models/IdeeModel';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,10 +11,19 @@ import { IdeeModel } from 'src/app/models/IdeeModel';
 export class IdeaPostComponent implements OnInit {
   @Input() i: number;
   @Input() idee: IdeeModel;
-  constructor() {
+  openComment: Function;
+
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
+    this.openComment = this.openComm.bind(this)
   }
-
+  public openComm() {
+    this.router.navigateByUrl('idea/' + this.idee._id);
+    setTimeout(() => { document.getElementById('texteCom').focus(); }, 10);
+    console.log('ouverture de l\'idée, placement dans les commentaires');
+    //this.router.navigateByUrl('idea/' + this.idee._id+"/commentaire"+this.commentaire._id);
+    //console.log('ouvertur de l'input dans le commentaire');
+  }
 }

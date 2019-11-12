@@ -15,7 +15,7 @@ export class VoteComponent implements OnInit {
 
   ngOnInit() {
   }
-  //TODO : verifier si c'est un commentaire
+
   like() {
     this.social.vote ? this.social.vote = null : this.social.vote = true;
     this.voteService.ajouter({
