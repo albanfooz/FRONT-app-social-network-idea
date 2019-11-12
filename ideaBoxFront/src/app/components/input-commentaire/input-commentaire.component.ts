@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommentaireModel } from 'src/app/models/CommentaireModel';
+import { CommentaireService } from 'src/app/services/CommentaireService';
 
 @Component({
   selector: 'app-input-commentaire',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input-commentaire.component.css']
 })
 export class InputCommentaireComponent implements OnInit {
+  private commentaire: CommentaireModel = { _createdAt: new Date(), _texteCommentaire: '', _idMembre: 0 };
 
-  constructor() { }
+  constructor(private commentaireService: CommentaireService) {
+  }
 
   ngOnInit() {
   }
 
+  creation() {
+    this.commentaireService.creation(this.commentaire);
+  }
 }
