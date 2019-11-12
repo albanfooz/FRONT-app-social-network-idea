@@ -1,6 +1,6 @@
 export interface CommentaireModel {
     _id?: number;
-    _texteCommentaire: string | null;
+    _contenu: string | null;
     _createdAt?: Date;
     _idCommentaire?: number;
     _idIdee?: number;

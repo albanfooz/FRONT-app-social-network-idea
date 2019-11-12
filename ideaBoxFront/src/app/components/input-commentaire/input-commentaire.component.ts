@@ -8,7 +8,7 @@ import { CommentaireService } from 'src/app/services/CommentaireService';
   styleUrls: ['./input-commentaire.component.css']
 })
 export class InputCommentaireComponent implements OnInit {
-  private commentaire: CommentaireModel = { _createdAt: new Date(), _texteCommentaire: '', _idMembre: 0 };
+  private commentaire: CommentaireModel = { _createdAt: new Date(), _contenu: '', _idMembre: 0 };
 
   constructor(private commentaireService: CommentaireService) {
   }
