@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface IDialogData {
@@ -13,15 +13,20 @@ export interface IDialogData {
 })
 export class SearchbarComponent implements OnInit {
 
-  searchinput: string;
-
   constructor(public dialog: MatDialog) { }
+
+  searchinput: string;
 
   openDialog(): void {
     this.dialog.open(SearchbarPopupComponent, {
       width: '250px',
       data: { searchinput: this.searchinput }
     });
+  }
+
+  setFocus(filled: boolean): boolean {
+    setTimeout(() => { document.getElementById('searchfocus').focus(); }, 500);
+    return !filled;
   }
 
   ngOnInit() {

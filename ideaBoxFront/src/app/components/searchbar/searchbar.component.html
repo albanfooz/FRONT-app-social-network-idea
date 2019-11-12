@@ -1,4 +1,10 @@
-<mat-form-field>
-    <mat-icon matPrefix>search</mat-icon>
-    <input matInput type=text (keyup.enter)="openDialog()" [(ngModel)]="searchinput" placeholder="Rechercher" />
-</mat-form-field>
+<div class="direction">
+    <form id="search">
+        <button (click)="filled=setFocus(filled)" mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+        <input #search id="searchfocus" name="search" type="search" placeholder="Rechercher..."
+            [ngClass]="{'filled':filled}" (click)="filled=!filled" (blur)="filled=search.value?true:false"
+            [(ngModel)]="searchinput" (keyup.enter)="openDialog()">
+    </form>
+</div>

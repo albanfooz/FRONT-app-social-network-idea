@@ -1,9 +1,37 @@
-mat-form-field {
 
-  font-size:0.75em;
+.direction {
+
+  float:left;
 }
 
-mat-form-field mat-icon {
+::placeholder {
 
-  vertical-align: middle;
+  color:lightblue;
+}
+
+#search input {
+
+  visibility:hidden;
+  width:0px;
+  transition: width 0.5s, visibility 0.4s;
+  background-color:transparent;
+  color:white;
+  border:none;
+  border-bottom: solid 2px rgb(225, 225, 225);
+  font-weight: bold;
+  font-size:15px;
+}
+
+#search input.filled {
+
+  visibility: visible;
+  width:250px;
+  cursor: auto;
+}
+
+#search input:focus {
+
+  visibility: visible;
+  width:250px;
+  cursor: auto;
 }

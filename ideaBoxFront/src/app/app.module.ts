@@ -41,6 +41,7 @@ import { CommentaireBoutonComponent } from './components/commentaire-bouton/comm
 import { CookieService } from 'ngx-cookie-service';
 import { MenuConnexionComponent } from './components/menu-connexion/menu-connexion.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
