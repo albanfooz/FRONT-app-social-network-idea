@@ -34,7 +34,7 @@ import { InputCommentaireComponent } from './components/input-commentaire/input-
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 import { MatRippleModule } from '@angular/material/core';
 import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { VoteComponent } from './components/vote/vote.component';
 import { CommentaireBoutonComponent } from './components/commentaire-bouton/commentaire-bouton.component';
@@ -64,7 +64,7 @@ import { MenuConnexionComponent } from './components/menu-connexion/menu-connexi
     BoutonCollaborateurComponent,
     ListeCommentairesComponent,
     VoteComponent,
-    CommentaireBoutonComponent
+    CommentaireBoutonComponent,
     SearchbarPopupComponent,
     MenuConnexionComponent
   ],
@@ -88,7 +88,7 @@ import { MenuConnexionComponent } from './components/menu-connexion/menu-connexi
     MatMenuModule,
     MatDialogModule,
     MatRippleModule,
-    HttpClientModule
+    HttpClientModule,
     FormsModule
   ],
   providers: [CookieService],
