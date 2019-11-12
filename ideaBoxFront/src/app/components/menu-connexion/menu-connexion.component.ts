@@ -20,17 +20,13 @@ export class MenuConnexionComponent implements OnInit {
 
   createSession() {
 
-    console.log(this.estConnecte);
     this.cookie.set('Login', 'true');
     this.estConnecte = this.cookie.get('Login');
-    console.log(this.estConnecte);
   }
 
   deleteSession() {
 
-    console.log(this.estConnecte);
     this.cookie.deleteAll();
     this.estConnecte = this.cookie.get('Login');
-    console.log(this.estConnecte);
   }
 }

@@ -3,14 +3,14 @@
         <button *ngIf="!isOpen" (click)="setFocus()" mat-icon-button>
             <mat-icon>search</mat-icon>
         </button>
-        <button *ngIf="isOpen" (click)="openDialog()" mat-icon-button>
-            <mat-icon>search</mat-icon>
+        <button *ngIf="isOpen" (click)="search.value='';isOpen=false" mat-icon-button>
+            <mat-icon>close</mat-icon>
         </button>
         <input #search id="searchfocus" name="search" type="search" placeholder="Rechercher..."
             class="{{isOpen?'ouvert':'ferme'}}" (blur)="search.value?'':setFocus()" [(ngModel)]="searchinput"
             (keyup.enter)="openDialog()">
-        <button mat-icon-button *ngIf="isOpen" (click)="search.value='';isOpen=false">
-            <mat-icon>close</mat-icon>
+        <button mat-icon-button *ngIf="isOpen" (click)="openDialog()">
+            <mat-icon>search</mat-icon>
         </button>
     </form>
 </div>

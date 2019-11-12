@@ -1,3 +1,14 @@
+/*
+* Retire les fonctions intégrées aux inputs par les navigateurs
+* (i.e. la croix "cancel" de Chrome)
+*/
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 
 .direction {
 
@@ -24,19 +35,17 @@
 
   visibility: hidden;
   width:0px;
-  cursor: auto;
 }
 
 #search input.ouvert {
 
   visibility: visible;
   width:250px;
-  cursor: auto;
 }
 
 #search input:focus {
 
   visibility: visible;
   width:250px;
-  cursor: auto;
+  outline: none;
 }

@@ -3,17 +3,17 @@
         <a mat-list-item routerLink="/inscription" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">
             Inscription</a>
-        <a mat-list-item routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        <a mat-list-item routerLink="#" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
             (click)="createSession()">Connexion</a>
     </div>
     <div *ngIf="posmenu == 'top'">
         <a mat-button routerLink="/inscription" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
             Inscription</a>
-        <a mat-button routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        <a mat-button routerLink="#" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
             (click)="createSession()">Connexion</a>
     </div>
 </div>
 <div *ngIf="estConnecte == 'true'">
-    <a mat-button routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+    <a mat-button routerLink="#" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
         (click)="deleteSession()">Déconnexion</a>
 </div>
