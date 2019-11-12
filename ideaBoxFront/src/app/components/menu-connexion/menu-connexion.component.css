@@ -1,0 +1,21 @@
+.mat-list-item {
+
+  background-color: #FFFFFF;
+}
+.mat-button.active {
+
+  background-color: #303e8d;
+}
+.mat-list-item.active {
+
+  background-color: lightgrey;
+}
+.mat-button:hover {
+
+  background-color:#8f9fff;
+}
+
+.mat-list-item:hover {
+
+  background-color:lightskyblue;
+}
