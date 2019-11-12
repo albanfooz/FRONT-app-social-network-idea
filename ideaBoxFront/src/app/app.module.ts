@@ -90,7 +90,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatMenuModule,
     MatDialogModule,
     MatRippleModule,
-    FormsModule
+    FormsModule,
     HttpClientModule,
     ScrollingModule
   ],
