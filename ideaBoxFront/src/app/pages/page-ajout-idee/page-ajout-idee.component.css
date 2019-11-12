@@ -25,3 +25,7 @@
 .col:last-child {
   margin-right: 0;
 }
+
+textarea {
+  min-height: 200px;
+}

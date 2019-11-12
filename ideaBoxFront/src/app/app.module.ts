@@ -71,7 +71,7 @@ import { MatRadioModule } from '@angular/material/radio';
     VoteComponent,
     SearchbarPopupComponent,
     CommentaireBoutonComponent,
-    PageAjoutIdeeComponent
+    PageAjoutIdeeComponent,
     MenuConnexionComponent
   ],
   imports: [
