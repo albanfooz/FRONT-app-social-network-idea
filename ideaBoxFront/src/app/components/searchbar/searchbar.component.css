@@ -11,8 +11,6 @@
 
 #search input {
 
-  visibility:hidden;
-  width:0px;
   transition: width 0.5s, visibility 0.4s;
   background-color:transparent;
   color:white;
@@ -22,7 +20,14 @@
   font-size:15px;
 }
 
-#search input.filled {
+#search input.ferme {
+
+  visibility: hidden;
+  width:0px;
+  cursor: auto;
+}
+
+#search input.ouvert {
 
   visibility: visible;
   width:250px;

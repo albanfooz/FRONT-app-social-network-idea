@@ -1,10 +1,16 @@
 <div class="direction">
     <form id="search">
-        <button (click)="filled=setFocus(filled)" mat-icon-button>
+        <button *ngIf="!isOpen" (click)="setFocus()" mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+        <button *ngIf="isOpen" (click)="openDialog()" mat-icon-button>
             <mat-icon>search</mat-icon>
         </button>
         <input #search id="searchfocus" name="search" type="search" placeholder="Rechercher..."
-            [ngClass]="{'filled':filled}" (click)="filled=!filled" (blur)="filled=search.value?true:false"
-            [(ngModel)]="searchinput" (keyup.enter)="openDialog()">
+            class="{{isOpen?'ouvert':'ferme'}}" (blur)="search.value?'':setFocus()" [(ngModel)]="searchinput"
+            (keyup.enter)="openDialog()">
+        <button mat-icon-button *ngIf="isOpen" (click)="search.value='';isOpen=false">
+            <mat-icon>close</mat-icon>
+        </button>
     </form>
 </div>

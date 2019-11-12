@@ -16,6 +16,7 @@ export class SearchbarComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   searchinput: string;
+  isOpen = false;
 
   openDialog(): void {
     this.dialog.open(SearchbarPopupComponent, {
@@ -24,9 +25,14 @@ export class SearchbarComponent implements OnInit {
     });
   }
 
-  setFocus(filled: boolean): boolean {
-    setTimeout(() => { document.getElementById('searchfocus').focus(); }, 500);
-    return !filled;
+  setFocus() {
+    if (this.isOpen) {
+      setTimeout(() => { document.getElementById('searchfocus').blur(); }, 0);
+      this.isOpen = !this.isOpen;
+    } else {
+      this.isOpen = !this.isOpen;
+      setTimeout(() => { document.getElementById('searchfocus').focus(); }, 500);
+    }
   }
 
   ngOnInit() {
