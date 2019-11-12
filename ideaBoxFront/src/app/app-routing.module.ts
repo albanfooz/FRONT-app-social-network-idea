@@ -17,14 +17,13 @@ const routes: Routes = [
   { path: 'popup-list-collaborateurs', component: PopupListCollaborateursComponent },
   { path: 'pastille-categorie', component: PastilleCategorieComponent },
   { path: 'inscription', component: PageInscriptionComponent },
-  { path: 'idea-page', component: PageIdeaComponent },
   { path: 'idea/:ideaId', component: PageIdeaComponent },
   { path: 'commentaire', component: ListeCommentairesComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule,
     MatChipsModule]
 
