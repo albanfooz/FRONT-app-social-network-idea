@@ -1,0 +1,38 @@
+h3{
+  text-align : center;
+}
+
+img{
+    max-width: 10%;
+    max-height: 10%;
+    padding-right : 50px;
+    padding-left : 100px;
+    padding-top: 20px;
+}
+
+
+.mat-dialog-content {
+    align-items: stretch;
+    max-height: 0%;
+  }
+
+  .example-viewport {
+    height: 500px;
+    width: 700px;
+    border: 1px solid white;
+  }
+
+  a{
+    text-decoration:none;
+    color: black;
+  }
+
+.item.pseudo{
+  color : blue;
+}
+
+  
+  
+
+  
+

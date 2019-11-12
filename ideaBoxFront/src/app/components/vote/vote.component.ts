@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VoteService } from 'src/app/service/VoteService';
+import { VoteService } from 'src/app/services/VoteService';
 
 @Component({
   selector: 'app-vote',
