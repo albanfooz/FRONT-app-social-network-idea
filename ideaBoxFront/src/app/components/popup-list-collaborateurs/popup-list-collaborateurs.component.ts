@@ -10,7 +10,6 @@ import { CollaborateurPopUp } from 'src/app/models/CollaborateurPopUp';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PopupListCollaborateursComponent implements OnInit {
-  items = Array.from({ length: 10 }).map((_, i) => `Item #${i}`);
   private collaborateurList: Array<CollaborateurPopUp>;
   constructor(private collaborateurService: CollaborateurService) {
   }

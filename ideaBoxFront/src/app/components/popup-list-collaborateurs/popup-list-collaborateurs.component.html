@@ -5,8 +5,7 @@
 
 
         <div *cdkVirtualFor="let item of collaborateurList; templateCacheSize: 0" class="example-item">
-            <img src="{{item.img}}">
-            {{item.pseudo}}
+            <a href="/" class="item.pseudo"> <img src="{{item.img}}" /> {{item.pseudo}} </a>
         </div>
     </cdk-virtual-scroll-viewport>
 
