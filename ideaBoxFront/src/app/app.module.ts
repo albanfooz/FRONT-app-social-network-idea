@@ -23,7 +23,7 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PopupListCollaborateursComponent } from './components/popup-list-collaborateurs/popup-list-collaborateurs.component';
 import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -38,6 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { VoteComponent } from './components/vote/vote.component';
 import { CommentaireBoutonComponent } from './components/commentaire-bouton/commentaire-bouton.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     BoutonCollaborateurComponent,
     ListeCommentairesComponent,
     VoteComponent,
-    CommentaireBoutonComponent
+    CommentaireBoutonComponent,
+    PageAjoutIdeeComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +89,10 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatDialogModule,
     MatRippleModule,
     HttpClientModule,
-    ScrollingModule
+    ScrollingModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
