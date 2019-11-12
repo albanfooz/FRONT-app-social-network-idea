@@ -14,6 +14,12 @@
     </div>
 </div>
 <div *ngIf="estConnecte == 'true'">
-    <a mat-button routerLink="#" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-        (click)="deleteSession()">Déconnexion</a>
+    <div *ngIf="posmenu == 'side'">
+        <a mat-list-item routerLink="#" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            (click)="deleteSession()">Déconnexion</a>
+    </div>
+    <div *ngIf="posmenu == 'top'">
+        <a mat-button routerLink="#" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            (click)="deleteSession()">Déconnexion</a>
+    </div>
 </div>

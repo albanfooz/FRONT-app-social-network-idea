@@ -94,7 +94,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatMenuModule,
     MatDialogModule,
     MatRippleModule,
-    FormsModule
+    FormsModule,
     HttpClientModule,
     ScrollingModule,
     MatSelectModule,
