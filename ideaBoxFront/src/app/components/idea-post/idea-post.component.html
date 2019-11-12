@@ -1,8 +1,9 @@
 <mat-card-header>
-    <mat-card-title class="myCardTitle">{{card.title}}
+    <mat-card-title class="myCardTitle" [routerLink]="['idea', idee._id]" routerLinkActive="router-link-active">
+        {{idee._titre}}
 
     </mat-card-title>
-    <mat-card-subtitle>UserName</mat-card-subtitle>
+    <mat-card-subtitle>{{idee._originalPosteur}}</mat-card-subtitle>
     <div fxFlex>
         <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
             <mat-icon>more_vert</mat-icon>
@@ -15,13 +16,11 @@
         <app-pastille-categorie></app-pastille-categorie>
     </div>
 </mat-card-header>
-
-<img mat-card-image src="https://picsum.photos/800/400?random={{i}}" /><!-- TODO ; Fetch image from database-->
-<mat-card-content>
-
-
-
-    {{card.content}}
+<img mat-card-image src="{{idee._image}}"  [routerLink]="['idea', idee._id]"
+routerLinkActive="router-link-active"/>
+<mat-card-content [routerLink]="['idea', idee._id]"
+routerLinkActive="router-link-active"> 
+    {{idee._content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque dictum risus in vehicula.
     Aenean congue, massa a suscipit consequat, metus massa mattis sapien, at elementum metus ante a ante. Morbi
     id

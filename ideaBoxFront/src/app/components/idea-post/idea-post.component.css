@@ -2,6 +2,18 @@ mat-card-header {
     width: 100%;
 }
 
+mat-card-title {
+    cursor: pointer;
+}
+
+img {
+    cursor: pointer;
+}
+
+mat-card-content{
+    cursor: pointer;
+}
+
 
 .more-button {
     float: right;

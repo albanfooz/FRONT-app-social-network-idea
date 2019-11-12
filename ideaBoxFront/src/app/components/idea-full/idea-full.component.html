@@ -1,6 +1,7 @@
-<div class="ideaHeader">
-    <mat-card-title>
-        <span class="myCardTitle">{{card.title}}</span>
+<mat-card-header>
+    <mat-card-title>{{idee._titre}}</mat-card-title>
+    <mat-card-subtitle>{{idee._originalPosteur}}</mat-card-subtitle>
+    <div fxFlex>
         <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
             <mat-icon>more_vert</mat-icon>
         </button>
@@ -8,13 +9,15 @@
             <button mat-menu-item>Expand</button>
             <button mat-menu-item>Masquer</button>
         </mat-menu>
-    </mat-card-title>
-    <img src="https://picsum.photos/950/400?random={{i}}" /><!-- TODO ; Fetch image from database-->
-</div>
-<mat-divider [inset]="true"></mat-divider>
-<div class="ideaContent">
+        <app-pastille-categorie></app-pastille-categorie>
 
-    {{card.content}}
+    </div>
+</mat-card-header>
+<img mat-card-image src="{{idee._image}}" />
+
+<mat-card-content>
+
+    {{idee._content}}
     <p>Et et veniam pariatur elit ipsum do. Laboris commodo Lorem incididunt amet id deserunt in. Nostrud quis
         non ullamco aute laboris nisi dolore esse officia laborum anim amet et pariatur.</p>
     <p>Nisi officia consectetur ex ad reprehenderit consectetur. Excepteur sunt in enim anim quis esse deserunt
@@ -47,6 +50,7 @@
         Adipisicing excepteur irure anim cillum sint do quis ullamco nostrud. Dolor est commodo eiusmod ex
         laborum eu dolor magna quis ullamco est adipisicing qui culpa. Commodo ad velit culpa irure anim. Id
         deserunt qui et sit enim culpa velit minim mollit. In proident aute occaecat et.</p>
-</div>
-<app-bar-icons-idee></app-bar-icons-idee>
-<app-pastille-categorie></app-pastille-categorie>
+</mat-card-content>
+<mat-card-actions>
+    <app-bar-icons-idee></app-bar-icons-idee>
+</mat-card-actions>
