@@ -7,27 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bar-icons-idee.component.css']
 })
 export class BarIconsIdeeComponent implements OnInit {
-  social: Social = {
-    vote: null,
-    comment: null
-  };
 
   constructor() { }
 
   ngOnInit() {
   }
-
-  like() {
-    this.social.vote ? this.social.vote = null : this.social.vote = true;
-  }
-  dislike() {
-    this.social.vote === false ? this.social.vote = null : this.social.vote = false;
-  }
-  openComment() {
-    console.log("ouverture de l'idée, placement dans les commentaires");
-  }
-}
-interface Social {
-  vote: boolean;
-  comment: boolean;
 }

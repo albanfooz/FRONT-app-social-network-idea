@@ -33,8 +33,13 @@ import { CommentaireComponent } from './components/commentaire/commentaire.compo
 import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 import { MatRippleModule } from '@angular/material/core';
-import { MenuConnexionComponent } from './components/menu-connexion/menu-connexion.component';
+import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { VoteComponent } from './components/vote/vote.component';
+import { CommentaireBoutonComponent } from './components/commentaire-bouton/commentaire-bouton.component';
 import { CookieService } from 'ngx-cookie-service';
+import { MenuConnexionComponent } from './components/menu-connexion/menu-connexion.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +62,9 @@ import { CookieService } from 'ngx-cookie-service';
     CommentaireComponent,
     InputCommentaireComponent,
     BoutonCollaborateurComponent,
+    ListeCommentairesComponent,
+    VoteComponent,
+    CommentaireBoutonComponent
     SearchbarPopupComponent,
     MenuConnexionComponent
   ],
@@ -75,10 +83,12 @@ import { CookieService } from 'ngx-cookie-service';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    MatFormFieldModule,
     MatInputModule,
     MatMenuModule,
     MatDialogModule,
     MatRippleModule,
+    HttpClientModule
     FormsModule
   ],
   providers: [CookieService],
