@@ -20,7 +20,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { IdeaPostComponent } from './components/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
-import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { MatInputModule } from '@angular/material/input';
+import { SearchbarComponent, SearchbarPopupComponent } from './components/searchbar/searchbar.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
@@ -33,10 +34,14 @@ import { InputCommentaireComponent } from './components/input-commentaire/input-
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 import { MatRippleModule } from '@angular/material/core';
 import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { VoteComponent } from './components/vote/vote.component';
 import { CommentaireBoutonComponent } from './components/commentaire-bouton/commentaire-bouton.component';
+import { CookieService } from 'ngx-cookie-service';
+import { MenuConnexionComponent } from './components/menu-connexion/menu-connexion.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+
 
 @NgModule({
   declarations: [
@@ -61,7 +66,9 @@ import { CommentaireBoutonComponent } from './components/commentaire-bouton/comm
     BoutonCollaborateurComponent,
     ListeCommentairesComponent,
     VoteComponent,
-    CommentaireBoutonComponent
+    CommentaireBoutonComponent,
+    SearchbarPopupComponent,
+    MenuConnexionComponent
   ],
   imports: [
     BrowserModule,
@@ -83,10 +90,12 @@ import { CommentaireBoutonComponent } from './components/commentaire-bouton/comm
     MatMenuModule,
     MatDialogModule,
     MatRippleModule,
+    FormsModule,
     HttpClientModule,
-    FormsModule
+    ScrollingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CookieService],
+  bootstrap: [AppComponent],
+  entryComponents: [SearchbarPopupComponent]
 })
 export class AppModule { }
