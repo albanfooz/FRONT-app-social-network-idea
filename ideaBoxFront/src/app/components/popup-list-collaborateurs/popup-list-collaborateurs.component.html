@@ -1,9 +1,20 @@
 <h3 mat-dialog-title>Liste des Collaborateurs</h3>
 <mat-dialog-content class="mat-typography">
 
-    <ul *ngFor="let item of collaborateurList">
-        <li> <img src="{{item.img}}"> ,{{item.pseudo}}</li>
-    </ul>
+    <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+
+
+        <div *cdkVirtualFor="let item of collaborateurList; templateCacheSize: 0" class="example-item">
+            <a href="/" class="item.pseudo"> <img src="{{item.img}}" /> {{item.pseudo}} </a>
+        </div>
+    </cdk-virtual-scroll-viewport>
+
+
+    <!--    <ul *ngFor="let item of collaborateurList">
+        <li>
+            <img src="{{item.img}}"> {{item.pseudo}}
+        </li>
+    </ul>-->
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">

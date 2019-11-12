@@ -40,6 +40,7 @@ import { VoteComponent } from './components/vote/vote.component';
 import { CommentaireBoutonComponent } from './components/commentaire-bouton/commentaire-bouton.component';
 import { CookieService } from 'ngx-cookie-service';
 import { MenuConnexionComponent } from './components/menu-connexion/menu-connexion.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -89,8 +90,9 @@ import { MenuConnexionComponent } from './components/menu-connexion/menu-connexi
     MatMenuModule,
     MatDialogModule,
     MatRippleModule,
-    HttpClientModule,
     FormsModule
+    HttpClientModule,
+    ScrollingModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
