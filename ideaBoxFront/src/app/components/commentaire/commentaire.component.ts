@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommentaireModel } from 'src/app/models/CommentaireModel';
 
 @Component({
   selector: 'app-commentaire',
@@ -14,7 +15,8 @@ export class CommentaireComponent implements OnInit {
     { photoMembre: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", membre: "nom membre", contenu: "commentaire du membre" }
   ];
   openComment: Function;
-
+  commentaire: CommentaireModel;
+  commentaires: Array<CommentaireModel>;
   constructor() { }
 
   ngOnInit() {

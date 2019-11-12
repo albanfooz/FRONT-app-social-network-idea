@@ -83,7 +83,8 @@ import { CommentaireBoutonComponent } from './components/commentaire-bouton/comm
     MatMenuModule,
     MatDialogModule,
     MatRippleModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
