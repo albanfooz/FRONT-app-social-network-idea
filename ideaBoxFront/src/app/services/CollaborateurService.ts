@@ -1,4 +1,4 @@
-import { CollaborateurPopUp } from '../model/collaborateurPopUp';
+import { CollaborateurPopUp } from '../models/CollaborateurPopUp';
 import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
@@ -10,6 +10,7 @@ export class CollaborateurService {
   recupereList(): Array<CollaborateurPopUp> {
     const result = new Array<CollaborateurPopUp>();
     // tslint:disable-next-line: max-line-length
+    // tslint:disable-next-line: prefer-const
     let c1 = {
       pseudo: ' Smith',
       img: 'https://improvyourself.fr/wp-content/uploads/2017/10/Photo-profil-libert%C3%A9-mentale-rond-1-300x300.png'

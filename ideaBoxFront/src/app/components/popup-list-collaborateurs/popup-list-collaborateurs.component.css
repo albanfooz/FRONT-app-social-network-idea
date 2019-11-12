@@ -1,9 +1,20 @@
 img{
-    max-width: 15%;
-    max-height: 15%;
-    padding-right : 9px;
+    max-width: 40%;
+    max-height: 40%;
+    padding-right : 1px;
 }
 .mat-dialog-content {
     align-items: stretch;
   }
+
+  .example-viewport {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+  }
+  
+  .example-item {
+    height: 50px;
+  }
+  
 
