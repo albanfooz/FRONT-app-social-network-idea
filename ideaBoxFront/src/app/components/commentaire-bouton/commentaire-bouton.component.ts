@@ -12,7 +12,6 @@ export class CommentaireBoutonComponent implements OnInit {
     comment: null
   };
 
-
   ngOnInit() {
   }
 
@@ -22,6 +21,7 @@ export class CommentaireBoutonComponent implements OnInit {
     console.log('ouverture de l\'idée, placement dans les commentaires');
   }
 }
+
 interface Social {
   comment: boolean;
 }
