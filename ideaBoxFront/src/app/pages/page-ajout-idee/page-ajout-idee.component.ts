@@ -7,8 +7,9 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./page-ajout-idee.component.css']
 })
 export class PageAjoutIdeeComponent {
-  addressForm = this.fb.group({
+  creationIdeeForm = this.fb.group({
     titre: [null, Validators.required],
+    categorie: [null, Validators.required],
     imageURL: null,
     contenu: [null, Validators.required]
   });

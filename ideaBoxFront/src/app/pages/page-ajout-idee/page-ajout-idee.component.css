@@ -29,3 +29,7 @@
 textarea {
   min-height: 200px;
 }
+
+.card-ajouter-idee {
+  max-width: 633px;
+}
