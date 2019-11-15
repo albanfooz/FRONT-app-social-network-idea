@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { IdeeModel } from 'src/app/models/IdeeModel';
+import { IdeeService } from 'src/app/services/IdeeService';
 
 @Component({
   selector: 'app-page-ajout-idee',
@@ -8,17 +10,18 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class PageAjoutIdeeComponent {
   creationIdeeForm = this.fb.group({
-    titre: [null, Validators.required],
-    categorie: [null, Validators.required],
-    imageURL: null,
-    contenu: [null, Validators.required]
+    _titre: [null, Validators.required],
+    _categorie: [null, Validators.required],
+    _image: null,
+    _content: [null, Validators.required]
   });
 
   hasUnitNumber = false;
-
-  constructor(private fb: FormBuilder) { }
+  private idee: IdeeModel;
+  constructor(private fb: FormBuilder, private iService: IdeeService) { }
 
   onSubmit() {
-    alert('Thanks!');
+    console.log(this.creationIdeeForm.value);
+    this.iService.ajouter(this.creationIdeeForm.value);
   }
 }

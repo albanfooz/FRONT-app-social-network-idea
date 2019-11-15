@@ -7,16 +7,16 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <strong><input matInput placeholder="Titre" formControlName="titre"></strong>
-            <mat-error *ngIf="creationIdeeForm.controls['titre'].hasError('required')">
+            <strong><input matInput placeholder="Titre" formControlName="_titre"></strong>
+            <mat-error *ngIf="creationIdeeForm.controls['_titre'].hasError('required')">
               Le titre est <strong>requis</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Catégorie" formControlName="categorie">
-            <mat-error *ngIf="creationIdeeForm.controls['categorie'].hasError('required')">
+            <input matInput placeholder="Catégorie" formControlName="_categorie">
+            <mat-error *ngIf="creationIdeeForm.controls['_categorie'].hasError('required')">
               La catégorie est <strong>requise</strong>
             </mat-error>
           </mat-form-field>
@@ -25,15 +25,15 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Image URL : https://123exemple.com/image" formControlName="imageURL">
+            <input matInput placeholder="Image URL : https://123exemple.com/image" formControlName="_image">
           </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width" id="textArea">
-            <textarea matInput placeholder="Description/contenu de l'idée" formControlName="contenu"></textarea>
-            <mat-error *ngIf="creationIdeeForm.controls['contenu'].hasError('required')">
+            <textarea matInput placeholder="Description/contenu de l'idée" formControlName="_content"></textarea>
+            <mat-error *ngIf="creationIdeeForm.controls['_content'].hasError('required')">
               Le contenu est <strong>requis</strong>
             </mat-error>
           </mat-form-field>

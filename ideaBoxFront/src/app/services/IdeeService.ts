@@ -40,6 +40,8 @@ export class IdeeService {
 
 
     ajouter(idee: IdeeModel) {
+        idee._id = this.idees.length + 1;
+        this._idees.push(idee);
 
     }
 
