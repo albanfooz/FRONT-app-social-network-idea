@@ -7,10 +7,9 @@ export class PastilleService {
     // bouchon dev list pastille
 
     private _pastille: Array<PastilleModel> = [
-        { _id: 1, _categorie: 'Technologie', _icone: 'url' }
-    ];
+    ];// creation de la liste
 
-    constructor() {
+    constructor() {// constructeur avec les variables push dans la liste
         this._pastille.push(
             {
                 _id: 1,
@@ -19,69 +18,69 @@ export class PastilleService {
             });
         this._pastille.push({
             _id: 2,
-            _categorie: 'Etude / Formation',
-            _icone: 'url'
+            _categorie: 'Etude/Formation',
+            _icone: 'school'
         });
         this._pastille.push({
             _id: 3,
             _categorie: 'Jeux',
-            _icone: 'url'
+            _icone: 'sports_esports'
         });
         this._pastille.push({
             _id: 4,
-            _categorie: 'Entre-Aide',
-            _icone: 'url'
+            _categorie: 'Entraide',
+            _icone: 'people_outline'
         });
         this._pastille.push({
             _id: 5,
             _categorie: 'Nature',
-            _icone: 'url'
+            _icone: 'emoji_nature'
         });
         this._pastille.push({
             _id: 6,
             _categorie: 'Ecologie',
-            _icone: 'url'
+            _icone: 'eco'
         });
         this._pastille.push({
             _id: 7,
             _categorie: 'Musique',
-            _icone: 'url'
+            _icone: 'music_note'
         });
         this._pastille.push({
             _id: 8,
             _categorie: 'Sport',
-            _icone: 'url'
+            _icone: 'sports_soccer'
         });
         this._pastille.push({
             _id: 9,
-            _categorie: 'Gastronomie',
-            _icone: 'url'
+            _categorie: 'Cuisine',
+            _icone: 'local_dining'
         });
         this._pastille.push({
             _id: 10,
             _categorie: 'Voyage',
-            _icone: 'url'
+            _icone: 'flight_takeoff'
         });
         this._pastille.push({
             _id: 11,
-            _categorie: 'Femme',
-            _icone: 'url'
+            _categorie: 'Animaux',
+            _icone: 'pets'
         });
 
         this._pastille.push({
             _id: 12,
-            _categorie: 'Homme',
-            _icone: 'url'
+            _categorie: 'Livre',
+            _icone: 'menu_book'
         });
         this._pastille.push({
             _id: 13,
             _categorie: 'Emploi',
-            _icone: 'url'
+            _icone: 'work'
         });
         this._pastille.push({
             _id: 14,
             _categorie: 'Santé',
-            _icone: 'url'
+            _icone: 'local_hospital'
         });
     }
 
