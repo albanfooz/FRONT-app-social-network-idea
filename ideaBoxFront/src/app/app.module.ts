@@ -39,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { VoteComponent } from './components/vote/vote.component';
 import { CommentaireBoutonComponent } from './components/commentaire-bouton/commentaire-bouton.component';
 import { CookieService } from 'ngx-cookie-service';
-import { MenuConnexionComponent } from './components/navigation/menu-connexion/menu-connexion.component';
+import { MenuConnexionComponent, ConnexionPopupComponent } from './components/navigation/menu-connexion/menu-connexion.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.component';
 import { MatSelectModule } from '@angular/material/select';
@@ -72,7 +72,8 @@ import { MatRadioModule } from '@angular/material/radio';
     SearchbarPopupComponent,
     CommentaireBoutonComponent,
     PageAjoutIdeeComponent,
-    MenuConnexionComponent
+    MenuConnexionComponent,
+    ConnexionPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -103,6 +104,6 @@ import { MatRadioModule } from '@angular/material/radio';
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
-  entryComponents: [SearchbarPopupComponent]
+  entryComponents: [SearchbarPopupComponent, ConnexionPopupComponent]
 })
 export class AppModule { }
