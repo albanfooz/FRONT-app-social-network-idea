@@ -1,7 +1,11 @@
+
+import { PastilleModel } from './PastilleModel';
+
 export interface IdeeModel {
     // tslint:disable: variable-name
     _id?: number;
     _titre: string;
+    _categorie: PastilleModel;
     _originalPosteur: string;
     _content: string; // sujet à un changement
     _score: number; // pour le moment, on utilisera voteDTO plus tard
