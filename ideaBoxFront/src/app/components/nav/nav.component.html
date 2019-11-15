@@ -1,26 +1,27 @@
 <div class="topnav-container">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-xs>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
         <mat-icon>menu</mat-icon>
       </button>
       <a id="home" routerLink="">
         <span id="titre">Social Idea</span>
         <span id="slogan">Think, Share, Create</span>
       </a>
-      <div fxShow="true" fxHide.lt-sm>
-        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+      <div fxShow="true" fxHide.lt-md>
         <a mat-button *ngFor="let link of links" routerLink="{{link.pageLink}}" routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }">{{link.pageName}}</a>
       </div>
-      <span class="menu-spacer"></span>
+
       <app-searchbar></app-searchbar>
+      <span class="menu-spacer"></span>
+      <app-menu-connexion fxShow="true" fxHide.lt-md posmenu="top"></app-menu-connexion>
     </mat-toolbar-row>
   </mat-toolbar>
-
   <mat-sidenav-container fxFlexFill>
     <mat-sidenav #sidenav>
       <mat-nav-list>
+        <app-menu-connexion posmenu="side"></app-menu-connexion>
         <a mat-list-item *ngFor="let link of links" routerLink="{{link.pageLink}}"
           routerLinkActive="active">{{link.pageName}}</a>
       </mat-nav-list>
