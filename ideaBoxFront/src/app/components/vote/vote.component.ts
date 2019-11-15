@@ -15,7 +15,7 @@ export class VoteComponent implements OnInit {
 
   ngOnInit() {
   }
-  //TODO : verifier si c'est un commentaire
+
   like() {
     this.social.vote ? this.social.vote = null : this.social.vote = true;
     this.voteService.ajouter({
@@ -29,7 +29,7 @@ export class VoteComponent implements OnInit {
       positif: this.social.vote,
       idMembre: 1
     });
-    console.log(obs);
+    //FIXME : réparer l'url
     //obs.subscribe((resultat) => { console.log(resultat); });
   }
 }

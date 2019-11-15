@@ -19,12 +19,12 @@ const routes: Routes = [
   { path: 'inscription', component: PageInscriptionComponent },
   { path: 'idea/:ideaId', component: PageIdeaComponent },
   { path: 'ajout-idee', component: PageAjoutIdeeComponent },
-  { path: 'commentaire', component: ListeCommentairesComponent },
+  { path: 'commentaire', component: CommentaireComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule,
     MatChipsModule]
 
