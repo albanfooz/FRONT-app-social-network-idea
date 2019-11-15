@@ -1,12 +1,12 @@
-import { PastilleModel } from '../models/PastilleModel';
+import { CategorieModel } from '../models/CategorieModel';
 import { Injectable } from '@angular/core';
 import { ICON_REGISTRY_PROVIDER } from '@angular/material';
 
 @Injectable({ providedIn: 'root' })
-export class PastilleService {
+export class CategorieService {
     // bouchon dev list pastille
 
-    private _pastille: Array<PastilleModel> = [
+    private _pastille: Array<CategorieModel> = [
     ];// creation de la liste
 
     constructor() {// constructeur avec les variables push dans la liste
@@ -84,19 +84,19 @@ export class PastilleService {
         });
     }
 
-    public get pastille(): Array<PastilleModel> {
+    public get pastille(): Array<CategorieModel> {
         return this._pastille;
     }
 
-    ajouter(pastille: PastilleModel) {
+    ajouter(pastille: CategorieModel) {
 
     }
 
-    modifier(pastille: PastilleModel) {
+    modifier(pastille: CategorieModel) {
 
     }
 
-    recupererById(id: number): PastilleModel {
+    recupererById(id: number): CategorieModel {
         return null;
     }
 

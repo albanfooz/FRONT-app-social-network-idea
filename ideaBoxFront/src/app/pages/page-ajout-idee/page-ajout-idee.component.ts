@@ -3,7 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { IdeeModel } from 'src/app/models/IdeeModel';
 import { IdeeService } from 'src/app/services/IdeeService';
 import { Route, Router } from '@angular/router';
-import { PastilleModel } from 'src/app/models/PastilleModel';
+import { CategorieModel } from 'src/app/models/CategorieModel';
 
 @Component({
   selector: 'app-page-ajout-idee',

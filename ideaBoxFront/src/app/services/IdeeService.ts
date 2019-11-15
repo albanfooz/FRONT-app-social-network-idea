@@ -1,6 +1,6 @@
 import { IdeeModel } from '../models/IdeeModel';
 import { Injectable } from '@angular/core';
-import { PastilleService } from './PastilleService';
+import { CategorieService } from './CategorieService';
 
 
 @Injectable({ providedIn: 'root' })
@@ -20,7 +20,7 @@ export class IdeeService {
         }
     ];
 
-    constructor() {
+    constructor(private categorieService: CategorieService) {
         // Bouchon : dev list idee;
         for (let index = 2; index < 12; index++) {
             this._idees.push(
@@ -29,7 +29,7 @@ export class IdeeService {
                     _titre: 'Idea Number ' + index,
                     _content: 'A content',
                     _originalPosteur: 'alban_fooz_dev',
-                    _categorie: { _categorie: 'Home', _icone: 'home' },
+                    _categorie: this.categorieService.pastille.find(({ _id }) => _id == index),
                     _score: Math.floor((Math.random() * 100) + 1),
                     _image: 'https://picsum.photos/800/400?random=' + index
                 }
