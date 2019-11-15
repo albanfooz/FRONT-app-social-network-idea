@@ -19,7 +19,18 @@
             (click)="deleteSession()">Déconnexion</a>
     </div>
     <div *ngIf="posmenu == 'top'">
-        <a mat-button routerLink="#" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            (click)="deleteSession()">Déconnexion</a>
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>arrow_drop_down</mat-icon>
+            Profil
+            <img id="pp"
+                src="https://sites.nicholas.duke.edu/clarklab/files/2011/01/default_profile-d80441a6f25a9a0aac354978c65c8fa9.jpg"
+                alt="profile picture" />
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Voir profil</button>
+            <button mat-menu-item>Modifier profil</button>
+            <button mat-menu-item>Préférences</button>
+            <button mat-menu-item (click)="deleteSession()">Déconnexion</button>
+        </mat-menu>
     </div>
 </div>
