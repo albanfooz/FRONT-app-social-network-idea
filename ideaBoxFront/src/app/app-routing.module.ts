@@ -7,9 +7,10 @@ import { PageInscriptionComponent } from './template/page-inscription/page-inscr
 import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { PopupListCollaborateursComponent } from './components/popup-list-collaborateurs/popup-list-collaborateurs.component';
-import { CommentaireComponent } from './components/commentaire/commentaire.component';
 import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.component';
+import { CommentaireComponent } from './components/commentaire/commentaire.component';
 
 const routes: Routes = [
   { path: '', component: FrontPageComponent },
@@ -17,8 +18,8 @@ const routes: Routes = [
   { path: 'popup-list-collaborateurs', component: PopupListCollaborateursComponent },
   { path: 'pastille-categorie', component: PastilleCategorieComponent },
   { path: 'inscription', component: PageInscriptionComponent },
-  { path: 'idea-page', component: PageIdeaComponent },
   { path: 'idea/:ideaId', component: PageIdeaComponent },
+  { path: 'ajout-idee', component: PageAjoutIdeeComponent },
   { path: 'commentaire', component: CommentaireComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
