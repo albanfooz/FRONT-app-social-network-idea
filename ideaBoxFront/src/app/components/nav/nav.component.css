@@ -79,5 +79,12 @@
 #logo {
 
   display:block;
-  width:187px;
+  width:175px;
+  margin-left:10px;
+  margin-right:20px;
+}
+
+a mat-icon {
+
+  font-size: 20px;
 }
