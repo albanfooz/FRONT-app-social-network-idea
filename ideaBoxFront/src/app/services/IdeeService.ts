@@ -1,6 +1,6 @@
 import { IdeeModel } from '../models/IdeeModel';
 import { Injectable } from '@angular/core';
-import { PastilleService } from './PastilleService';
+import { CategorieService } from './CategorieService';
 
 
 @Injectable({ providedIn: 'root' })
@@ -20,7 +20,7 @@ export class IdeeService {
         }
     ];
 
-    constructor(private categorieService: PastilleService) {
+    constructor(private categorieService: CategorieService) {
         // Bouchon : dev list idee;
         for (let index = 2; index < 12; index++) {
             this._idees.push(
