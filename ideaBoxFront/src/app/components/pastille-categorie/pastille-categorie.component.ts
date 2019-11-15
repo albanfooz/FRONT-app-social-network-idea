@@ -2,6 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { PastilleModel } from 'src/app/models/PastilleModel';
 import { Router } from '@angular/router';
 import { PastilleService } from 'src/app/services/PastilleService';
+import { Observable } from 'rxjs';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+
+
 
 @Component({
   selector: 'app-pastille-categorie',
@@ -21,6 +25,8 @@ export class PastilleCategorieComponent implements OnInit {
     this._pastille = pastilleService.pastille; // appelle le service PastilleService.ts avec la variable this._pastille
 
   }
+
+
 
   ngOnInit() {
 
