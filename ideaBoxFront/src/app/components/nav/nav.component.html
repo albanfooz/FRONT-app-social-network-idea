@@ -5,8 +5,7 @@
         <mat-icon>menu</mat-icon>
       </button>
       <a id="home" routerLink="">
-        <span id="titre">Social Idea</span>
-        <span id="slogan">Think, Share, Create</span>
+        <img id="logo" src="../../../assets/images/logo.svg" alt="Social Idea">
       </a>
       <div fxShow="true" fxHide.lt-md>
         <a mat-button *ngFor="let link of links" routerLink="{{link.pageLink}}" routerLinkActive="active"
