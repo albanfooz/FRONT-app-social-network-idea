@@ -17,27 +17,34 @@ import { FrontPageComponent } from './pages/front-page/front-page.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { IdeaPostComponent } from './components/idea-post/idea-post.component';
+import { IdeaPostComponent } from './components/idee/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
-import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { MatInputModule } from '@angular/material/input';
+import { SearchbarComponent, SearchbarPopupComponent } from './components/searchbar/searchbar.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PopupListCollaborateursComponent } from './components/popup-list-collaborateurs/popup-list-collaborateurs.component';
 import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { IdeaFullComponent } from './components/idea-full/idea-full.component';
+import { IdeaFullComponent } from './components/idee/idea-full/idea-full.component';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
 import { InputCommentaireComponent } from './components/input-commentaire/input-commentaire.component';
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 import { MatRippleModule } from '@angular/material/core';
 import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { VoteComponent } from './components/vote/vote.component';
 import { CommentaireBoutonComponent } from './components/commentaire-bouton/commentaire-bouton.component';
+import { CookieService } from 'ngx-cookie-service';
+import { MenuConnexionComponent } from './components/menu-connexion/menu-connexion.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 @NgModule({
   declarations: [
@@ -62,7 +69,10 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     BoutonCollaborateurComponent,
     ListeCommentairesComponent,
     VoteComponent,
-    CommentaireBoutonComponent
+    SearchbarPopupComponent,
+    CommentaireBoutonComponent,
+    PageAjoutIdeeComponent,
+    MenuConnexionComponent
   ],
   imports: [
     BrowserModule,
@@ -84,10 +94,15 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatMenuModule,
     MatDialogModule,
     MatRippleModule,
+    FormsModule,
     HttpClientModule,
-    ScrollingModule
+    ScrollingModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CookieService],
+  bootstrap: [AppComponent],
+  entryComponents: [SearchbarPopupComponent]
 })
 export class AppModule { }

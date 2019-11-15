@@ -8,7 +8,14 @@ export class IdeeService {
     // Bouchon : dev list idee;
     // tslint:disable-next-line: variable-name
     private _idees: Array<IdeeModel> = [
-        { _id: 1, _titre: 'First Idea', _content: 'A content', _originalPosteur: 'alban_fooz_dev', _score: 100, _image: 'https://picsum.photos/800/400?random=1' }
+        {
+            _id: 1,
+            _titre: 'First Idea',
+            _content: 'A content',
+            _originalPosteur: 'alban_fooz_dev',
+            _score: 100,
+            _image: 'https://picsum.photos/800/400?random=1'
+        }
     ];
 
     constructor() {
@@ -34,6 +41,8 @@ export class IdeeService {
 
 
     ajouter(idee: IdeeModel) {
+        idee._id = this.idees.length + 1;
+        this._idees.push(idee);
 
     }
 
