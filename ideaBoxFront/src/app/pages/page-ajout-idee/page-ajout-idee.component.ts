@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { IdeeModel } from 'src/app/models/IdeeModel';
 import { IdeeService } from 'src/app/services/IdeeService';
 import { Route, Router } from '@angular/router';
+import { PastilleModel } from 'src/app/models/PastilleModel';
 
 @Component({
   selector: 'app-page-ajout-idee',
@@ -22,7 +23,13 @@ export class PageAjoutIdeeComponent {
   constructor(private fb: FormBuilder, private iService: IdeeService, private router: Router) { }
 
   onSubmit() {
-    this.iService.ajouter(this.creationIdeeForm.value);
+    let tempIdee: IdeeModel = this.creationIdeeForm.value;
+    //transform string en catégorie
+    const tempCat: string = this.creationIdeeForm.value._categorie;
+    tempIdee._categorie = { _categorie: tempCat, _icone: tempCat };
+    //console.log(tempIdee);
+
+    this.iService.ajouter(tempIdee);
     this.router.navigateByUrl('');
   }
 }

@@ -1,5 +1,6 @@
 import { IdeeModel } from '../models/IdeeModel';
 import { Injectable } from '@angular/core';
+import { PastilleService } from './PastilleService';
 
 
 @Injectable({ providedIn: 'root' })
@@ -13,6 +14,7 @@ export class IdeeService {
             _titre: 'First Idea',
             _content: 'A content',
             _originalPosteur: 'alban_fooz_dev',
+            _categorie: { _categorie: 'business', _icone: 'business' },
             _score: 100,
             _image: 'https://picsum.photos/800/400?random=1'
         }
@@ -27,9 +29,11 @@ export class IdeeService {
                     _titre: 'Idea Number ' + index,
                     _content: 'A content',
                     _originalPosteur: 'alban_fooz_dev',
+                    _categorie: { _categorie: 'Home', _icone: 'home' },
                     _score: Math.floor((Math.random() * 100) + 1),
                     _image: 'https://picsum.photos/800/400?random=' + index
                 }
+
             );
         }
     }
