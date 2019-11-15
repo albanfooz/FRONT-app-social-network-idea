@@ -27,10 +27,18 @@
                 alt="profile picture" />
         </button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item>Voir profil</button>
-            <button mat-menu-item>Modifier profil</button>
-            <button mat-menu-item>Préférences</button>
-            <button mat-menu-item (click)="deleteSession()">Déconnexion</button>
+            <button mat-menu-item>
+                <mat-icon>account_circle</mat-icon>Voir profil
+            </button>
+            <button mat-menu-item>
+                <mat-icon>edit</mat-icon>Modifier profil
+            </button>
+            <button mat-menu-item>
+                <mat-icon>settings</mat-icon>Préférences
+            </button>
+            <button mat-menu-item (click)="deleteSession()">
+                <mat-icon>power_settings_new</mat-icon>Déconnexion
+            </button>
         </mat-menu>
     </div>
 </div>
