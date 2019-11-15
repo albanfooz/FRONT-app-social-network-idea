@@ -10,6 +10,7 @@ import { PopupListCollaborateursComponent } from './components/popup-list-collab
 import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.component';
+import { CommentaireComponent } from './components/commentaire/commentaire.component';
 
 const routes: Routes = [
   { path: '', component: FrontPageComponent },

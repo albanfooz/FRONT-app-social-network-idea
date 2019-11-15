@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { IdeeModel } from 'src/app/models/IdeeModel';
 import { IdeeService } from 'src/app/services/IdeeService';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-ajout-idee',
@@ -18,10 +19,10 @@ export class PageAjoutIdeeComponent {
 
   hasUnitNumber = false;
   private idee: IdeeModel;
-  constructor(private fb: FormBuilder, private iService: IdeeService) { }
+  constructor(private fb: FormBuilder, private iService: IdeeService, private router: Router) { }
 
   onSubmit() {
-    console.log(this.creationIdeeForm.value);
     this.iService.ajouter(this.creationIdeeForm.value);
+    this.router.navigateByUrl('');
   }
 }
