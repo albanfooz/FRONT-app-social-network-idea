@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pastille-categorie.component.html',
   styleUrls: ['./pastille-categorie.component.css']
 })
+
 export class PastilleCategorieComponent implements OnInit {
-  nomPastilleCategorieEntreprenariat:String;
+  nomPastilleCategorieEntreprenariat: String;
 
   /*
   nomPastilleCategorieTechnologie:String;
@@ -31,7 +32,7 @@ export class PastilleCategorieComponent implements OnInit {
     this.nomPastilleCategorieEcologie = '  Ecologie'; */
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  }
+}
 

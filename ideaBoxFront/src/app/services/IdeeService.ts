@@ -23,6 +23,7 @@ export class IdeeService {
                     _score: Math.floor((Math.random() * 100) + 1),
                     _image: 'https://picsum.photos/800/400?random=' + index
                 }
+
             );
         }
     }
