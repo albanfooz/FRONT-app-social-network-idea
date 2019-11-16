@@ -14,3 +14,10 @@
   .dashboard-card-content {
     text-align: center;
   }
+  .example-icon {
+    padding: 0 14px;
+  }
+
+  mat-toolbar{
+      background: #bbdefb;
+  }
