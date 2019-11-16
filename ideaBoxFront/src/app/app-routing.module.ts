@@ -11,6 +11,7 @@ import { PageIdeaComponent } from './pages/page-idea/page-idea.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.component';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
+import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
 
 const routes: Routes = [
   { path: '', component: FrontPageComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'pastille-categorie', component: PastilleCategorieComponent },
   { path: 'inscription', component: PageInscriptionComponent },
   { path: 'idea/:ideaId', component: PageIdeaComponent },
+  { path: 'categorie/:categorieId', component: PageCategorieComponent },
   { path: 'ajout-idee', component: PageAjoutIdeeComponent },
   { path: 'commentaire', component: CommentaireComponent },
   { path: '**', component: PageNotFoundComponent }

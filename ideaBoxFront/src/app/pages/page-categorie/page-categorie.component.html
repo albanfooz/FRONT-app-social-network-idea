@@ -1,0 +1,10 @@
+<h2 class="mat-h2"><mat-icon>{{categorie._icone}}</mat-icon>{{categorie._categorie}}</h2>
+<div class="grid-container">
+<mat-grid-list cols="2" rowHeight="600px">
+    <mat-grid-tile *ngFor="let idee of idees; let i =index" [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card" tabindex="i">
+        <app-idea-post  [idee]='idee'></app-idea-post>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
