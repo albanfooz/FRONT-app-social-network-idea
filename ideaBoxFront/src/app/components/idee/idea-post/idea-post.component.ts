@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./idea-post.component.css']
 })
 export class IdeaPostComponent implements OnInit {
-  @Input() i: number;
   @Input() idee: IdeeModel;
   openComment: Function;
 
@@ -22,7 +21,7 @@ export class IdeaPostComponent implements OnInit {
   public openComm() {
     this.router.navigateByUrl('idea/' + this.idee._id);
     setTimeout(() => { document.getElementById('texteCom').focus(); }, 10);
-    console.log('ouverture de l\'idée, placement dans les commentaires');
+    //console.log('ouverture de l\'idée, placement dans les commentaires');
     //this.router.navigateByUrl('idea/' + this.idee._id+"/commentaire"+this.commentaire._id);
     //console.log('ouvertur de l'input dans le commentaire');
   }

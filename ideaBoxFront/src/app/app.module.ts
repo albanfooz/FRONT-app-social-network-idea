@@ -44,6 +44,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { MatRadioModule } from '@angular/material/radio';
     CommentaireBoutonComponent,
     PageAjoutIdeeComponent,
     MenuConnexionComponent,
-    ConnexionPopupComponent
+    ConnexionPopupComponent,
+    PageCategorieComponent
   ],
   imports: [
     BrowserModule,
