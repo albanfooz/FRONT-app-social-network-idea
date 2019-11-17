@@ -78,6 +78,10 @@ export class IdeeService {
         return null;
     }
 
+    recupererIdeeByCategorie(idCategorie: number): Array<IdeeModel> {
+        return this.idees.filter(element => {if (element._categorie._id == idCategorie) { return element };});
+    }
+
     // idee depuis l'historique des commentaires du posteur (IDK, au cas où)
     recupererIdeeByCommentaire(idCommentaire: number): IdeeModel {
         return null;

@@ -20,7 +20,7 @@ export class PageCategorieComponent implements OnInit {
   ngOnInit() {
     this.id = this.route.snapshot.params["categorieId"];
     this.categorie = this.categorieService.pastille.find(({ _id }) => _id == this.id);
-    this.ideeService.idees.filter(element => {if (element._categorie._id == this.id) { this.idees.push(element) };});
+    this.idees =this.ideeService.recupererIdeeByCategorie(this.id);
   }
 
 }
