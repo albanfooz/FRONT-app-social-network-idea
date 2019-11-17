@@ -71,7 +71,7 @@ export class IdeeService {
     }
 
     recupererById(id: number): IdeeModel {
-        return null;
+        return this.idees.find(({ _id }) => _id == id);
     }
 
     recupererIdeeByPosteur(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur

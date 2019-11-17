@@ -17,7 +17,7 @@ export class PageIdeaComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.params["ideaId"];
-    this.idee = this.ideeService.idees.find(({ _id }) => _id == this.id);
+    this.idee = this.ideeService.recupererById(this.id);
 
 
   }
