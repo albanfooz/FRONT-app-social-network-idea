@@ -2,3 +2,17 @@ img{
     height: 70px;
     width: 70px;
 }
+
+mat-card{
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.profil-desc{
+    padding-top: 25px;
+}
+
+.profil-actions{
+    padding-top: 25px;
+}

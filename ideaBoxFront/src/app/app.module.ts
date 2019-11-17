@@ -34,7 +34,7 @@ import { InputCommentaireComponent } from './components/input-commentaire/input-
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 import { MatRippleModule } from '@angular/material/core';
 import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
-import { MatFormFieldModule } from '@angular/material';
+import { MatFormFieldModule, MatTabsModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { VoteComponent } from './components/vote/vote.component';
 import { CommentaireBoutonComponent } from './components/commentaire-bouton/commentaire-bouton.component';
@@ -104,6 +104,7 @@ import { PageMembreComponent } from './pages/page-membre/page-membre.component';
     ScrollingModule,
     MatSelectModule,
     MatRadioModule,
+    MatTabsModule,
     ReactiveFormsModule
   ],
   providers: [CookieService],
