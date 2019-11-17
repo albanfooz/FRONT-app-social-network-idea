@@ -45,6 +45,7 @@ import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
+import { PageMembreComponent } from './pages/page-membre/page-membre.component';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import { PageCategorieComponent } from './pages/page-categorie/page-categorie.co
     PageAjoutIdeeComponent,
     MenuConnexionComponent,
     ConnexionPopupComponent,
-    PageCategorieComponent
+    PageCategorieComponent,
+    PageMembreComponent
   ],
   imports: [
     BrowserModule,

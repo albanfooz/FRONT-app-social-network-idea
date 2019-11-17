@@ -27,18 +27,20 @@ export class MembreService {
       _profilePic: 'https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-1/p100x100/11954818_168148033518696_8945614144384326149_n.jpg?_nc_cat=110&_nc_oc=AQm-6yqfIlyxgimTdBmOgaj0oDJ_viOqi0_-01INWi4qU2iRttt8WcABIOgakXePK5U&_nc_ht=scontent-cdg2-1.xx&oh=6b87eb04ad252d77314ffd83c845c15f&oe=5E8A1CE7'
     }
   ];
-  members: Array<MembreModel> = this.devs;
+  membres: Array<MembreModel> = this.devs;
   constructor() {
     for (let index = 5; index < 15; index++) {
-      this.members.push(
+      this.membres.push(
         {
           _id:index,
           _pseudo: 'fakeMembre' + index,
-          _profilePic: 'https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png'
+          _profilePic: 'https://www.booksie.com/files/profiles/22/mr-anonymous_230x230.png'
         }
       );
     }
   }
 
-  
+  recupererMembreById(id:number){
+    return this.membres.find(({ _id }) => _id == id);
+  }
 }
