@@ -75,12 +75,12 @@ export class IdeeService {
         return this.idees.find(({ _id }) => _id == id);
     }
 
-    recupererIdeeByPosteur(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur
-        return null;
+    recupererIdeesByPosteur(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur
+        return this.idees.filter(element => { if (element._originalPosteur._id == idPosteur) { return element; } });
     }
 
-    recupererIdeeByCategorie(idCategorie: number): Array<IdeeModel> {
-        return this.idees.filter(element => { if (element._categorie._id == idCategorie) { return element }; });
+    recupererIdeesByCategorie(idCategorie: number): Array<IdeeModel> {
+        return this.idees.filter(element => { if (element._categorie._id == idCategorie) { return element; } });
     }
 
     // idee depuis l'historique des commentaires du posteur (IDK, au cas où)
