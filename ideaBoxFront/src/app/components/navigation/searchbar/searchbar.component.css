@@ -49,3 +49,25 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   width:250px;
   outline: none;
 }
+
+#resultList {
+
+  background-color: white;
+  position:absolute;
+  top:50px;
+  margin-left:25px;
+  width:275px;
+  color:black;
+  padding:0;
+}
+
+.resultTitle {
+
+  font-weight: 500;
+  font-size:16px;
+}
+.resultAuthor {
+
+  color:grey;
+  font-style: italic;
+}
