@@ -1,0 +1,17 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example">
+            {{categorie._icone}}</mat-icon>
+        <span>{{categorie._categorie}}</span>
+        <span class="example-spacer"></span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div class="grid-container">
+    <mat-grid-list cols="2" rowHeight="600px">
+        <mat-grid-tile *ngFor="let idee of idees; let i =index" [colspan]="2" [rowspan]="1">
+            <mat-card class="dashboard-card" tabindex="i">
+                <app-idea-post [idee]='idee'></app-idea-post>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

@@ -1,9 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PastilleModel } from 'src/app/models/PastilleModel';
-import { Router } from '@angular/router';
-import { PastilleService } from 'src/app/services/PastilleService';
-import { Observable } from 'rxjs';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { CategorieModel } from 'src/app/models/CategorieModel';
 
 
 
@@ -16,15 +12,10 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 
 export class PastilleCategorieComponent implements OnInit {
-  @Input() categorie: PastilleModel;
-  openComment: Function;
-  private _pastille: Array<PastilleModel>;
+  @Input() categorie: CategorieModel;
 
 
-  constructor(private pastilleService: PastilleService) {
-    this._pastille = pastilleService.pastille; // appelle le service PastilleService.ts avec la variable this._pastille
-
-  }
+  constructor() { }
 
 
 
