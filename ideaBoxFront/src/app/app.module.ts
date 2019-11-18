@@ -44,6 +44,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import { PopupInscriptionComponent } from './components/popup-inscription/popup-inscription.component';
 import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
 import { PageMembreComponent } from './pages/page-membre/page-membre.component';
 
@@ -75,9 +76,11 @@ import { PageMembreComponent } from './pages/page-membre/page-membre.component';
     CommentaireBoutonComponent,
     PageAjoutIdeeComponent,
     MenuConnexionComponent,
-    ConnexionPopupComponent,
+    PopupInscriptionComponent,
+    MenuConnexionComponent,
     PageCategorieComponent,
-    PageMembreComponent
+    PageMembreComponent,
+    ConnexionPopupComponent,
   ],
   imports: [
     BrowserModule,
