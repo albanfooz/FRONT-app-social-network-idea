@@ -47,6 +47,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { PopupInscriptionComponent } from './components/popup-inscription/popup-inscription.component';
 import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
 import { PageMembreComponent } from './pages/page-membre/page-membre.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -108,7 +109,8 @@ import { PageMembreComponent } from './pages/page-membre/page-membre.component';
     MatSelectModule,
     MatRadioModule,
     MatTabsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
