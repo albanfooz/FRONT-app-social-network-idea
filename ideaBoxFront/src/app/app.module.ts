@@ -48,6 +48,7 @@ import { PopupInscriptionComponent } from './components/popup-inscription/popup-
 import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
 import { PageMembreComponent } from './pages/page-membre/page-membre.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { IdeeListComponent } from './components/idee/idee-list/idee-list.component';
 
 
 @NgModule({
@@ -82,6 +83,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     PageCategorieComponent,
     PageMembreComponent,
     ConnexionPopupComponent,
+    IdeeListComponent,
   ],
   imports: [
     BrowserModule,

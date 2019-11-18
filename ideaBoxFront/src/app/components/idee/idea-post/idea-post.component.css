@@ -6,6 +6,10 @@ mat-card-title {
     cursor: pointer;
 }
 
+mat-card-actions {
+    float: bottom;
+}
+
 img {
     cursor: pointer;
 }
