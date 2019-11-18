@@ -1,14 +1,13 @@
 .grid-container {
   margin: auto;
-  max-width: 633px;
+
+
 }
 
 .dashboard-card {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
+  max-width: 633px;
+  margin: 5px auto 10px auto;
+  min-width: 340px;
 }
 
 .dashboard-card-content {
