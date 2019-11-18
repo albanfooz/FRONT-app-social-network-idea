@@ -18,13 +18,9 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 export class PastilleCategorieComponent implements OnInit {
   @Input() categorie: CategorieModel;
   openComment: Function;
-  private _pastille: Array<CategorieModel>;
 
 
-  constructor(private pastilleService: CategorieService) {
-    this._pastille = pastilleService.pastille; // appelle le service PastilleService.ts avec la variable this._pastille
-
-  }
+  constructor() { }
 
 
 
