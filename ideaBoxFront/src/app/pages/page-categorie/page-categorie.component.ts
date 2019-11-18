@@ -18,9 +18,9 @@ export class PageCategorieComponent implements OnInit {
   constructor(private route: ActivatedRoute, private categorieService: CategorieService, private ideeService: IdeeService) { }
 
   ngOnInit() {
-    this.id = this.route.snapshot.params["categorieId"];
-    this.categorie = this.categorieService.pastille.find(({ _id }) => _id == this.id);
-    this.idees =this.ideeService.recupererIdeeByCategorie(this.id);
+    this.id = this.route.snapshot.params['categorieId'];
+    this.categorie = this.categorieService.recupererById(this.id);
+    this.idees = this.ideeService.recupererIdeesByCategorie(this.id);
   }
 
 }

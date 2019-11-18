@@ -32,7 +32,7 @@ export class MembreService {
     for (let index = 5; index < 15; index++) {
       this.membres.push(
         {
-          _id:index,
+          _id: index,
           _pseudo: 'fakeMembre' + index,
           _profilePic: 'https://www.booksie.com/files/profiles/22/mr-anonymous_230x230.png'
         }
@@ -40,7 +40,8 @@ export class MembreService {
     }
   }
 
-  recupererMembreById(id:number){
+  recupererMembreById(id: number) {
     return this.membres.find(({ _id }) => _id == id);
   }
+
 }
