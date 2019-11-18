@@ -28,15 +28,7 @@
     <mat-divider></mat-divider>
     <mat-tab-group dynamicHeight mat-stretch-tabs>
         <mat-tab label="Postes">
-            <div class="grid-container">
-                <mat-grid-list cols="2" rowHeight="600px">
-                    <mat-grid-tile *ngFor="let idee of idees; let i =index" [colspan]="2" [rowspan]="1">
-                        <mat-card class="idee-card mat-elevation-z3" tabindex="i">
-                            <app-idea-post [idee]='idee'></app-idea-post>
-                        </mat-card>
-                    </mat-grid-tile>
-                </mat-grid-list>
-            </div>
+            <app-idee-list [ideesList]="idees"></app-idee-list>
         </mat-tab>
         <mat-tab label="Commentaires"> <code>Historique commentaires</code> </mat-tab>
         <mat-tab label="Likes"> <code>(Perso) Historique idées likées</code> </mat-tab>
