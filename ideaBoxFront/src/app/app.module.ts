@@ -34,7 +34,7 @@ import { InputCommentaireComponent } from './components/input-commentaire/input-
 import { BoutonCollaborateurComponent } from './components/bouton-collaborateur/bouton-collaborateur.component';
 import { MatRippleModule } from '@angular/material/core';
 import { ListeCommentairesComponent } from './components/liste-commentaires/liste-commentaires.component';
-import { MatFormFieldModule } from '@angular/material';
+import { MatFormFieldModule, MatTabsModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { VoteComponent } from './components/vote/vote.component';
 import { CommentaireBoutonComponent } from './components/commentaire-bouton/commentaire-bouton.component';
@@ -45,6 +45,7 @@ import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
+import { PageMembreComponent } from './pages/page-membre/page-membre.component';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import { PageCategorieComponent } from './pages/page-categorie/page-categorie.co
     PageAjoutIdeeComponent,
     MenuConnexionComponent,
     ConnexionPopupComponent,
-    PageCategorieComponent
+    PageCategorieComponent,
+    PageMembreComponent
   ],
   imports: [
     BrowserModule,
@@ -102,6 +104,7 @@ import { PageCategorieComponent } from './pages/page-categorie/page-categorie.co
     ScrollingModule,
     MatSelectModule,
     MatRadioModule,
+    MatTabsModule,
     ReactiveFormsModule
   ],
   providers: [CookieService],
