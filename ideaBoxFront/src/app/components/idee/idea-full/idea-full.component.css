@@ -13,3 +13,7 @@ app-pastille-categorie {
     float: right;
 
 }
+
+.subtitle-pseudo {
+    cursor: pointer;
+}
