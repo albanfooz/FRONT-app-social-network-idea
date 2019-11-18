@@ -2,6 +2,7 @@ import { IdeeModel } from '../models/IdeeModel';
 import { Injectable } from '@angular/core';
 import { CategorieService } from './CategorieService';
 import { MembreService } from './MembreService';
+import { CommentaireModel } from '../models/CommentaireModel';
 
 
 @Injectable({ providedIn: 'root' })
@@ -84,8 +85,8 @@ export class IdeeService {
     }
 
     // idee depuis l'historique des commentaires du posteur (IDK, au cas où)
-    recupererIdeeByCommentaire(idCommentaire: number): IdeeModel {
-        return null;
+    recupererIdeeByCommentaire(commentaire: CommentaireModel): IdeeModel {
+        return this.idees.find(({ _id }) => _id == commentaire._idIdee);
     }
 
 }

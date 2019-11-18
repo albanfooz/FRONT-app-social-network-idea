@@ -97,7 +97,7 @@ export class CategorieService {
     }
 
     recupererById(id: number): CategorieModel {
-        return null;
+        return this._pastille.find(({ _id }) => _id == id);
     }
 
 }
