@@ -1,7 +1,8 @@
-import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Component, OnInit, Input, Inject, RootRenderer } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { IDialogData } from '../searchbar/searchbar.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-connexion',
@@ -14,22 +15,17 @@ export class MenuConnexionComponent implements OnInit {
 
   public estConnecte = this.cookie.get('Login');
 
-  constructor(public cookie: CookieService, public dialog: MatDialog) {
+  constructor(public cookie: CookieService, public dialog: MatDialog, public router: Router) {
   }
 
   ngOnInit() {
   }
 
-  createSession() {
-
-    this.cookie.set('Login', 'true');
-    this.estConnecte = this.cookie.get('Login');
-  }
-
   deleteSession() {
 
-    this.cookie.deleteAll();
+    this.cookie.deleteAll('/');
     this.estConnecte = this.cookie.get('Login');
+    window.location.href = '';
   }
 
   openDialog(): void {
@@ -50,6 +46,7 @@ export class ConnexionPopupComponent {
   constructor(
     public dialogRef: MatDialogRef<ConnexionPopupComponent>,
     public cookie: CookieService,
+    public router: Router,
     @Inject(MAT_DIALOG_DATA) public data: IDialogData) { }
 
   onNoClick(): void {
@@ -57,7 +54,7 @@ export class ConnexionPopupComponent {
   }
   createSession() {
 
-    this.cookie.set('Login', 'true');
+    this.cookie.set('Login', 'true', 0, '/');
     this.estConnecte = this.cookie.get('Login');
     this.dialogRef.close();
     window.location.reload();
