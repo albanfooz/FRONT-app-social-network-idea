@@ -1,6 +1,7 @@
 import { IdeeModel } from '../models/IdeeModel';
 import { Injectable } from '@angular/core';
 import { CategorieService } from './CategorieService';
+import { MembreService } from './MembreService';
 
 
 @Injectable({ providedIn: 'root' })
@@ -13,14 +14,14 @@ export class IdeeService {
             _id: 1,
             _titre: 'First Idea',
             _content: 'A content',
-            _originalPosteur: 'alban_fooz_dev',
-            _categorie:  this.categorieService.pastille.find(({ _id }) => _id == 1),
+            _originalPosteur: this.membreService.recupererMembreById(3),
+            _categorie: this.categorieService.pastille.find(({ _id }) => _id == 1),
             _score: 100,
             _image: 'https://picsum.photos/800/400?random=1'
         }
     ];
 
-    constructor(private categorieService: CategorieService) {
+    constructor(private categorieService: CategorieService, private membreService: MembreService) {
         // Bouchon : dev list idee;
         for (let index = 2; index < 12; index++) {
             this._idees.push(
@@ -28,7 +29,7 @@ export class IdeeService {
                     _id: index,
                     _titre: 'Idea Number ' + index,
                     _content: 'A content',
-                    _originalPosteur: 'alban_fooz_dev',
+                    _originalPosteur: this.membreService.recupererMembreById(index),
                     _categorie: this.categorieService.pastille.find(({ _id }) => _id == index),
                     _score: Math.floor((Math.random() * 100) + 1),
                     _image: 'https://picsum.photos/800/400?random=' + index
@@ -39,13 +40,13 @@ export class IdeeService {
         //more data for idees with same categorie
         this.idees.push(
             {
-                _id: this.idees.length+1,
-                _titre: 'Idea Number ' + (this.idees.length+1),
+                _id: this.idees.length + 1,
+                _titre: 'Idea Number ' + (this.idees.length + 1),
                 _content: 'A content',
-                _originalPosteur: 'alban_fooz_dev',
+                _originalPosteur: this.membreService.recupererMembreById(3),
                 _categorie: this.categorieService.pastille.find(({ _id }) => _id == 1),
                 _score: Math.floor((Math.random() * 100) + 1),
-                _image: 'https://picsum.photos/800/400?random=' + (this.idees.length+1)
+                _image: 'https://picsum.photos/800/400?random=' + (this.idees.length + 1)
             }
         )
     }
@@ -79,7 +80,7 @@ export class IdeeService {
     }
 
     recupererIdeeByCategorie(idCategorie: number): Array<IdeeModel> {
-        return this.idees.filter(element => {if (element._categorie._id == idCategorie) { return element };});
+        return this.idees.filter(element => { if (element._categorie._id == idCategorie) { return element }; });
     }
 
     // idee depuis l'historique des commentaires du posteur (IDK, au cas où)
