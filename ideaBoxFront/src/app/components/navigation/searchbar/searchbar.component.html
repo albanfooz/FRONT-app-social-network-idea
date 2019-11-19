@@ -3,14 +3,26 @@
         <button *ngIf="!isOpen" (click)="setFocus()" mat-icon-button>
             <mat-icon>search</mat-icon>
         </button>
-        <button *ngIf="isOpen" (click)="search.value='';isOpen=false" mat-icon-button>
+        <button *ngIf="isOpen" (click)="search.value='';searchinput='';isOpen=false" mat-icon-button>
             <mat-icon>close</mat-icon>
         </button>
         <input #search id="searchfocus" name="search" type="search" placeholder="Rechercher..."
-            class="{{isOpen?'ouvert':'ferme'}}" (blur)="search.value?'':setFocus()" [(ngModel)]="searchinput"
-            (keyup.enter)="openDialog()">
+            class="{{isOpen?'ouvert':'ferme'}}" (blur)="isBlurActive?setFocus():''" [(ngModel)]="searchinput"
+            (keyup.enter)="openDialog()" autocomplete="off">
         <button mat-icon-button *ngIf="isOpen" (click)="openDialog()">
             <mat-icon>search</mat-icon>
         </button>
     </form>
+
+    <mat-nav-list id="resultList" *ngIf="searchinput!=NULL && searchinput!=''" (mouseover)="cancelBlur()"
+        (mouseout)="activeBlur()">
+        <mat-list-item *ngFor="let idea of ideas | filter:searchinput">
+            <a matLine [routerLink]="['/idea/'+idea._id]" (click)="setFocus();searchinput=''">
+                <span class="resultTitle">{{idea._titre}} </span>
+
+                <span class="resultAuthor"> {{idea._originalPosteur}}</span>
+            </a>
+        </mat-list-item>
+    </mat-nav-list>
+
 </div>

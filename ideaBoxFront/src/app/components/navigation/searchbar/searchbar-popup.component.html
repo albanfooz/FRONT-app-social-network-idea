@@ -1,5 +1,11 @@
 <div mat-dialog-content>
     0 résultats trouvés pour "<em>{{data.searchinput}}</em>" :(
+    <ul>
+        <li *ngFor="let idea of ideas">
+            <h3>{{idea.name}}</h3>{{idea.author}}
+        </li>
+    </ul>
+
 </div>
 <div mat-dialog-actions>
     <button mat-flat-button color="primary" (click)="onNoClick()">Ok</button>

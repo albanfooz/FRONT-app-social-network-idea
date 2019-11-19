@@ -1,0 +1,11 @@
+.grid-container {
+    margin: auto;
+
+
+}
+
+.dashboard-card {
+    max-width: 633px;
+    margin: 5px auto 10px auto;
+    min-width: 340px;
+}

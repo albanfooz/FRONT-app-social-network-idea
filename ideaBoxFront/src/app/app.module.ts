@@ -46,6 +46,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
 import { PageMembreComponent } from './pages/page-membre/page-membre.component';
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { IdeeListComponent } from './components/idee/idee-list/idee-list.component';
 
 
 @NgModule({
@@ -79,6 +81,7 @@ import { PageInscriptionComponent } from './pages/page-inscription/page-inscript
     PageMembreComponent,
     ConnexionPopupComponent,
     PageInscriptionComponent
+    IdeeListComponent,
   ],
   imports: [
     BrowserModule,
@@ -106,7 +109,8 @@ import { PageInscriptionComponent } from './pages/page-inscription/page-inscript
     MatSelectModule,
     MatRadioModule,
     MatTabsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
