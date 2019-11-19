@@ -31,12 +31,9 @@
       </div>
       <div class="row">
         <div class="col">
-          <mat-form-field class="full-width" id="textArea">
-            <textarea matInput placeholder="Description/contenu de l'idée" formControlName="_content"></textarea>
-            <mat-error *ngIf="creationIdeeForm.controls['_content'].hasError('required')">
-              Le contenu est <strong>requis</strong>
-            </mat-error>
-          </mat-form-field>
+
+              <ckeditor formControlName="_content" [editor]="Editor"></ckeditor>
+
         </div>
       </div>
 

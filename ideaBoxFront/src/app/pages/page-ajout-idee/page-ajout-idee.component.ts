@@ -3,7 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { IdeeModel } from 'src/app/models/IdeeModel';
 import { IdeeService } from 'src/app/services/IdeeService';
 import { Route, Router } from '@angular/router';
-import { CategorieModel } from 'src/app/models/CategorieModel';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-inline';
 
 @Component({
   selector: 'app-page-ajout-idee',
@@ -17,6 +17,8 @@ export class PageAjoutIdeeComponent {
     _image: null,
     _content: [null, Validators.required]
   });
+  //RichTextEditor
+  Editor = ClassicEditor;
 
   hasUnitNumber = false;
   private idee: IdeeModel;
