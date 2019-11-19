@@ -48,6 +48,7 @@ import { PageMembreComponent } from './pages/page-membre/page-membre.component';
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { IdeeListComponent } from './components/idee/idee-list/idee-list.component';
+import { HtmlContentComponent } from './components/html-content/html-content.component';
 
 
 @NgModule({
@@ -80,8 +81,9 @@ import { IdeeListComponent } from './components/idee/idee-list/idee-list.compone
     PageCategorieComponent,
     PageMembreComponent,
     ConnexionPopupComponent,
-    PageInscriptionComponent
+    PageInscriptionComponent,
     IdeeListComponent,
+    HtmlContentComponent,
   ],
   imports: [
     BrowserModule,
