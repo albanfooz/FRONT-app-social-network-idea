@@ -48,6 +48,7 @@ import { PopupInscriptionComponent } from './components/popup-inscription/popup-
 import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
 import { PageMembreComponent } from './pages/page-membre/page-membre.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 @NgModule({
@@ -110,7 +111,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MatRadioModule,
     MatTabsModule,
     ReactiveFormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    InfiniteScrollModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],

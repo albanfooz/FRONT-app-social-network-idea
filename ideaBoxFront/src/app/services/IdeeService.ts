@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { CategorieService } from './CategorieService';
 import { MembreService } from './MembreService';
 import { CommentaireModel } from '../models/CommentaireModel';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
 
 
 @Injectable({ providedIn: 'root' })
@@ -16,40 +18,40 @@ export class IdeeService {
             _titre: 'First Idea',
             _content: 'A content',
             _originalPosteur: this.membreService.recupererMembreById(3),
-            _categorie: this.categorieService.pastille.find(({ _id }) => _id == 1),
+            _categorie: this.categorieService.pastille.find(({ _id }) => _id === 1),
             _score: 100,
             _image: 'https://picsum.photos/800/400?random=1'
         }
     ];
 
-    constructor(private categorieService: CategorieService, private membreService: MembreService) {
+    constructor(private categorieService: CategorieService, private membreService: MembreService, private http: HttpClient) {
         // Bouchon : dev list idee;
-        for (let index = 2; index < 12; index++) {
+        for (let index = 2; index < 15; index++) {
             this._idees.push(
                 {
                     _id: index,
                     _titre: 'Idea Number ' + index,
                     _content: 'A content',
                     _originalPosteur: this.membreService.recupererMembreById(index),
-                    _categorie: this.categorieService.pastille.find(({ _id }) => _id == index),
+                    _categorie: this.categorieService.pastille.find(({ _id }) => _id === index),
                     _score: Math.floor((Math.random() * 100) + 1),
                     _image: 'https://picsum.photos/800/400?random=' + index
                 }
 
             );
         }
-        //more data for idees with same categorie
+        // more data for idees with same categorie
         this.idees.push(
             {
                 _id: this.idees.length + 1,
                 _titre: 'Idea Number ' + (this.idees.length + 1),
                 _content: 'A content',
                 _originalPosteur: this.membreService.recupererMembreById(3),
-                _categorie: this.categorieService.pastille.find(({ _id }) => _id == 1),
+                _categorie: this.categorieService.pastille.find(({ _id }) => _id === 1),
                 _score: Math.floor((Math.random() * 100) + 1),
                 _image: 'https://picsum.photos/800/400?random=' + (this.idees.length + 1)
             }
-        )
+        );
     }
 
     public get idees(): Array<IdeeModel> {
@@ -73,20 +75,20 @@ export class IdeeService {
     }
 
     recupererById(id: number): IdeeModel {
-        return this.idees.find(({ _id }) => _id == id);
+        return this.idees.find(({ _id }) => _id === id);
     }
 
     recupererIdeesByPosteur(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur
-        return this.idees.filter(element => { if (element._originalPosteur._id == idPosteur) { return element; } });
+        return this.idees.filter(element => { if (element._originalPosteur._id === idPosteur) { return element; } });
     }
 
     recupererIdeesByCategorie(idCategorie: number): Array<IdeeModel> {
-        return this.idees.filter(element => { if (element._categorie._id == idCategorie) { return element; } });
+        return this.idees.filter(element => { if (element._categorie._id === idCategorie) { return element; } });
     }
 
     // idee depuis l'historique des commentaires du posteur (IDK, au cas où)
     recupererIdeeByCommentaire(commentaire: CommentaireModel): IdeeModel {
-        return this.idees.find(({ _id }) => _id == commentaire._idIdee);
+        return this.idees.find(({ _id }) => _id === commentaire._idIdee);
     }
-
 }
+

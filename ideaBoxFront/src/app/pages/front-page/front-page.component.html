@@ -1,4 +1,4 @@
-<div class="grid-container">
+<!--<div class="grid-container">
   <mat-grid-list cols="2" rowHeight="600px">
     <mat-grid-tile *ngFor="let idee of ideeService.idees; let i =index" [colspan]="2" [rowspan]="1">
       <mat-card class="dashboard-card" tabindex="i">
@@ -6,4 +6,14 @@
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
+</div>-->
+
+<div style="max-height: 500px; overflow: scroll;" infiniteScroll (scrolled)="onScrollDown()"
+  [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="scrollThrottle" [scrollWindow]="false">
+  <div *ngFor="let idee of listIdees">
+    <div>
+      <h4>{{idee._titre}}</h4> by {{idee._originalPosteur._pseudo}}
+    </div>
+    <img [src]="idee._image" alt="ckc">
+  </div>
 </div>
