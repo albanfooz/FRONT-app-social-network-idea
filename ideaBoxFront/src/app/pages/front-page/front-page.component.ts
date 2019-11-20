@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 import { IdeeService } from 'src/app/services/IdeeService';
 import { IdeeModel } from 'src/app/models/IdeeModel';
 
@@ -9,8 +9,8 @@ import { IdeeModel } from 'src/app/models/IdeeModel';
 })
 export class FrontPageComponent {
 
-  scrollDistance = 2;
-  scrollThrottle = 50;
+  scrollDistance = 1;
+  scrollThrottle = 150;
 
   private nbrIdees = 5;
   private displayedIdees = 1;
