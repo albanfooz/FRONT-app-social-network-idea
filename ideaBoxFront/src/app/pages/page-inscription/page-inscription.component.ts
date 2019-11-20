@@ -11,15 +11,17 @@ import { InscriptionService } from 'src/app/services/InscriptionServices';
 })
 export class PageInscriptionComponent implements OnInit {
   creationInscriptionForm = this.fb.group({
-    _nom: [null, Validators.required],
-    _prenom: [null, Validators.required],
+    _nom: [null],
+    _prenom: [null],
     _mail: [null, Validators.required],
     _pseudo: [null, Validators.required],
     _motDePasse: [null, Validators.required]
   });
 
   hasUnitNumber = false;
+
   private inscription: ProfilModel;
+
   constructor(private fb: FormBuilder, private InscriptionService: InscriptionService, private router: Router) { }
 
 

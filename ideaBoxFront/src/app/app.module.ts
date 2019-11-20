@@ -80,7 +80,7 @@ import { IdeeListComponent } from './components/idee/idee-list/idee-list.compone
     PageCategorieComponent,
     PageMembreComponent,
     ConnexionPopupComponent,
-    PageInscriptionComponent
+    PageInscriptionComponent,
     IdeeListComponent,
   ],
   imports: [
