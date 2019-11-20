@@ -2,6 +2,11 @@
 
   background-color: #FFFFFF;
 }
+button.mat-list-item {
+
+  border:none;
+}
+
 .mat-button.active {
 
   background-color: #303e8d;
@@ -25,4 +30,9 @@
   width:40px;
   border-radius: 20px;
   margin-left:10px;
+}
+button.mat-list-item #pp {
+
+  margin-left:0px;
+  margin-right:10px;
 }
