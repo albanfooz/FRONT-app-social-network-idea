@@ -78,20 +78,20 @@ export class IdeeService {
     }
 
     recupererById(id: number): IdeeModel {
-        return this.idees.find(({ _id }) => _id === id);
+        return this.idees.find(({ _id }) => _id == id);
     }
 
     recupererIdeesByPosteur(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur
-        return this.idees.filter(element => { if (element._originalPosteur._id === idPosteur) { return element; } });
+        return this.idees.filter(element => { if (element._originalPosteur._id == idPosteur) { return element; } });
     }
 
     recupererIdeesByCategorie(idCategorie: number): Array<IdeeModel> {
-        return this.idees.filter(element => { if (element._categorie._id === idCategorie) { return element; } });
+        return this.idees.filter(element => { if (element._categorie._id == idCategorie) { return element; } });
     }
 
     // idee depuis l'historique des commentaires du posteur (IDK, au cas où)
     recupererIdeeByCommentaire(commentaire: CommentaireModel): IdeeModel {
-        return this.idees.find(({ _id }) => _id === commentaire._idIdee);
+        return this.idees.find(({ _id }) => _id == commentaire._idIdee);
     }
 }
 
