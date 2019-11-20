@@ -49,7 +49,7 @@ export class IdeeService {
                 _score: Math.floor((Math.random() * 100) + 1),
                 _image: 'https://picsum.photos/800/400?random=' + (this.idees.length + 1)
             }
-        )
+        );
     }
 
     public get idees(): Array<IdeeModel> {
@@ -60,6 +60,8 @@ export class IdeeService {
     ajouter(idee: IdeeModel) {
         idee._id = this.idees.length + 1;
         this._idees.push(idee);
+
+
 
     }
 

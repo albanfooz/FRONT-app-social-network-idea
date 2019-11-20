@@ -20,13 +20,7 @@
 </mat-card-header>
 <img mat-card-image [src]="idee._image" [routerLink]="['/idea', idee._id]" routerLinkActive="router-link-active" />
 <mat-card-content [routerLink]="['/idea', idee._id]" routerLinkActive="router-link-active">
-    {{idee._content}}
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque dictum risus in vehicula.
-    Aenean congue, massa a suscipit consequat, metus massa mattis sapien, at elementum metus ante a ante. Morbi
-    id
-    neque ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vel diam sitis pulvinar,
-    cursus id nunc. Maecenas consectetur libero ut nibh luctus, vel finibus odio consectetur.
-    azeaze
+    <div [innerHtml]="idee._content"></div>
 </mat-card-content>
 <mat-card-actions>
     <app-bar-icons-idee [openComment]='openComment'></app-bar-icons-idee>

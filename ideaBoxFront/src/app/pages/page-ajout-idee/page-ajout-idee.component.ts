@@ -4,6 +4,8 @@ import { IdeeModel } from 'src/app/models/IdeeModel';
 import { IdeeService } from 'src/app/services/IdeeService';
 import { Route, Router } from '@angular/router';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { CategorieService } from 'src/app/services/CategorieService';
+import { MembreService } from 'src/app/services/MembreService';
 
 @Component({
   selector: 'app-page-ajout-idee',
@@ -21,18 +23,22 @@ export class PageAjoutIdeeComponent {
   Editor = ClassicEditor;
 
 
-hasUnitNumber = false;
+  hasUnitNumber = false;
   private idee: IdeeModel;
-constructor(private fb: FormBuilder, private iService: IdeeService, private router: Router) { }
+  constructor(private fb: FormBuilder, private iService: IdeeService, private router: Router, private categorieService: CategorieService, private membreService: MembreService) { }
 
-onSubmit() {
-  let tempIdee: IdeeModel = this.creationIdeeForm.value;
-  //transform string en catégorie
-  const tempCat: string = this.creationIdeeForm.value._categorie;
-  tempIdee._categorie = { _categorie: tempCat, _icone: tempCat };
-  //console.log(tempIdee);
+  onSubmit() {
+    let tempIdee: IdeeModel = this.creationIdeeForm.value;
+    //transform string en catégorie
+    const tempCat: string = this.creationIdeeForm.value._categorie;
+    const tempCatId: number = (this.categorieService.pastille.length + 1);
+    this.categorieService.ajouter({ _id: tempCatId, _categorie: tempCat, _icone: tempCat });
+    tempIdee._categorie = this.categorieService.recupererById(tempCatId);
 
-  this.iService.ajouter(tempIdee);
-  this.router.navigateByUrl('');
-}
+    //posteur alban_fooz_dev par defaut
+    tempIdee._originalPosteur = this.membreService.recupererMembreById(3);
+
+    this.iService.ajouter(tempIdee);
+    this.router.navigateByUrl('');
+  }
 }
