@@ -10,17 +10,21 @@ import { InscriptionService } from 'src/app/services/InscriptionServices';
   styleUrls: ['./page-inscription.component.css']
 })
 export class PageInscriptionComponent implements OnInit {
-  creationInscriptionForm = this.fb.group({
-    _nom: [null, Validators.required],
-    _prenom: [null, Validators.required],
-    _mail: [null, Validators.required],
-    _pseudo: [null, Validators.required],
-    _motDePasse: [null, Validators.required]
-  });
-
+  creationInscriptionForm: FormGroup;
   hasUnitNumber = false;
+
   private inscription: ProfilModel;
   constructor(private fb: FormBuilder, private inscriptionService: InscriptionService, private router: Router) { }
+
+  constructor(private fb: FormBuilder, private InscriptionService: InscriptionService, private router: Router) {
+    this.creationInscriptionForm = this.fb.group({
+      _nom: [null],
+      _prenom: [null],
+      _mail: [null, Validators.required],
+      _pseudo: [null, Validators.required],
+      _motDePasse: [null, Validators.required]
+    });
+  }
 
 
   ngOnInit() {

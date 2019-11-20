@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommentaireModel } from 'src/app/models/CommentaireModel';
+import { CommentaireService } from 'src/app/services/CommentaireService';
 
 @Component({
   selector: 'app-commentaire',
@@ -7,26 +8,18 @@ import { CommentaireModel } from 'src/app/models/CommentaireModel';
   styleUrls: ['./commentaire.component.css']
 })
 export class CommentaireComponent implements OnInit {
-  comment: boolean = false;
-  coments = [
-    { photoMembre: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", membre: "nom membre", contenu: "commentaire du membre" },
-    { photoMembre: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", membre: "nom membre", contenu: "commentaire du membre" },
-    { photoMembre: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", membre: "nom membre", contenu: "commentaire du membre" },
-    { photoMembre: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png", membre: "nom membre", contenu: "commentaire du membre" }
-  ];
+  isCommentable: boolean = false;
+
   openComment: Function;
   commentaire: CommentaireModel;
   commentaires: Array<CommentaireModel>;
-  constructor() { }
+  constructor(private commentService: CommentaireService) { }
 
   ngOnInit() {
-    this.openComment = this.open.bind(this)
+    this.openComment = this.open.bind(this);
   }
 
   open() {
-    this.comment = !this.comment
+    this.isCommentable = !this.isCommentable;
   }
-
-
-
 }
