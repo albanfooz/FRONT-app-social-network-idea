@@ -49,6 +49,7 @@ import { PageInscriptionComponent } from './pages/page-inscription/page-inscript
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { IdeeListComponent } from './components/idee/idee-list/idee-list.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 @NgModule({
@@ -111,8 +112,9 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     MatRadioModule,
     MatTabsModule,
     ReactiveFormsModule,
-    Ng2SearchPipeModule,
     CKEditorModule,
+    InfiniteScrollModule,
+    Ng2SearchPipeModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
