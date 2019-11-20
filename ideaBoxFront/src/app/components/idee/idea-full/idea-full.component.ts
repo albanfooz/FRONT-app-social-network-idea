@@ -11,6 +11,8 @@ export class IdeaFullComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.idee);
+
   }
 
 }
