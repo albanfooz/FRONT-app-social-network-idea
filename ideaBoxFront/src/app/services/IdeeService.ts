@@ -19,7 +19,7 @@ export class IdeeService {
             _content: this.contentBouchon,
             _originalPosteur: this.membreService.recupererMembreById(3),
             _categorie: this.categorieService.pastille.find(({ _id }) => _id === 1),
-            _score: 100,
+            _score: 321,
             _image: 'https://picsum.photos/800/400?random=1'
         }
     ];

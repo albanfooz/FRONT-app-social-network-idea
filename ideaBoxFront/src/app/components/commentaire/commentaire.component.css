@@ -1,20 +1,28 @@
-img{
+/*img{
     top: 40px;
     left: 0px;
     width: 3%;
     height: auto;
     padding-right: 5px;
     vertical-align:middle;
-}
+}*/
 .more-button {
     position: absolute;
     top: 0px;
     right: 0px;
 }
-app-bar-icons-idee{
+
+app-bar-icons-idee {
     bottom: 0px;
-    left: 5px; 
+    left: 5px;
 }
-mat-card-content{
+
+mat-card-content {
     padding: 10px;
-    }
+}
+
+.commentaire-card {
+    max-width: 1000px;
+    margin: 5px auto 10px auto;
+    min-width: 340px;
+}

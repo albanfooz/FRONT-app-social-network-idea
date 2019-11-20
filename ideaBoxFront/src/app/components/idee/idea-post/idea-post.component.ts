@@ -16,7 +16,7 @@ export class IdeaPostComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.openComment = this.openComm.bind(this.idee);
+    this.openComment = this.openComm.bind(this);
   }
   public openComm() {
     this.router.navigateByUrl('idea/' + this.idee._id);
