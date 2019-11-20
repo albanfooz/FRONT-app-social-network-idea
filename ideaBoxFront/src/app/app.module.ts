@@ -19,7 +19,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { IdeaPostComponent } from './components/idee/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
-import { PageInscriptionComponent } from './template/page-inscription/page-inscription.component';
 import { MatInputModule } from '@angular/material/input';
 import { SearchbarComponent, SearchbarPopupComponent } from './components/navigation/searchbar/searchbar.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
@@ -44,10 +43,12 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
-import { PopupInscriptionComponent } from './components/popup-inscription/popup-inscription.component';
 import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
 import { PageMembreComponent } from './pages/page-membre/page-membre.component';
+import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { IdeeListComponent } from './components/idee/idee-list/idee-list.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
@@ -55,7 +56,6 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   declarations: [
     AppComponent,
     NavComponent,
-    PageInscriptionComponent,
     PastilleCategorieComponent,
     FrontPageComponent,
     BarIconsIdeeComponent,
@@ -78,11 +78,12 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     CommentaireBoutonComponent,
     PageAjoutIdeeComponent,
     MenuConnexionComponent,
-    PopupInscriptionComponent,
     MenuConnexionComponent,
     PageCategorieComponent,
     PageMembreComponent,
     ConnexionPopupComponent,
+    PageInscriptionComponent,
+    IdeeListComponent,
   ],
   imports: [
     BrowserModule,
@@ -111,8 +112,9 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     MatRadioModule,
     MatTabsModule,
     ReactiveFormsModule,
-    Ng2SearchPipeModule,
+    CKEditorModule,
     InfiniteScrollModule,
+    Ng2SearchPipeModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],

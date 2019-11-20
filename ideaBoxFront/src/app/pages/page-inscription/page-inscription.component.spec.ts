@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PopupInscriptionComponent } from './popup-inscription.component';
+import { PageInscriptionComponent } from './page-inscription.component';
 
-describe('PopupInscriptionComponent', () => {
-  let component: PopupInscriptionComponent;
-  let fixture: ComponentFixture<PopupInscriptionComponent>;
+describe('PageInscriptionComponent', () => {
+  let component: PageInscriptionComponent;
+  let fixture: ComponentFixture<PageInscriptionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PopupInscriptionComponent ]
+      declarations: [ PageInscriptionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PopupInscriptionComponent);
+    fixture = TestBed.createComponent(PageInscriptionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
