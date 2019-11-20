@@ -88,7 +88,8 @@ export class CategorieService {
         return this._pastille;
     }
 
-    ajouter(pastille: CategorieModel) {
+    ajouter(categorie: CategorieModel) {
+        this._pastille.push(categorie);
 
     }
 
