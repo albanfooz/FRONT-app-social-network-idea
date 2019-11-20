@@ -9,7 +9,6 @@ import { IdeeModel } from 'src/app/models/IdeeModel';
 export class IdeaFullComponent implements OnInit {
   @Input() idee: IdeeModel;
   constructor() { }
-  Test = '<h2 class="mat-h2">TEST<h2>';
 
   ngOnInit() {
   }
