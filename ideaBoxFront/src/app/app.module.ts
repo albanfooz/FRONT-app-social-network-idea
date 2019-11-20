@@ -48,6 +48,7 @@ import { PageMembreComponent } from './pages/page-membre/page-membre.component';
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { IdeeListComponent } from './components/idee/idee-list/idee-list.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 
 @NgModule({
@@ -80,7 +81,7 @@ import { IdeeListComponent } from './components/idee/idee-list/idee-list.compone
     PageCategorieComponent,
     PageMembreComponent,
     ConnexionPopupComponent,
-    PageInscriptionComponent
+    PageInscriptionComponent,
     IdeeListComponent,
   ],
   imports: [
@@ -110,7 +111,8 @@ import { IdeeListComponent } from './components/idee/idee-list/idee-list.compone
     MatRadioModule,
     MatTabsModule,
     ReactiveFormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    CKEditorModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
