@@ -2,7 +2,7 @@
     <mat-icon class="{{social.vote ? 'material-icons' : 'material-icons-outlined'}}">thumb_up</mat-icon>
 </button>
 <!--appel de la variable de conteur de vote-->
-<span class="compteurVote">35.5k</span>
+<span class="compteurVote">{{score}}</span>
 <button class="downVote" mat-icon-button aria-label="icon-button downvote" (click)="dislike()">
     <mat-icon class="{{social.vote===false ? 'material-icons' : 'material-icons-outlined'}}">thumb_down</mat-icon>
 </button>
