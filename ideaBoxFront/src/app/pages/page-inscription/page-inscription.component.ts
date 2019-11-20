@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProfilModel } from 'src/app/models/ProfilModel';
 import { InscriptionService } from 'src/app/services/InscriptionServices';
@@ -14,9 +14,8 @@ export class PageInscriptionComponent implements OnInit {
   hasUnitNumber = false;
 
   private inscription: ProfilModel;
-  constructor(private fb: FormBuilder, private inscriptionService: InscriptionService, private router: Router) { }
 
-  constructor(private fb: FormBuilder, private InscriptionService: InscriptionService, private router: Router) {
+  constructor(private fb: FormBuilder, private inscriptionService: InscriptionService, private router: Router) {
     this.creationInscriptionForm = this.fb.group({
       _nom: [null],
       _prenom: [null],
