@@ -23,6 +23,6 @@
     <div [innerHtml]="idee._content.substring(0,512)"></div>
 </mat-card-content>
 <mat-card-actions>
-    <app-bar-icons-idee [openComment]='openComment'></app-bar-icons-idee>
+    <app-bar-icons-idee [score]="idee._score" [openComment]='openComment'></app-bar-icons-idee>
     <app-bouton-collaborateur></app-bouton-collaborateur>
 </mat-card-actions>

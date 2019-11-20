@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { VoteService } from 'src/app/services/VoteService';
 
 @Component({
@@ -10,6 +10,8 @@ export class VoteComponent implements OnInit {
   social: Social = {
     vote: null,
   };
+
+  @Input() score: number;
 
   constructor(private voteService: VoteService) { }
 
