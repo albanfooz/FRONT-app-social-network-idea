@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { IdeeService } from 'src/app/services/IdeeService';
 
 @Component({
@@ -7,6 +7,9 @@ import { IdeeService } from 'src/app/services/IdeeService';
   styleUrls: ['./front-page.component.css']
 })
 export class FrontPageComponent {
+
   constructor(private ideeService: IdeeService) {
+
   }
+
 }

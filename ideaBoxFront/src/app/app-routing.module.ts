@@ -12,14 +12,14 @@ import { PageAjoutIdeeComponent } from './pages/page-ajout-idee/page-ajout-idee.
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
 import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
 import { PageMembreComponent } from './pages/page-membre/page-membre.component';
-import { PopupInscriptionComponent } from './components/popup-inscription/popup-inscription.component';
+import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 
 const routes: Routes = [
   { path: '', component: FrontPageComponent },
   { path: 'collaborateur', component: CollaborateurComponent },
   { path: 'popup-list-collaborateurs', component: PopupListCollaborateursComponent },
   { path: 'pastille-categorie', component: PastilleCategorieComponent },
-  { path: 'inscription', component: PopupInscriptionComponent },
+  { path: 'inscription', component: PageInscriptionComponent },
   { path: 'idea/:ideaId', component: PageIdeaComponent },
   { path: 'categorie/:categorieId', component: PageCategorieComponent },
   { path: 'profil/:membreId', component: PageMembreComponent },
