@@ -24,7 +24,7 @@ export class MembreService {
     {
       _id: 4,
       _pseudo: 'luc_dev',
-      _profilePic: 'https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-1/p100x100/11954818_168148033518696_8945614144384326149_n.jpg?_nc_cat=110&_nc_oc=AQm-6yqfIlyxgimTdBmOgaj0oDJ_viOqi0_-01INWi4qU2iRttt8WcABIOgakXePK5U&_nc_ht=scontent-cdg2-1.xx&oh=6b87eb04ad252d77314ffd83c845c15f&oe=5E8A1CE7'
+      _profilePic: 'https://toppng.com/public/uploads/preview/anther-clipart-perry-black-panther-11562894629dczjoe2rmr.png'
     }
   ];
   membres: Array<MembreModel> = this.devs;
