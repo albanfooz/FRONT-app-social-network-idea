@@ -15,9 +15,10 @@ export class CommentaireService {
     }
 
     creation(data: CommentaireModel) {
-        console.log('creation faite');
-        console.log(data);
+        //console.log('creation faite');
+        //console.log(data);
         /* const obs = this.http.post(this.URL, data);
          obs.subscribe((reponse) => { console.log(reponse); });*/
+
     }
 }

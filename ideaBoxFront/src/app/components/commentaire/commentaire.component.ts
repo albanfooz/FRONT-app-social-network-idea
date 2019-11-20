@@ -20,11 +20,11 @@ export class CommentaireComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.openComment = this.open.bind(this)
+    this.openComment = this.open.bind(this);
   }
 
   open() {
-    this.comment = !this.comment
+    this.comment = !this.comment;
   }
 
 
