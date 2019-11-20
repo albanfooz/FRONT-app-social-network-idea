@@ -9,7 +9,11 @@ import { CommentaireModel } from 'src/app/models/CommentaireModel';
   styleUrls: ['./bar-icons-idee.component.css']
 })
 export class BarIconsIdeeComponent implements OnInit {
+
+  @Input() score: number;
+
   @Input() openComment: Function;
+
   constructor() { }
 
   ngOnInit() {
