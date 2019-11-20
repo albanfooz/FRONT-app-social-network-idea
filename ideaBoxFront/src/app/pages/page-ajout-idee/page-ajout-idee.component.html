@@ -31,12 +31,15 @@
       </div>
       <div class="row">
         <div class="col ">
-          <ckeditor class="ckeditor-idee" formControlName="_content" [editor]="Editor" [config]="{
+          <ckeditor class="ckeditor-idee" formControlName="_content" [editor]="Editor" (keyup)="onUpdate($event)"
+            [config]="{
               toolbar: ['heading','|', 'bold', 'italic','link', 'bulletedList', 'numberedList','|',  'blockQuote','MediaEmbed','undo','redo' ],
              placeholder: 'Taper une description ici ...'
+             
              }"></ckeditor>
         </div>
       </div>
+      <p>Nombre de Caracteres : {{lengthOfContent}}</p>
       <p>Seul les 512 premiers carateres seront affichés (Warning : (to improve) y compris les balises HTML)</p>
 
     </mat-card-content>

@@ -17,14 +17,13 @@ export class PageAjoutIdeeComponent {
     _titre: [null, Validators.required],
     _categorie: [null, Validators.required],
     _image: null,
-    _content: [null, Validators.required]
+    _content: ['', Validators.required]
   });
   //RichTextEditor
   Editor = ClassicEditor;
-
+  lengthOfContent = 0;
 
   hasUnitNumber = false;
-  private idee: IdeeModel;
   constructor(private fb: FormBuilder, private iService: IdeeService, private router: Router, private categorieService: CategorieService, private membreService: MembreService) { }
 
   onSubmit() {
@@ -40,5 +39,9 @@ export class PageAjoutIdeeComponent {
 
     this.iService.ajouter(tempIdee);
     this.router.navigateByUrl('');
+  }
+
+  onUpdate() {
+    this.lengthOfContent = this.creationIdeeForm.value._content.length;
   }
 }
