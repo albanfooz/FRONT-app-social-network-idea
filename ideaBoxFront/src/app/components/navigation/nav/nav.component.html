@@ -9,8 +9,11 @@
       </a>
       <div fxShow="true" fxHide.lt-md>
         <a mat-button *ngFor="let link of links" [routerLink]="[link.url]" routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }">{{link.name}}<mat-icon class="material-icons-outlined">
-            {{link.icon}}</mat-icon></a>
+          [routerLinkActiveOptions]="{ exact: true }">{{link.name}}
+          <mat-icon class="material-icons">
+            {{link.icon}}
+          </mat-icon>
+        </a>
       </div>
 
       <app-searchbar></app-searchbar>
