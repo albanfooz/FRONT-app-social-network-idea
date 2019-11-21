@@ -1,0 +1,73 @@
+/*
+* Retire les fonctions intégrées aux inputs par les navigateurs
+* (i.e. la croix "cancel" de Chrome)
+*/
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+.direction {
+
+  float:left;
+}
+
+::placeholder {
+
+  color:lightblue;
+}
+
+#search input {
+
+  transition: width 0.5s, visibility 0.4s;
+  background-color:transparent;
+  color:white;
+  border:none;
+  border-bottom: solid 2px rgb(225, 225, 225);
+  font-weight: bold;
+  font-size:15px;
+}
+
+#search input.ferme {
+
+  visibility: hidden;
+  width:0px;
+}
+
+#search input.ouvert {
+
+  visibility: visible;
+  width:250px;
+}
+
+#search input:focus {
+
+  visibility: visible;
+  width:250px;
+  outline: none;
+}
+
+#resultList {
+
+  background-color: white;
+  position:absolute;
+  top:50px;
+  margin-left:25px;
+  width:275px;
+  color:black;
+  padding:0;
+}
+
+.resultTitle {
+
+  font-weight: 500;
+  font-size:16px;
+}
+.resultAuthor {
+
+  color:grey;
+  font-style: italic;
+}

@@ -1,0 +1,6 @@
+<mat-chip-list aria-label="Pastille de Categorie">
+    <mat-chip [routerLink]="['/categorie', categorie._id]" routerLinkActive="router-link-active">
+        <mat-icon>{{categorie._icone}}</mat-icon> {{categorie._categorie}}
+    </mat-chip>
+
+</mat-chip-list>

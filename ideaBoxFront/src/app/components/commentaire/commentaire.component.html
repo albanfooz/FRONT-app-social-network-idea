@@ -1,0 +1,20 @@
+<mat-card *ngFor="let comment of commentService._comments" class="commentaire-card">
+
+    <mat-card-header>
+        <img mat-card-avatar [src]="comment._membre._profilePic" />
+        <h3 class="mat-h3">{{comment._membre._pseudo}}</h3>
+        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item>Modifier</button>
+            <button mat-menu-item>Supprimer</button>
+        </mat-menu>
+    </mat-card-header>
+
+    <mat-card-content>
+        {{comment._texteCommentaire}}</mat-card-content>
+    <app-bar-icons-idee [openComment]="openComment" [score]='comment._score'></app-bar-icons-idee>
+    <app-input-commentaire *ngIf="isCommentable"></app-input-commentaire>
+
+</mat-card>

@@ -1,0 +1,25 @@
+img {
+  top: 40px;
+  left: 0px;
+  width: 3%;
+  height: auto;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.inputCom {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputCom>* {
+  width: 100%;
+}
+
+
+
+.input-card {
+  max-width: 1000px;
+  margin: 5px auto 10px auto;
+  min-width: 340px;
+}

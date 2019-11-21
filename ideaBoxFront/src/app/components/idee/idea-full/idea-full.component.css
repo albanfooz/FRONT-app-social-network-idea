@@ -1,0 +1,19 @@
+mat-card-title {
+    width: max-content;
+}
+
+
+
+.more-button {
+    float: right;
+}
+
+
+app-pastille-categorie {
+    float: right;
+
+}
+
+.subtitle-pseudo {
+    cursor: pointer;
+}

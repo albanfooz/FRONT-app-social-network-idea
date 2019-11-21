@@ -1,0 +1,34 @@
+mat-card-header {
+    width: 100%;
+}
+
+mat-card-title {
+    cursor: pointer;
+}
+
+mat-card-actions {
+    float: bottom;
+}
+
+img {
+    cursor: pointer;
+}
+
+mat-card-content {
+    cursor: pointer;
+}
+
+
+.more-button {
+    float: right;
+}
+
+
+app-pastille-categorie {
+    float: right;
+
+}
+
+.subtitle-pseudo {
+    cursor: pointer;
+}

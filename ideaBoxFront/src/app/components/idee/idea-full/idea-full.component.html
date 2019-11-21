@@ -1,0 +1,26 @@
+<mat-card-header>
+    <mat-card-title>{{idee._titre}}</mat-card-title>
+    <mat-card-subtitle class="subtitle-pseudo" [routerLink]="['/profil', idee._originalPosteur._id]"
+        routerLinkActive="router-link-active">
+        {{idee._originalPosteur._pseudo}}</mat-card-subtitle>
+    <div fxFlex>
+        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item>Expand</button>
+            <button mat-menu-item>Masquer</button>
+        </mat-menu>
+        <app-pastille-categorie [categorie]="idee._categorie"></app-pastille-categorie>
+
+    </div>
+</mat-card-header>
+<img mat-card-image [src]="idee._image" />
+
+<mat-card-content>
+    <div [innerHtml]="idee._content"></div>
+
+</mat-card-content>
+<mat-card-actions>
+    <app-bar-icons-idee [openComment]='openComment' [score]="idee._score"></app-bar-icons-idee>
+</mat-card-actions>

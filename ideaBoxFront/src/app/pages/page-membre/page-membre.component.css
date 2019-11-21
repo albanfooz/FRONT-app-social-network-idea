@@ -1,0 +1,33 @@
+img {
+    height: 70px;
+    width: 70px;
+}
+
+mat-card {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+.profil-desc {
+    padding-top: 25px;
+}
+
+.profil-actions {
+    padding-top: 25px;
+}
+
+
+.grid-container {
+    margin: auto;
+    max-width: 633px;
+}
+
+.idee-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
