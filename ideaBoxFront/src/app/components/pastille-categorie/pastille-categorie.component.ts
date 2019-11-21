@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CategorieModel } from 'src/app/models/CategorieModel';
+
 
 
 @Component({
@@ -6,32 +8,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pastille-categorie.component.html',
   styleUrls: ['./pastille-categorie.component.css']
 })
+
+
+
 export class PastilleCategorieComponent implements OnInit {
-  nomPastilleCategorieEntreprenariat:String;
+  @Input() categorie: CategorieModel;
 
-  /*
-  nomPastilleCategorieTechnologie:String;
-  nomPastilleCategorieEtudeFormation : String;
-  nomPastilleCategorieJeux : String;
-  nomPastilleCategorieEntreAide: String;
-  nomPastilleCategorieNature : String;
-  nomPastilleCategorieEcologie : String;
-  nomPastilleCategorie : String;
-  */
 
-  constructor() {
-    this.nomPastilleCategorieEntreprenariat = 'Entreprenariat';
+  constructor() { }
 
-    /*
-    this.nomPastilleCategorieTechnologie = '  Technologie';
-    this.nomPastilleCategorieEtudeFormation = '  Etude/Formation';
-    this.nomPastilleCategorieJeux = '  Jeux';
-    this.nomPastilleCategorieEntreAide = '  Entre-Aide';
-    this.nomPastilleCategorieNature = '  Nature';
-    this.nomPastilleCategorieEcologie = '  Ecologie'; */
-  }
 
-  ngOnInit() {}
+
+  ngOnInit() {
 
   }
+}
 

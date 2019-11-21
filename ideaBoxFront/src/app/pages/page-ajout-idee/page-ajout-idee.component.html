@@ -30,15 +30,17 @@
         </div>
       </div>
       <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width" id="textArea">
-            <textarea matInput placeholder="Description/contenu de l'idée" formControlName="_content"></textarea>
-            <mat-error *ngIf="creationIdeeForm.controls['_content'].hasError('required')">
-              Le contenu est <strong>requis</strong>
-            </mat-error>
-          </mat-form-field>
+        <div class="col ">
+          <ckeditor class="ckeditor-idee" formControlName="_content" [editor]="Editor" (keyup)="onUpdate($event)"
+            [config]="{
+              toolbar: ['heading','|', 'bold', 'italic','link', 'bulletedList', 'numberedList','|',  'blockQuote','MediaEmbed','undo','redo' ],
+             placeholder: 'Taper une description ici ...'
+             
+             }"></ckeditor>
         </div>
       </div>
+      <p>Nombre de Caracteres : {{lengthOfContent}}</p>
+      <p>Seul les 512 premiers carateres seront affichés dans l'aperçu.</p>
 
     </mat-card-content>
     <mat-card-actions>

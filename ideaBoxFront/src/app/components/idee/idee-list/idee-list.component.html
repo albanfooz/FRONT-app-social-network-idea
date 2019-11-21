@@ -1,0 +1,8 @@
+<div class="grid-container" infiniteScroll (scrolled)="onScrollDown()" [infiniteScrollDistance]="scrollDistance"
+    [infiniteScrollThrottle]="scrollThrottle" [scrollWindow]="false">
+    <div *ngFor="let idee of displayedIdees; let i =index">
+        <mat-card class="dashboard-card" tabindex="i">
+            <app-idea-post [idee]='idee'></app-idea-post>
+        </mat-card>
+    </div>
+</div>

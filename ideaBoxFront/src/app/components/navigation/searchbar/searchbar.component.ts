@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { IdeeService } from '../../../services/IdeeService';
 
 export interface IDialogData {
 
@@ -13,10 +14,13 @@ export interface IDialogData {
 })
 export class SearchbarComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private ids: IdeeService) { }
+
+  ideas = this.ids.idees;
 
   searchinput: string;
   isOpen = false;
+  isBlurActive = true;
 
   openDialog(): void {
     this.dialog.open(SearchbarPopupComponent, {
@@ -28,6 +32,7 @@ export class SearchbarComponent implements OnInit {
   setFocus() {
     if (this.isOpen) {
       setTimeout(() => { document.getElementById('searchfocus').blur(); }, 0);
+      this.searchinput = '';
       this.isOpen = !this.isOpen;
     } else {
       this.isOpen = !this.isOpen;
@@ -36,6 +41,15 @@ export class SearchbarComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  cancelBlur() {
+
+    this.isBlurActive = false;
+  }
+  activeBlur() {
+
+    this.isBlurActive = true;
   }
 
 }

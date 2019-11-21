@@ -1,0 +1,81 @@
+<!-- IF NOT LOGGED IN -->
+
+<div *ngIf="estConnecte == false">
+
+    <!-- SIDE MENU -->
+
+    <div *ngIf="posmenu == 'side'">
+        <a mat-list-item [routerLink]="['/inscription']" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
+            Inscription</a>
+        <a mat-list-item (click)="openDialog()">Connexion</a>
+    </div>
+
+    <!-- TOP MENU -->
+
+    <div *ngIf="posmenu == 'top'">
+        <a mat-button [routerLink]="['/inscription']" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
+            Inscription</a>
+        <a mat-button (click)="openDialog()">Connexion</a>
+    </div>
+
+</div>
+
+<!-- IF LOGGED IN -->
+
+<div *ngIf="estConnecte == 'true'">
+
+    <!-- SIDE MENU -->
+
+    <div *ngIf="posmenu == 'side'">
+        <button mat-list-item [matMenuTriggerFor]="menu">
+            <img id="pp"
+                src="https://sites.nicholas.duke.edu/clarklab/files/2011/01/default_profile-d80441a6f25a9a0aac354978c65c8fa9.jpg"
+                alt="profile picture" />
+            Profil
+            <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>account_circle</mat-icon>Voir profil
+            </button>
+            <button mat-menu-item>
+                <mat-icon>edit</mat-icon>Modifier profil
+            </button>
+            <button mat-menu-item>
+                <mat-icon>settings</mat-icon>Préférences
+            </button>
+            <button mat-menu-item (click)="deleteSession()">
+                <mat-icon>power_settings_new</mat-icon>Déconnexion
+            </button>
+        </mat-menu>
+    </div>
+
+    <!-- TOP MENU -->
+
+    <div *ngIf="posmenu == 'top'">
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>arrow_drop_down</mat-icon>
+            Profil
+            <img id="pp"
+                src="https://sites.nicholas.duke.edu/clarklab/files/2011/01/default_profile-d80441a6f25a9a0aac354978c65c8fa9.jpg"
+                alt="profile picture" />
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>account_circle</mat-icon>Voir profil
+            </button>
+            <button mat-menu-item>
+                <mat-icon>edit</mat-icon>Modifier profil
+            </button>
+            <button mat-menu-item>
+                <mat-icon>settings</mat-icon>Préférences
+            </button>
+            <button mat-menu-item (click)="deleteSession()">
+                <mat-icon>power_settings_new</mat-icon>Déconnexion
+            </button>
+        </mat-menu>
+    </div>
+
+</div>

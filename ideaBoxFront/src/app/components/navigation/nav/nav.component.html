@@ -5,12 +5,15 @@
         <mat-icon>menu</mat-icon>
       </button>
       <a id="home" routerLink="">
-        <span id="titre">Social Idea</span>
-        <span id="slogan">Think, Share, Create</span>
+        <img id="logo" src="../../../assets/images/logo.svg" alt="Social Idea">
       </a>
       <div fxShow="true" fxHide.lt-md>
-        <a mat-button *ngFor="let link of links" routerLink="{{link.pageLink}}" routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }">{{link.pageName}}</a>
+        <a mat-button *ngFor="let link of links" [routerLink]="[link.url]" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">{{link.name}}
+          <mat-icon class="material-icons">
+            {{link.icon}}
+          </mat-icon>
+        </a>
       </div>
 
       <app-searchbar></app-searchbar>
@@ -22,8 +25,9 @@
     <mat-sidenav #sidenav>
       <mat-nav-list>
         <app-menu-connexion posmenu="side"></app-menu-connexion>
-        <a mat-list-item *ngFor="let link of links" routerLink="{{link.pageLink}}"
-          routerLinkActive="active">{{link.pageName}}</a>
+        <a mat-list-item *ngFor="let link of links" [routerLink]="[link.url]" routerLinkActive="active">{{link.name}}
+          <mat-icon class="material-icons-outlined">
+            {{link.icon}}</mat-icon></a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>

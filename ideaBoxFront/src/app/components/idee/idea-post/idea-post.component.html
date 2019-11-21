@@ -1,9 +1,11 @@
 <mat-card-header>
-    <mat-card-title class="myCardTitle" [routerLink]="['idea', idee._id]" routerLinkActive="router-link-active">
+    <mat-card-title class="myCardTitle" [routerLink]="['/idea', idee._id]" routerLinkActive="router-link-active">
         {{idee._titre}}
 
     </mat-card-title>
-    <mat-card-subtitle>{{idee._originalPosteur}}</mat-card-subtitle>
+    <mat-card-subtitle class="subtitle-pseudo" [routerLink]="['/profil', idee._originalPosteur._id]"
+        routerLinkActive="router-link-active">
+        {{idee._originalPosteur._pseudo}}</mat-card-subtitle>
     <div fxFlex>
         <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
             <mat-icon>more_vert</mat-icon>
@@ -13,19 +15,14 @@
             <button mat-menu-item>Masquer</button>
             <button mat-menu-item>Test</button>
         </mat-menu>
-        <app-pastille-categorie></app-pastille-categorie>
+        <app-pastille-categorie [categorie]="idee._categorie"></app-pastille-categorie>
     </div>
 </mat-card-header>
-<img mat-card-image [src]="idee._image" [routerLink]="['idea', idee._id]" routerLinkActive="router-link-active" />
-<mat-card-content [routerLink]="['idea', idee._id]" routerLinkActive="router-link-active">
-    {{idee._content}}
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque dictum risus in vehicula.
-    Aenean congue, massa a suscipit consequat, metus massa mattis sapien, at elementum metus ante a ante. Morbi
-    id
-    neque ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vel diam sitis pulvinar,
-    cursus id nunc. Maecenas consectetur libero ut nibh luctus, vel finibus odio consectetur.
+<img mat-card-image [src]="idee._image" [routerLink]="['/idea', idee._id]" routerLinkActive="router-link-active" />
+<mat-card-content [routerLink]="['/idea', idee._id]" routerLinkActive="router-link-active">
+    <div [innerHtml]="idee._content.substring(0,512)"></div>
 </mat-card-content>
 <mat-card-actions>
-    <app-bar-icons-idee [openComment]='openComment'></app-bar-icons-idee>
+    <app-bar-icons-idee [score]="idee._score" [openComment]='openComment'></app-bar-icons-idee>
     <app-bouton-collaborateur></app-bouton-collaborateur>
 </mat-card-actions>

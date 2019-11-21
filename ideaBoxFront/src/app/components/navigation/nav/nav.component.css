@@ -75,3 +75,14 @@
   color:#FFFFFF;
   text-decoration:none;
 }
+
+#logo {
+
+  display:block;
+  width:200px;
+}
+
+a mat-icon {
+
+  font-size: 23px;
+}

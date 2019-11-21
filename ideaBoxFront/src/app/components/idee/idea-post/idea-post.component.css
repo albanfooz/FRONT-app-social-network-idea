@@ -6,6 +6,10 @@ mat-card-title {
     cursor: pointer;
 }
 
+mat-card-actions {
+    float: bottom;
+}
+
 img {
     cursor: pointer;
 }
@@ -23,4 +27,8 @@ mat-card-content {
 app-pastille-categorie {
     float: right;
 
+}
+
+.subtitle-pseudo {
+    cursor: pointer;
 }
