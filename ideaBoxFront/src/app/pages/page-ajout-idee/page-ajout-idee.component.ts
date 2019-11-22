@@ -36,9 +36,11 @@ export class PageAjoutIdeeComponent {
 
     //posteur alban_fooz_dev par defaut
     tempIdee._originalPosteur = this.membreService.recupererMembreById(3);
+    if (!this.creationIdeeForm.controls['_categorie'].hasError('required') && !this.creationIdeeForm.controls['_content'].hasError('required') && !this.creationIdeeForm.controls['_titre'].hasError('required')) {
 
-    this.iService.ajouter(tempIdee);
-    this.router.navigateByUrl('');
+      this.iService.ajouter(tempIdee);
+      this.router.navigateByUrl('');
+    }
   }
 
   onUpdate() {
