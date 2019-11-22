@@ -1,6 +1,7 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { IdeeService } from '../../../services/IdeeService';
+import { ActivatedRoute, Router } from '@angular/router';
 
 export interface IDialogData {
 
@@ -14,7 +15,10 @@ export interface IDialogData {
 })
 export class SearchbarComponent implements OnInit {
 
-  constructor(public dialog: MatDialog, private ids: IdeeService) { }
+  constructor(public dialog: MatDialog, private ids: IdeeService, private router: Router) {
+
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  }
 
   ideas = this.ids.idees;
 
