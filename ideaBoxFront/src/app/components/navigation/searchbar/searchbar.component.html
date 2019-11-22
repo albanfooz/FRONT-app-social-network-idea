@@ -1,4 +1,5 @@
 <div class="direction">
+
     <form id="search">
         <button *ngIf="!isOpen" (click)="setFocus()" mat-icon-button>
             <mat-icon>search</mat-icon>
@@ -7,8 +8,8 @@
             <mat-icon>close</mat-icon>
         </button>
         <input #search id="searchfocus" name="search" type="search" placeholder="Rechercher..."
-            class="{{isOpen?'ouvert':'ferme'}}" (blur)="isBlurActive?setFocus():''" [(ngModel)]="searchinput"
-            (keyup.enter)="openDialog()" autocomplete="off">
+            class="{{isOpen?'ouvert':'ferme'}}" (blur)="isBlurActive?searchinput?'':setFocus():''"
+            [(ngModel)]="searchinput" (keyup.enter)="openDialog()" autocomplete="off">
         <button mat-icon-button *ngIf="isOpen" (click)="openDialog()">
             <mat-icon>search</mat-icon>
         </button>
@@ -19,8 +20,7 @@
         <mat-list-item *ngFor="let idea of ideas | filter:searchinput">
             <a matLine [routerLink]="['/idea/'+idea._id]" (click)="setFocus();searchinput=''">
                 <span class="resultTitle">{{idea._titre}} </span>
-
-                <span class="resultAuthor"> {{idea._originalPosteur}}</span>
+                <span class="resultAuthor"> {{idea._originalPosteur._pseudo}}</span>
             </a>
         </mat-list-item>
     </mat-nav-list>
