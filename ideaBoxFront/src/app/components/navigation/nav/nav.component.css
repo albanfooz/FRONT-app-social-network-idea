@@ -86,3 +86,20 @@ a mat-icon {
 
   font-size: 23px;
 }
+
+::ng-deep ::-webkit-scrollbar {
+
+  color:white;
+  width:10px;
+  
+}
+::ng-deep ::-webkit-scrollbar-thumb {
+
+  background-color:lightgray;
+  border:solid 2px white;
+  border-radius: 5px;
+}
+::ng-deep ::-webkit-scrollbar-button {
+ 
+  height: 2px;
+}

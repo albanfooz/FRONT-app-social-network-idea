@@ -8,6 +8,7 @@
         <img id="logo" src="../../../assets/images/logo.svg" alt="Social Idea">
       </a>
       <div fxShow="true" fxHide.lt-md>
+        <app-menu-liste-categories></app-menu-liste-categories>
         <a mat-button *ngFor="let link of links" [routerLink]="[link.url]" routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }">{{link.name}}
           <mat-icon class="material-icons">
@@ -28,6 +29,7 @@
         <a mat-list-item *ngFor="let link of links" [routerLink]="[link.url]" routerLinkActive="active">{{link.name}}
           <mat-icon class="material-icons-outlined">
             {{link.icon}}</mat-icon></a>
+        <app-menu-liste-categories></app-menu-liste-categories>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
