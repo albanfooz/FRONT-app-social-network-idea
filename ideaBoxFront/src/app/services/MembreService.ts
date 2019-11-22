@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { MembreModel } from '../models/MembreModel';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MembreService {
+
+  private URL = 'http://localhost:7000/membres/';
   devs: Array<MembreModel> = [
     {
       _id: 1,
@@ -28,7 +31,11 @@ export class MembreService {
     }
   ];
   membres: Array<MembreModel> = this.devs;
-  constructor() {
+  constructor(private http: HttpClient) {
+    const obs = this.http.get(this.URL);
+    obs.subscribe((reponse) => {
+      membres = response //TODO
+    });
     for (let index = 5; index < 15; index++) {
       this.membres.push(
         {
