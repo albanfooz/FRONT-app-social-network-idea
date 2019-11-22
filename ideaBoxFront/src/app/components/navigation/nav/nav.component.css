@@ -86,6 +86,11 @@ a mat-icon {
 
   font-size: 23px;
 }
+.mat-list-item mat-icon {
+
+  margin-right:5px;
+  font-size: 24px;
+}
 
 ::ng-deep ::-webkit-scrollbar {
 

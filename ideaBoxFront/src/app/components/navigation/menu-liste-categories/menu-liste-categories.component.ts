@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CategorieService } from 'src/app/services/CategorieService';
 
 @Component({
@@ -7,6 +7,8 @@ import { CategorieService } from 'src/app/services/CategorieService';
   styleUrls: ['./menu-liste-categories.component.css']
 })
 export class MenuListeCategoriesComponent implements OnInit {
+
+  @Input() position: string;
 
   listeCategories = this.categorieService.pastille;
 

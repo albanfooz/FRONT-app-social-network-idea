@@ -3,7 +3,26 @@ button mat-icon {
     font-size: 24px;
 }
 
+.mat-button:hover {
+
+  background-color:#8f9fff;
+}
+.mat-list-item:hover {
+
+  background-color: lightskyblue;
+}
+
 ::ng-deep .mat-menu-content {
 
     max-height: 500px;
+}
+button.mat-list-item {
+
+  border:none;
+  background-color: white;
+}
+
+.mat-list-item mat-icon {
+
+  margin-right:5px;
 }
