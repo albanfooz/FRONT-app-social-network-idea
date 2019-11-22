@@ -1,5 +1,5 @@
-<div class="grid-container" infiniteScroll (scrolled)="onScrollDown()" [infiniteScrollDistance]="scrollDistance"
-    [infiniteScrollThrottle]="scrollThrottle" [scrollWindow]="false">
+<div #container class="grid-container" infiniteScroll (scrolled)="onScrollDown()" (scroll)="windowScrolled = true"
+    [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="scrollThrottle" [scrollWindow]="false">
     <div *ngFor="let idee of displayedIdees; let i =index">
         <mat-card *ngIf="i!=0 && i%2==0" class="dashboard-card">
             <mat-icon> attach_money</mat-icon>
@@ -13,3 +13,7 @@
         </mat-card>
     </div>
 </div>
+<button mat-mini-fab (click)="toTop(container)" color="primary" class="scroll-to-top"
+    [ngClass]="{'show-scroll-to-top': windowScrolled}">
+    <mat-icon> vertical_align_top</mat-icon>
+</button>
