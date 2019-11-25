@@ -9,8 +9,8 @@
         </button>
         <input #search id="searchfocus" name="search" type="search" placeholder="Rechercher..."
             class="{{isOpen?'ouvert':'ferme'}}" (blur)="isBlurActive?searchinput?'':setFocus():''"
-            [(ngModel)]="searchinput" (keyup.enter)="openDialog()" autocomplete="off">
-        <button mat-icon-button *ngIf="isOpen" (click)="openDialog()">
+            [(ngModel)]="searchinput" (keyup.enter)="submit()" autocomplete="off">
+        <button mat-icon-button *ngIf="isOpen" (click)="submit()">
             <mat-icon>search</mat-icon>
         </button>
     </form>
