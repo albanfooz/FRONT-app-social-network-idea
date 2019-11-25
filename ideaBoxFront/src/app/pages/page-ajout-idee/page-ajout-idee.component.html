@@ -15,7 +15,13 @@
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Catégorie" formControlName="_categorie">
+
+            <mat-select placeholder="Categorie" formControlName="_categorie">
+              <mat-option *ngFor="let categorie of categorieService.pastille" [value]="categorie">
+                {{categorie._categorie}}
+              </mat-option>
+            </mat-select>
+
             <mat-error *ngIf="creationIdeeForm.controls['_categorie'].hasError('required')">
               La catégorie est <strong>requise</strong>
             </mat-error>
