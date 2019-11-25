@@ -50,6 +50,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { IdeeListComponent } from './components/idee/idee-list/idee-list.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { MenuListeCategoriesComponent } from './components/navigation/menu-liste-categories/menu-liste-categories.component';
 
 
 @NgModule({
@@ -84,6 +85,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     ConnexionPopupComponent,
     PageInscriptionComponent,
     IdeeListComponent,
+    MenuListeCategoriesComponent,
   ],
   imports: [
     BrowserModule,
