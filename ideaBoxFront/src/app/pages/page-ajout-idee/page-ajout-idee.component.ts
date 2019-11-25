@@ -35,7 +35,7 @@ export class PageAjoutIdeeComponent {
     tempIdee._categorie = this.categorieService.recupererById(tempCatId);
 
     //posteur alban_fooz_dev par defaut
-    tempIdee._originalPosteur = this.membreService.recupererMembreById(3);
+    tempIdee._originalPosteur = this.membreService.recupererMembreByIdBouchon(3);
     if (!this.creationIdeeForm.controls['_categorie'].hasError('required') && !this.creationIdeeForm.controls['_content'].hasError('required') && !this.creationIdeeForm.controls['_titre'].hasError('required')) {
 
       this.iService.ajouter(tempIdee);

@@ -17,7 +17,7 @@ export class IdeeService {
             _id: 1,
             _titre: 'First Idea',
             _content: this.contentBouchon,
-            _originalPosteur: this.membreService.recupererMembreById(3),
+            _originalPosteur: this.membreService.recupererMembreByIdBouchon(3),
             _categorie: this.categorieService.pastille.find(({ _id }) => _id === 1),
             _score: 321,
             _image: 'https://picsum.photos/800/400?random=1'
@@ -32,7 +32,7 @@ export class IdeeService {
                     _id: index,
                     _titre: 'Idea Number ' + index,
                     _content: this.contentBouchon,
-                    _originalPosteur: this.membreService.recupererMembreById(index),
+                    _originalPosteur: this.membreService.recupererMembreByIdBouchon(index),
                     _categorie: this.categorieService.pastille.find(({ _id }) => _id === index),
                     _score: Math.floor((Math.random() * 100) + 1),
                     _image: 'https://picsum.photos/800/400?random=' + index
@@ -46,7 +46,7 @@ export class IdeeService {
                 _id: this.idees.length + 1,
                 _titre: 'Idea Number ' + (this.idees.length + 1),
                 _content: this.contentBouchon,
-                _originalPosteur: this.membreService.recupererMembreById(3),
+                _originalPosteur: this.membreService.recupererMembreByIdBouchon(3),
                 _categorie: this.categorieService.pastille.find(({ _id }) => _id === 1),
                 _score: Math.floor((Math.random() * 100) + 1),
                 _image: 'https://picsum.photos/800/400?random=' + (this.idees.length + 1)

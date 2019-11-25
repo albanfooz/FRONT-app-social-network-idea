@@ -34,35 +34,34 @@ export class MembreService {
   membres: Array<MembreModel> = [];//= this.devs;
   membresDTO: Array<MembreModelDTO> = [];
   constructor(private http: HttpClient) {
-    const obs = this.http.get(this.URL);
-    obs.subscribe((reponse) => {
-      this.membresDTO = <Array<MembreModelDTO>>reponse //TODO
-      console.log(this.membresDTO);
-      
-      console.log(reponse);
-      
-    });
-    this.membresDTO.forEach(element => {
-      this.membres.push(
-        {
-          _id: element.id,
-          _pseudo: element.login
-        }
-      )
-    });
-    /*for (let index = 5; index < 15; index++) {
-      this.membres.push(
-        {
-          _id: index,
-          _pseudo: 'fakeMembre' + index,
-          _profilePic: 'https://www.booksie.com/files/profiles/22/mr-anonymous_230x230.png'
-        }
-      );
-    }*/
+    //should return a obs in method
+    //use the obs in component,
+    //ngif tab.length != 0;
+    /* const obs = this.http.get(this.URL);
+     obs.subscribe((reponse) => {
+       this.membresDTO = reponse as Array<MembreModelDTO>;
+       this.membresDTO.forEach(element => {
+         this.membres.push(
+           {
+             _id: element.id,
+             _pseudo: element.login
+           }
+         );
+       });
+ 
+ 
+     });
+     console.log(this.membres);*/
   }
 
-  recupererMembreById(id: number) {
+  recupererMembreByIdBouchon(id: number) {
     return this.membres.find(({ _id }) => _id == id);
+  }
+  recupererMembreById(id: number) {
+    return this.http.get(this.URL + '/p' + id);
+  }
+  recupererAllMembres() { //useless
+    return this.http.get(this.URL);
   }
 
 }
