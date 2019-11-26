@@ -34,24 +34,6 @@ export class MembreService {
   membres: Array<MembreModel> = [];//= this.devs;
   membresDTO: Array<MembreModelDTO> = [];
   constructor(private http: HttpClient) {
-    //should return a obs in method
-    //use the obs in component,
-    //ngif tab.length != 0;
-    /* const obs = this.http.get(this.URL);
-     obs.subscribe((reponse) => {
-       this.membresDTO = reponse as Array<MembreModelDTO>;
-       this.membresDTO.forEach(element => {
-         this.membres.push(
-           {
-             _id: element.id,
-             _pseudo: element.login
-           }
-         );
-       });
- 
- 
-     });
-     console.log(this.membres);*/
   }
 
   recupererMembreByIdBouchon(id: number) {
