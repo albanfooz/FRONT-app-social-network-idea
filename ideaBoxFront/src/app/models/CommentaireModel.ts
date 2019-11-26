@@ -2,7 +2,7 @@ import { MembreModel } from './MembreModel';
 
 export interface CommentaireModel {
     _id?: number;
-    _contenu: string | null;
+    _texteCommentaire: string | null;
     _createdAt?: Date;
     _score: number;
     _idCommentaire?: number;
