@@ -8,6 +8,9 @@
         <img id="logo" src="../../../assets/images/logo.svg" alt="Social Idea">
       </a>
       <div fxShow="true" fxHide.lt-md>
+
+        <app-menu-liste-categories position="top"></app-menu-liste-categories>
+
         <a mat-button *ngFor="let link of links" [routerLink]="[link.url]" routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }">{{link.name}}
           <mat-icon class="material-icons">
@@ -17,6 +20,7 @@
       </div>
 
       <app-searchbar></app-searchbar>
+
       <span class="menu-spacer"></span>
       <app-menu-connexion fxShow="true" fxHide.lt-md posmenu="top"></app-menu-connexion>
     </mat-toolbar-row>
@@ -25,9 +29,15 @@
     <mat-sidenav #sidenav>
       <mat-nav-list>
         <app-menu-connexion posmenu="side"></app-menu-connexion>
-        <a mat-list-item *ngFor="let link of links" [routerLink]="[link.url]" routerLinkActive="active">{{link.name}}
+        <a mat-list-item *ngFor="let link of links" [routerLink]="[link.url]" routerLinkActive="active">
           <mat-icon class="material-icons-outlined">
-            {{link.icon}}</mat-icon></a>
+            {{link.icon}}
+          </mat-icon>
+          {{link.name}}
+        </a>
+
+        <app-menu-liste-categories position="side"></app-menu-liste-categories>
+
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>

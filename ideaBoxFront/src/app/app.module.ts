@@ -20,7 +20,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { IdeaPostComponent } from './components/idee/idea-post/idea-post.component';
 import { PastilleCategorieComponent } from './components/pastille-categorie/pastille-categorie.component';
 import { MatInputModule } from '@angular/material/input';
-import { SearchbarComponent, SearchbarPopupComponent } from './components/navigation/searchbar/searchbar.component';
+import { SearchbarComponent } from './components/navigation/searchbar/searchbar.component';
 import { CollaborateurComponent } from './components/collaborateur/collaborateur.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -50,6 +50,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { IdeeListComponent } from './components/idee/idee-list/idee-list.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { MenuListeCategoriesComponent } from './components/navigation/menu-liste-categories/menu-liste-categories.component';
+import { PageSearchComponent } from './pages/page-search/page-search.component';
 
 
 @NgModule({
@@ -74,7 +76,6 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     BoutonCollaborateurComponent,
     ListeCommentairesComponent,
     VoteComponent,
-    SearchbarPopupComponent,
     CommentaireBoutonComponent,
     PageAjoutIdeeComponent,
     MenuConnexionComponent,
@@ -84,6 +85,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     ConnexionPopupComponent,
     PageInscriptionComponent,
     IdeeListComponent,
+    MenuListeCategoriesComponent,
+    PageSearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -118,6 +121,6 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
-  entryComponents: [SearchbarPopupComponent, ConnexionPopupComponent]
+  entryComponents: [ConnexionPopupComponent]
 })
 export class AppModule { }

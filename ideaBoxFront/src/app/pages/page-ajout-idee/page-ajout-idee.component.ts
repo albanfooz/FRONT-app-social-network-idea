@@ -19,7 +19,7 @@ export class PageAjoutIdeeComponent {
     _image: null,
     _content: ['', Validators.required]
   });
-  //RichTextEditor
+  // RichTextEditor
   Editor = ClassicEditor;
   lengthOfContent = 0;
 
@@ -28,14 +28,10 @@ export class PageAjoutIdeeComponent {
 
   onSubmit() {
     let tempIdee: IdeeModel = this.creationIdeeForm.value;
-    //transform string en catégorie
-    const tempCat: string = this.creationIdeeForm.value._categorie;
-    const tempCatId: number = (this.categorieService.pastille.length + 1);
-    this.categorieService.ajouter({ _id: tempCatId, _categorie: tempCat, _icone: tempCat });
-    tempIdee._categorie = this.categorieService.recupererById(tempCatId);
 
-    //posteur alban_fooz_dev par defaut
+    // posteur alban_fooz_dev par defaut
     tempIdee._originalPosteur = this.membreService.recupererMembreById(3);
+
     if (!this.creationIdeeForm.controls['_categorie'].hasError('required') && !this.creationIdeeForm.controls['_content'].hasError('required') && !this.creationIdeeForm.controls['_titre'].hasError('required')) {
 
       this.iService.ajouter(tempIdee);
