@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./idea-post.component.css']
 })
 export class IdeaPostComponent implements OnInit {
-  @Input() idee: IdeeModel;
+  @Input() idee: IdeeModel = null;
   openComment: Function;
 
   constructor(private router: Router) {

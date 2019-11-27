@@ -11,6 +11,6 @@ export interface IdeeModel {
     description: string; // sujet à un changement
     score: number; // pour le moment, on utilisera voteDTO plus tard
     _image?: string; // url de l'image, deviendra un fichier de type image
-    collaborateurs: Array<MembreModel>;   // list de collaborateurs
+    collaborateurs?: Array<MembreModel>;   // list de collaborateurs
     createdAt: Date;
 }

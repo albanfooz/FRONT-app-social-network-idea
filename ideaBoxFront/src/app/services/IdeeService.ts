@@ -30,7 +30,7 @@ export class IdeeService {
     constructor(private categorieService: CategorieService, private membreService: MembreService, private http: HttpClient) {
         // Bouchon : dev list idee;
         for (let index = 2; index < 15; index++) {
-            this.idees.push(
+            this._idees.push(
                 {
                     id: index,
                     titre: 'Idea Number ' + index,
@@ -46,7 +46,7 @@ export class IdeeService {
             );
         }
         // more data for idees with same categorie
-        this.idees.push(
+        this._idees.push(
             {
                 id: this.idees.length + 1,
                 titre: 'Idea Number ' + (this.idees.length + 1),
@@ -56,20 +56,20 @@ export class IdeeService {
                 score: Math.floor((Math.random() * 100) + 1),
                 createdAt: new Date,
                 collaborateurs: [],
-                _image: 'https://picsum.photos/800/400?random=' + (this.idees.length + 1)
+                _image: 'https://picsum.photos/800/400?random=' + (this._idees.length + 1)
             }
         );
     }
 
 
     public get idees(): Array<IdeeModel> {
-        return this.idees;
+        return this._idees;
     }
 
 
     ajouter(idee: IdeeModel) {
-        idee.id = this.idees.length + 1;
-        this.idees.push(idee);
+        idee.id = this._idees.length + 1;
+        this._idees.push(idee);
 
 
 
@@ -88,20 +88,22 @@ export class IdeeService {
     }
 
     recupererById(id: number): IdeeModel {
-        return this.idees.find(({ id }) => id == id);
+        return this._idees.find(({ id }) => id == id);
     }
 
     recupererIdeesByPosteur(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur
-        return this.idees.filter(element => { if (element.originalPosteur._id == idPosteur) { return element; } });
+        return this._idees.filter(element => { if (element.originalPosteur._id == idPosteur) { return element; } });
     }
 
     recupererIdeesByCategorie(idCategorie: number): Array<IdeeModel> {
-        return this.idees.filter(element => { if (element.categorie._id == idCategorie) { return element; } });
+        return this._idees.filter(element => { if (element.categorie._id == idCategorie) { return element; } });
     }
 
     // idee depuis l'historique des commentaires du posteur (IDK, au cas où)
     recupererIdeeByCommentaire(commentaire: CommentaireModel): IdeeModel {
-        return this.idees.find(({ id }) => id == commentaire._idIdee);
+        return this._idees.find(({ id }) => id == commentaire._idIdee);
     }
+
+
 }
 

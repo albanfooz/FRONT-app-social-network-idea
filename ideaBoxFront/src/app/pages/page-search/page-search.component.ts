@@ -21,10 +21,10 @@ export class PageSearchComponent implements OnInit {
     for (let idee of this.ideeService.idees) {
 
       if (
-        idee._titre.toLowerCase().indexOf(this.searchcontent.toLowerCase()) >= 0 ||
-        idee._categorie._categorie.toLowerCase().indexOf(this.searchcontent.toLowerCase()) >= 0 ||
-        idee._originalPosteur._pseudo.toLowerCase().indexOf(this.searchcontent.toLowerCase()) >= 0 ||
-        idee._content.toLowerCase().indexOf(this.searchcontent.toLowerCase()) >= 0
+        idee.titre.toLowerCase().indexOf(this.searchcontent.toLowerCase()) >= 0 ||
+        idee.categorie._categorie.toLowerCase().indexOf(this.searchcontent.toLowerCase()) >= 0 ||
+        idee.originalPosteur._pseudo.toLowerCase().indexOf(this.searchcontent.toLowerCase()) >= 0 ||
+        idee.description.toLowerCase().indexOf(this.searchcontent.toLowerCase()) >= 0
       ) {
         this.resultidees.push(idee);
       }

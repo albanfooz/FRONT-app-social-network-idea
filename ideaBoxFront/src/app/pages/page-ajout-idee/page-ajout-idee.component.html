@@ -16,13 +16,13 @@
         <div class="col">
           <mat-form-field class="full-width">
 
-            <mat-select placeholder="Categorie" formControlName="_categorie">
+            <mat-select placeholder="Categorie" formControlName="categorie">
               <mat-option *ngFor="let categorie of categorieService.pastille" [value]="categorie">
                 {{categorie._categorie}}
               </mat-option>
             </mat-select>
 
-            <mat-error *ngIf="creationIdeeForm.controls['_categorie'].hasError('required')">
+            <mat-error *ngIf="creationIdeeForm.controls['categorie'].hasError('required')">
               La catégorie est <strong>requise</strong>
             </mat-error>
           </mat-form-field>
@@ -35,8 +35,7 @@
           </mat-form-field>
         </div>
       </div>
-          <ckeditor class="ckeditor-idee" formControlName="content" [editor]="Editor" (keyup)="onUpdate($event)"
-            [config]="{
+      <ckeditor class="ckeditor-idee" formControlName="content" [editor]="Editor" (keyup)="onUpdate($event)" [config]="{
               toolbar: ['heading','|', 'bold', 'italic','link', 'bulletedList', 'numberedList','|',  'blockQuote','MediaEmbed','undo','redo' ],
              placeholder: 'Taper une description ici ...'
              }"></ckeditor>
