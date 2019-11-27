@@ -19,7 +19,7 @@ export class PageAjoutIdeeComponent {
     _image: null,
     _content: ['', Validators.required]
   });
-  //RichTextEditor
+  // RichTextEditor
   Editor = ClassicEditor;
   lengthOfContent = 0;
 
