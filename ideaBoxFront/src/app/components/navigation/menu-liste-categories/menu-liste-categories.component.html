@@ -1,5 +1,5 @@
 <span *ngIf="position == 'top'"><button mat-button [matMenuTriggerFor]="menu">
-        Categories {{position}}
+        Categories
         <mat-icon>list</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
@@ -14,7 +14,7 @@
 <span *ngIf="position == 'side'">
     <button mat-list-item [matMenuTriggerFor]="menu">
         <mat-icon>list</mat-icon>
-        Categories {{position}}
+        Categories
     </button>
     <mat-menu #menu="matMenu">
         <a mat-menu-item *ngFor="let categorie of listeCategories" [routerLink]="['/categorie',categorie._id]"
