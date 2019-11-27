@@ -1,4 +1,4 @@
-<div mat-dialog-content style="height:200px;">
+<div mat-dialog-content style="height:235px;text-align:center">
     <form [formGroup]="connexionForm" novalidate (ngSubmit)="submit()">
 
         <mat-form-field>
@@ -17,9 +17,12 @@
             </mat-error>
         </mat-form-field>
 
-        <div mat-dialog-actions>
+        <div mat-dialog-actions style="margin:0 auto;display:block;">
             <button mat-flat-button color="primary" type="submit">Se connecter</button>
+            <button mat-button color="secondary" (click)="onNoClick()">Annuler</button>
         </div>
-
+        <div matTooltip="Cette fonctionnalité n'est pas disponible">
+            <button mat-button disabled>Mot de passe oublié ?</button>
+        </div>
     </form>
 </div>
