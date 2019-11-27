@@ -15,12 +15,14 @@ export class IdeeService {
     // tslint:disable-next-line: variable-name
     private _idees: Array<IdeeModel> = [
         {
-            _id: 1,
-            _titre: 'First Idea',
-            _content: this.contentBouchon,
-            _originalPosteur: this.membreService.recupererMembreByIdBouchon(3),
-            _categorie: this.categorieService.pastille.find(({ _id }) => _id === 1),
-            _score: 321,
+            id: 1,
+            titre: 'First Idea',
+            description: this.contentBouchon,
+            originalPosteur: this.membreService.recupererMembreByIdBouchon(3),
+            categorie: this.categorieService.pastille.find(({ _id }) => _id === 1),
+            score: 321,
+            createdAt: new Date,
+            collaborateurs: [],
             _image: 'https://picsum.photos/800/400?random=1'
         }
     ];
@@ -28,14 +30,16 @@ export class IdeeService {
     constructor(private categorieService: CategorieService, private membreService: MembreService, private http: HttpClient) {
         // Bouchon : dev list idee;
         for (let index = 2; index < 15; index++) {
-            this._idees.push(
+            this.idees.push(
                 {
-                    _id: index,
-                    _titre: 'Idea Number ' + index,
-                    _content: this.contentBouchon,
-                    _originalPosteur: this.membreService.recupererMembreByIdBouchon(index),
-                    _categorie: this.categorieService.pastille.find(({ _id }) => _id === index),
-                    _score: Math.floor((Math.random() * 100) + 1),
+                    id: index,
+                    titre: 'Idea Number ' + index,
+                    description: this.contentBouchon,
+                    originalPosteur: this.membreService.recupererMembreByIdBouchon(index),
+                    categorie: this.categorieService.pastille.find(({ _id }) => _id === index),
+                    score: Math.floor((Math.random() * 100) + 1),
+                    createdAt: new Date,
+                    collaborateurs: [],
                     _image: 'https://picsum.photos/800/400?random=' + index
                 }
 
@@ -44,12 +48,14 @@ export class IdeeService {
         // more data for idees with same categorie
         this.idees.push(
             {
-                _id: this.idees.length + 1,
-                _titre: 'Idea Number ' + (this.idees.length + 1),
-                _content: this.contentBouchon,
-                _originalPosteur: this.membreService.recupererMembreByIdBouchon(3),
-                _categorie: this.categorieService.pastille.find(({ _id }) => _id === 1),
-                _score: Math.floor((Math.random() * 100) + 1),
+                id: this.idees.length + 1,
+                titre: 'Idea Number ' + (this.idees.length + 1),
+                description: this.contentBouchon,
+                originalPosteur: this.membreService.recupererMembreByIdBouchon(3),
+                categorie: this.categorieService.pastille.find(({ _id }) => _id === 1),
+                score: Math.floor((Math.random() * 100) + 1),
+                createdAt: new Date,
+                collaborateurs: [],
                 _image: 'https://picsum.photos/800/400?random=' + (this.idees.length + 1)
             }
         );
@@ -57,13 +63,13 @@ export class IdeeService {
 
 
     public get idees(): Array<IdeeModel> {
-        return this._idees;
+        return this.idees;
     }
 
 
     ajouter(idee: IdeeModel) {
-        idee._id = this.idees.length + 1;
-        this._idees.push(idee);
+        idee.id = this.idees.length + 1;
+        this.idees.push(idee);
 
 
 
@@ -82,20 +88,20 @@ export class IdeeService {
     }
 
     recupererById(id: number): IdeeModel {
-        return this.idees.find(({ _id }) => _id == id);
+        return this.idees.find(({ id }) => id == id);
     }
 
     recupererIdeesByPosteur(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur
-        return this.idees.filter(element => { if (element._originalPosteur._id == idPosteur) { return element; } });
+        return this.idees.filter(element => { if (element.originalPosteur._id == idPosteur) { return element; } });
     }
 
     recupererIdeesByCategorie(idCategorie: number): Array<IdeeModel> {
-        return this.idees.filter(element => { if (element._categorie._id == idCategorie) { return element; } });
+        return this.idees.filter(element => { if (element.categorie._id == idCategorie) { return element; } });
     }
 
     // idee depuis l'historique des commentaires du posteur (IDK, au cas où)
     recupererIdeeByCommentaire(commentaire: CommentaireModel): IdeeModel {
-        return this.idees.find(({ _id }) => _id == commentaire._idIdee);
+        return this.idees.find(({ id }) => id == commentaire._idIdee);
     }
 }
 
