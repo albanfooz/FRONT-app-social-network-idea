@@ -24,8 +24,7 @@ export class CommentaireService {
             this._comments.push(
                 {
                     _id: index,
-                    _membre: this.membreService.recupererMembreById(index),
-                    // tslint:disable-next-line: max-line-length
+                    _membre: this.membreService.recupererMembreByIdBouchon(index),
                     _texteCommentaire: 'commentaire du membre , Cillum dolore ipsum ea tempor do eu elit quis reprehenderit consequat anim esse mollit proident.Adipisicing excepteur irure anim',
                     _score: Math.floor((Math.random() * 100) + 1)
                 }
