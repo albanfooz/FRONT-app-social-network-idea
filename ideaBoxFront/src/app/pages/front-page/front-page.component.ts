@@ -25,11 +25,6 @@ export class FrontPageComponent implements OnInit, OnDestroy {
     this.sub = this.ideeService.recupererAllIdees().subscribe((response: Array<IdeeModelFromDB>) => {
       response.forEach(idee => {
         let ideeMap: IdeeModel;
-        let obsMembre = this.membreService.recupererMembrebyMembreId(idee.membreId);
-        obsMembre.subscribe((response2: MembreModelDTO) => {
-          console.log('membreId ' + idee.membreId + ' ');
-          console.log(response2);
-        });
 
 
 
@@ -37,7 +32,7 @@ export class FrontPageComponent implements OnInit, OnDestroy {
           id: idee.id,
           titre: idee.titre,
           categorie: { _id: idee.categorieId, _categorie: 'TODO', _icone: 'computer' },
-          originalPosteur: { _id: idee.id, _pseudo: 'temp' },
+          originalPosteur: { _id: idee.membreId, _pseudo: 'temp' },
           description: idee.description + ' ',
           score: idee.score,
           _image: 'https://picsum.photos/800/400?random=' + idee.id,
@@ -50,9 +45,15 @@ export class FrontPageComponent implements OnInit, OnDestroy {
         this.idees.push(ideeMap);
         console.log(this.idees);
       });
-      // i = this.membreService.recupererMembreById(tempIdees.membreId })
-
     });
+    /*
+     let obsMembre = this.membreService.recupererMembrebyMembreId(idee.membreId);
+        obsMembre.subscribe((response2: MembreModelDTO) => {
+          console.log('membreId ' + idee.membreId + ' ');
+          console.log(response2);
+        });
+        */
+
   }
 
   ngOnDestroy() {
