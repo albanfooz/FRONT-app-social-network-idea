@@ -32,3 +32,15 @@ app-pastille-categorie {
 .subtitle-pseudo {
     cursor: pointer;
 }
+
+app-collaborateur{
+    float: right;  
+    padding-right: 30px;
+}
+
+mat-icon-button{
+    height: 50px;
+    width: 50px;
+    
+}
+    

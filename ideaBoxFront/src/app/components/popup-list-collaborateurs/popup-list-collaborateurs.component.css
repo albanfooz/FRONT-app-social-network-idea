@@ -3,8 +3,8 @@ h3{
 }
 
 img{
-    max-width: 10%;
-    max-height: 10%;
+    max-width: 20%;
+    max-height: 20%;
     padding-right : 50px;
     padding-left : 100px;
     padding-top: 20px;
@@ -18,7 +18,7 @@ img{
 
   .example-viewport {
     height: 500px;
-    width: 700px;
+    width: 400px;
     border: 1px solid white;
   }
 
