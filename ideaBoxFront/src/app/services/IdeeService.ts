@@ -87,8 +87,8 @@ export class IdeeService {
         return this.http.get(this.URL);
     }
 
-    recupererById(id: number): IdeeModel {
-        return this._idees.find(({ id }) => id == id);
+    recupererById(id: number) {
+        return this.http.get(this.URL + '/' + id);
     }
 
     recupererIdeesByPosteur(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur
