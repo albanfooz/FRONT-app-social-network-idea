@@ -14,7 +14,7 @@ import { MembreModel } from 'src/app/models/MembreModel';
 })
 export class FrontPageComponent implements OnInit {
 
-  idees: Array<IdeeModel> = null;
+  idees: Array<IdeeModel> = [];
   observables: Array<Observable<Object>>;
   constructor(private ideeService: IdeeService, private membreService: MembreService) { }
 
@@ -26,16 +26,14 @@ export class FrontPageComponent implements OnInit {
     //this.observables[0].subscribe(response => {
     obs.subscribe(response => {
       tempIdees = response as Array<IdeeModelFromDB>;
-      console.log(tempIdees)
       tempIdees.forEach(idee => {
-        console.log(idee);
         /*this.observables.push(this.membreService.recupererMembreById(idee.id));
         let membreTemp: MembreModel;
         this.observables[this.observables.length - 1].subscribe(response2 =>{
 
         }
         )*/
-        console.log({
+        let t = {
           id: idee.id,
           titre: idee.titre,
           categorie: { _id: idee.categorieId, _categorie: 'TODO', _icone: 'computer' },
@@ -44,18 +42,12 @@ export class FrontPageComponent implements OnInit {
           score: idee.score,
           _image: 'https://picsum.photos/800/400?random=' + idee.id,
           createdAt: new Date(idee.createdAt)
-        });
+        };
 
-        this.idees.push({
-          id: idee.id,
-          titre: idee.titre,
-          categorie: { _id: idee.categorieId, _categorie: 'TODO', _icone: 'computer' },
-          originalPosteur: { _id: idee.id, _pseudo: 'hmmm' },
-          description: idee.description + ' ',
-          score: idee.score,
-          _image: 'https://picsum.photos/800/400?random=' + idee.id,
-          createdAt: new Date(idee.createdAt)
-        });
+
+        console.log(t);
+
+        this.idees.push(t);
       });
       // i = this.membreService.recupererMembreById(tempIdees.membreId })
 
