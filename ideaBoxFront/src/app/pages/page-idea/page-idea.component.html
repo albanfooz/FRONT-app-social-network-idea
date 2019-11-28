@@ -1,7 +1,9 @@
-<mat-card>
-    <app-idea-full [idee]='idee'></app-idea-full>
+<section *ngIf="idee !== null">
 
+    <mat-card>
+        <app-idea-full [idee]='idee'></app-idea-full>
 
 </mat-card>
 <app-input-commentaire></app-input-commentaire>
 <app-liste-commentaires></app-liste-commentaires>
+</section>
