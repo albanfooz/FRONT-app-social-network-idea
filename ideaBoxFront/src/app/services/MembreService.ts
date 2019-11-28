@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
 import { MembreModel } from '../models/MembreModel';
+import { HttpClient } from '@angular/common/http';
+import { MembreModelDTO } from '../models/MembreModelDTO';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MembreService {
+
+  private URL = 'http://localhost:7000/profils';
   devs: Array<MembreModel> = [
     {
       _id: 1,
@@ -27,21 +31,23 @@ export class MembreService {
       _profilePic: 'https://toppng.com/public/uploads/preview/anther-clipart-perry-black-panther-11562894629dczjoe2rmr.png'
     }
   ];
-  membres: Array<MembreModel> = this.devs;
-  constructor() {
-    for (let index = 5; index < 15; index++) {
-      this.membres.push(
-        {
-          _id: index,
-          _pseudo: 'fakeMembre' + index,
-          _profilePic: 'https://www.booksie.com/files/profiles/22/mr-anonymous_230x230.png'
-        }
-      );
-    }
+  membres: Array<MembreModel> = [];//= this.devs;
+  membresDTO: Array<MembreModelDTO> = [];
+  constructor(private http: HttpClient) {
   }
 
-  recupererMembreById(id: number) {
+  recupererMembreByIdBouchon(id: number) {
     return this.membres.find(({ _id }) => _id == id);
+  }
+  recupererMembreById(id: number) {
+    return this.http.get(this.URL + '/p' + id);
+  }
+
+  recupererMembrebyMembreId(id: number) {
+    return this.http.get(this.URL + '/m' + id);
+  }
+  recupererAllMembres() { //useless
+    return this.http.get(this.URL);
   }
 
 }
