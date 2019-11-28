@@ -26,9 +26,6 @@ export class FrontPageComponent implements OnInit, OnDestroy {
     this.sub = this.ideeService.recupererAllIdees().subscribe((response: Array<IdeeModelFromDB>) => {
       response.forEach(idee => {
         let ideeMap: IdeeModel;
-
-
-
         ideeMap = {
           id: idee.id,
           titre: idee.titre,
