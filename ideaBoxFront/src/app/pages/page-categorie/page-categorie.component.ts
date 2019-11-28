@@ -20,7 +20,7 @@ export class PageCategorieComponent implements OnInit {
   ngOnInit() {
     this.id = this.route.snapshot.params['categorieId'];
     this.categorie = this.categorieService.recupererById(this.id);
-    this.idees = this.ideeService.recupererIdeesByCategorie(this.id);
+    this.idees = this.ideeService.recupererIdeesByCategorieBouchon(this.id);
   }
 
 }

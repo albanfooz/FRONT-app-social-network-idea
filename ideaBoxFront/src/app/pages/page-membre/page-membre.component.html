@@ -25,7 +25,7 @@
     <mat-divider></mat-divider>
     <mat-tab-group dynamicHeight mat-stretch-tabs>
         <mat-tab label="Postes">
-            <app-idee-list *ngIf="idees.length == 0" [ideesList]="idees"></app-idee-list>
+            <app-idee-list *ngIf="idees.length != 0" [ideesList]="idees"></app-idee-list>
         </mat-tab>
         <mat-tab label="Commentaires"> <code>Historique commentaires</code> </mat-tab>
         <mat-tab label="Likes"> <code>(Perso) Historique idées likées</code> </mat-tab>
