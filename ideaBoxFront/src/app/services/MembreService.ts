@@ -31,9 +31,18 @@ export class MembreService {
       _profilePic: 'https://toppng.com/public/uploads/preview/anther-clipart-perry-black-panther-11562894629dczjoe2rmr.png'
     }
   ];
-  membres: Array<MembreModel> = [];//= this.devs;
+  membres: Array<MembreModel> = this.devs;
   membresDTO: Array<MembreModelDTO> = [];
   constructor(private http: HttpClient) {
+    for (let index = 5; index < 15; index++) {
+      this.membres.push(
+        {
+          _id: index,
+          _pseudo: 'fakeMembre' + index,
+          _profilePic: 'https://www.booksie.com/files/profiles/22/mr-anonymous_230x230.png'
+        }
+      );
+    }
   }
 
   recupererMembreByIdBouchon(id: number) {

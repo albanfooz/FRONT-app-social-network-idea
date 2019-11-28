@@ -42,7 +42,6 @@ export class IdeeListComponent implements OnInit {
   onScrollDown() {
 
     this.refreshDisplayedIdees();
-    console.log('Displayed Ideas = ' + this.nbrIdees);
   }
   ngOnInit() {
 

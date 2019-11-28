@@ -43,8 +43,7 @@ export class InscriptionService {
     }
 
     inscription(profil: ProfilModel) {
-        this._Profils.push(profil);
-        console.log(profil);
+        this._Profils.push(profil);;
     }
 
 }
