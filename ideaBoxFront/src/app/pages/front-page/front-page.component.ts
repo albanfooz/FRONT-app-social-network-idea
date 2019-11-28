@@ -6,6 +6,7 @@ import { MembreService } from 'src/app/services/MembreService';
 import { IdeeModelFromDB } from 'src/app/models/IdeeModelDTO';
 import { Observable, Subscription } from 'rxjs';
 import { MembreModel } from 'src/app/models/MembreModel';
+import { CategorieService } from 'src/app/services/CategorieService';
 
 @Component({
   selector: 'app-front-page',
@@ -17,7 +18,7 @@ export class FrontPageComponent implements OnInit, OnDestroy {
   idees: Array<IdeeModel> = [];
   sub: Subscription;
   membreSubs: Array<Subscription>;
-  constructor(private ideeService: IdeeService, private membreService: MembreService) { }
+  constructor(private ideeService: IdeeService, private membreService: MembreService, private categorieService: CategorieService) { }
   ngOnInit() {
     let tempIdees: Array<IdeeModelFromDB>;
 
@@ -31,7 +32,7 @@ export class FrontPageComponent implements OnInit, OnDestroy {
         ideeMap = {
           id: idee.id,
           titre: idee.titre,
-          categorie: { _id: idee.categorieId, _categorie: 'TODO', _icone: 'computer' },
+          categorie: this.categorieService.recupererById(idee.id),
           originalPosteur: this.membreService.recupererMembreByIdBouchon(idee.id),
           description: idee.description + ' ',
           score: idee.score,

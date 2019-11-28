@@ -4,6 +4,8 @@ import { IdeeService } from 'src/app/services/IdeeService';
 import { IdeeModel } from 'src/app/models/IdeeModel';
 import { Subscription } from 'rxjs';
 import { IdeeModelFromDB } from 'src/app/models/IdeeModelDTO';
+import { MembreService } from 'src/app/services/MembreService';
+import { CategorieService } from 'src/app/services/CategorieService';
 
 @Component({
   selector: 'app-page-idea',
@@ -16,7 +18,7 @@ export class PageIdeaComponent implements OnInit, OnDestroy {
   idee: IdeeModel = null;
   sub: Subscription;
 
-  constructor(private route: ActivatedRoute, private ideeService: IdeeService) { }
+  constructor(private route: ActivatedRoute, private ideeService: IdeeService, private membreService: MembreService, private categorieService: CategorieService) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params['ideaId'];
@@ -26,8 +28,8 @@ export class PageIdeaComponent implements OnInit, OnDestroy {
       this.idee = {
         id: response.id,
         titre: response.titre,
-        categorie: { _id: response.categorieId, _categorie: 'TODO', _icone: 'computer' },
-        originalPosteur: { _id: response.membreId, _pseudo: 'temp' },
+        categorie: this.categorieService.recupererById(response.id),
+        originalPosteur: this.membreService.recupererMembreByIdBouchon(response.id),
         description: response.description + ' ',
         score: response.score,
         _image: 'https://picsum.photos/800/400?random=' + response.id,
