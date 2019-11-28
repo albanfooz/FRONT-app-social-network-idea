@@ -91,11 +91,19 @@ export class IdeeService {
         return this.http.get(this.URL + '/' + id);
     }
 
-    recupererIdeesByPosteur(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur
+    recupererIdeesByPosteur(idPosteur: number) {       // historique idee du posteur
+        return this.http.get(this.URL + '/membre/' + idPosteur);
+        //return this._idees.filter(element => { if (element.originalPosteur._id == idPosteur) { return element; } });
+    }
+    recupererIdeesByCategorie(idCategorie: number) {
+        return this.http.get(this.URL + '/categorie/' + idCategorie);
+    }
+
+    recupererIdeesByPosteurBouchon(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur
         return this._idees.filter(element => { if (element.originalPosteur._id == idPosteur) { return element; } });
     }
 
-    recupererIdeesByCategorie(idCategorie: number): Array<IdeeModel> {
+    recupererIdeesByCategorieBouchon(idCategorie: number): Array<IdeeModel> {
         return this._idees.filter(element => { if (element.categorie._id == idCategorie) { return element; } });
     }
 
