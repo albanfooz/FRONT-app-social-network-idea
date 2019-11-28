@@ -1,5 +1,7 @@
 h3{
   text-align : center;
+  background: #3f51b5;
+  color: #fff;
 }
 
 img{
@@ -30,6 +32,23 @@ img{
 .item.pseudo{
   color : blue;
 }
+
+mat-dialog-content {
+  display: block;
+  padding: 0px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: auto;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  max-height: inherit;
+  overflow: hidden;
+}
+
+
+
 
   
   
