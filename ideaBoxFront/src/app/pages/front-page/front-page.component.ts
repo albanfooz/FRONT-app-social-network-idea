@@ -29,8 +29,8 @@ export class FrontPageComponent implements OnInit, OnDestroy {
         ideeMap = {
           id: idee.id,
           titre: idee.titre,
-          categorie: this.categorieService.recupererById(idee.id),
-          originalPosteur: this.membreService.recupererMembreByIdBouchon(idee.id),
+          categorie: this.categorieService.recupererById(idee.categorieId),
+          originalPosteur: this.membreService.recupererMembreByIdBouchon(idee.membreId),
           description: idee.description + ' ',
           score: idee.score,
           _image: 'https://picsum.photos/800/400?random=' + idee.id,
