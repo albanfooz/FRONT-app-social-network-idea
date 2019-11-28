@@ -31,7 +31,7 @@ export class MenuConnexionComponent implements OnInit {
 
   openDialog(): void {
     this.dialog.open(ConnexionPopupComponent, {
-      width: '250px'
+      width: '300px'
     });
   }
 }
