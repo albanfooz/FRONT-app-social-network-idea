@@ -35,7 +35,7 @@
           </mat-form-field>
         </div>
       </div>
-      <ckeditor class="ckeditor-idee" formControlName="content" [editor]="Editor" (keyup)="onUpdate($event)" [config]="{
+      <ckeditor class="ckeditor-idee" formControlName="description" [editor]="Editor" (keyup)="onUpdate($event)" [config]="{
               toolbar: ['heading','|', 'bold', 'italic','link', 'bulletedList', 'numberedList','|',  'blockQuote','MediaEmbed','undo','redo' ],
              placeholder: 'Taper une description ici ...'
              }"></ckeditor>

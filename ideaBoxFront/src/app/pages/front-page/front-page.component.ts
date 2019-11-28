@@ -32,7 +32,7 @@ export class FrontPageComponent implements OnInit, OnDestroy {
           id: idee.id,
           titre: idee.titre,
           categorie: { _id: idee.categorieId, _categorie: 'TODO', _icone: 'computer' },
-          originalPosteur: { _id: idee.membreId, _pseudo: 'temp' },
+          originalPosteur: this.membreService.recupererMembreByIdBouchon(idee.id),
           description: idee.description + ' ',
           score: idee.score,
           _image: 'https://picsum.photos/800/400?random=' + idee.id,
@@ -58,7 +58,7 @@ export class FrontPageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
 
-    this.sub.unsubscribe;
+    // this.sub.unsubscribe;
 
   }
 
