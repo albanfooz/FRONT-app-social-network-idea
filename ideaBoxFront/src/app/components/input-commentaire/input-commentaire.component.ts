@@ -13,7 +13,7 @@ export class InputCommentaireComponent implements OnInit {
   private commentaire: CommentaireModel = {
     _createdAt: new Date(),
     _texteCommentaire: '',
-    _membre: this.membreService.recupererMembreById(3),
+    _membre: this.membreService.recupererMembreByIdBouchon(3),
     _score: 100
   };
 

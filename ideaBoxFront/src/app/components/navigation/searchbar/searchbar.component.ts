@@ -1,6 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IdeeService } from '../../../services/IdeeService';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { InvokeFunctionExpr } from '@angular/compiler';
 
 export interface IDialogData {
 
@@ -27,13 +28,12 @@ export class SearchbarComponent implements OnInit {
 
   submit() {
 
-    if (this.searchinput != null && this.searchinput != '') {
-
-      this.router.navigateByUrl(`/search/${this.searchinput}`);
-    }
+    this.router.navigateByUrl('/search/' + this.searchinput);
+    this.searchinput = '';
   }
 
   setFocus() {
+
     if (this.isOpen) {
       setTimeout(() => { document.getElementById('searchfocus').blur(); }, 0);
       this.searchinput = '';
@@ -56,4 +56,46 @@ export class SearchbarComponent implements OnInit {
     this.isBlurActive = true;
   }
 
+  NavWithArrows(event: KeyboardEvent) {
+
+    if (this.searchinput != null && this.searchinput != '') {
+
+      this.cancelBlur();
+
+      const list = document.getElementById('resultList');
+      const firstElement = list.firstChild.nextSibling/*.firstChild.firstChild.nextSibling.firstChild*/;
+      const input = document.getElementById('searchfocus');
+
+      document.onkeydown = (e) => {
+        switch (e.code) {
+          case 'ArrowUp':
+            if (document.activeElement != firstElement && document.activeElement != input) {
+              (document.activeElement.previousSibling as HTMLElement).focus();
+            } else {
+              input.focus();
+              const castedInput = (input as HTMLInputElement);
+              setTimeout(() => castedInput.selectionStart = castedInput.selectionEnd = castedInput.value.length);
+            }
+            break;
+          case 'ArrowDown':
+            if (firstElement != null) {
+              if (document.activeElement == input) {
+                (firstElement as HTMLElement).focus();
+              } else {
+                const isNext = document.activeElement.nextSibling;
+                if (isNext != null) {
+                  (isNext as HTMLElement).focus();
+                }
+              }
+            }
+            break;
+        }
+      };
+    }
+  }
+  gotolink(id) {
+
+    this.setFocus();
+    this.router.navigateByUrl('idea/' + id);
+  }
 }

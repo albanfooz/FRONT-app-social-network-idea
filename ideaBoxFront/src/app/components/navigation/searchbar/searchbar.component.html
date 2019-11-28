@@ -4,21 +4,18 @@
         <button *ngIf="!isOpen" (click)="setFocus()" mat-icon-button>
             <mat-icon>search</mat-icon>
         </button>
-        <button *ngIf="isOpen" (click)="search.value='';searchinput='';isOpen=false" mat-icon-button>
+        <button *ngIf="isOpen" (click)="isOpen=false" mat-icon-button>
             <mat-icon>close</mat-icon>
         </button>
-        <input #search id="searchfocus" name="search" type="search" placeholder="Rechercher..."
-            class="{{isOpen?'ouvert':'ferme'}}" (blur)="isBlurActive?searchinput?'':setFocus():''"
-            [(ngModel)]="searchinput" (keyup.enter)="submit()" autocomplete="off">
+        <input #search id="searchfocus" name="search" type="search" placeholder="Rechercher..." class="{{isOpen?'ouvert':'ferme'}}" (blur)="isBlurActive?setFocus():''" [(ngModel)]="searchinput" (keyup.enter)='submit()' autocomplete="off" (keydown)="NavWithArrows($event)">
         <button mat-icon-button *ngIf="isOpen" (click)="submit()">
             <mat-icon>search</mat-icon>
         </button>
     </form>
 
-    <mat-nav-list id="resultList" *ngIf="searchinput!=NULL && searchinput!=''" (mouseover)="cancelBlur()"
-        (mouseout)="activeBlur()">
-        <mat-list-item *ngFor="let idea of ideas | filter:searchinput">
-            <a matLine [routerLink]="['/idea/'+idea._id]" (click)="setFocus();searchinput=''">
+    <mat-nav-list id="resultList" *ngIf="searchinput!=NULL && searchinput!=''" (mouseover)="cancelBlur()" (mouseout)="activeBlur()">
+        <mat-list-item *ngFor="let idea of ideas | filter:searchinput" tabindex="1" (keydown.enter)="gotolink(idea._id)">
+            <a matLine [routerLink]="['/idea/'+idea._id]" (click)="setFocus()">
                 <span class="resultTitle">{{idea._titre}} </span>
                 <span class="resultAuthor"> {{idea._originalPosteur._pseudo}}</span>
             </a>
