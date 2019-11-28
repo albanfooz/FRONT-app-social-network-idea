@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommentaireService } from 'src/app/services/CommentaireService';
 
 @Component({
   selector: 'app-liste-commentaires',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeCommentairesComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private commentService: CommentaireService) { }
 
   ngOnInit() {
+
   }
 
 }
