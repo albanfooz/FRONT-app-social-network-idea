@@ -1,11 +1,12 @@
-<h3 mat-dialog-title>Liste des Collaborateurs</h3>
-<mat-dialog-content class="mat-typography">
-
+<mat-dialog-content  class="mat-typography">
+    <div>
+        <h3 mat-dialog-title>Liste des Collaborateurs</h3>
+    </div>
     <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
 
 
-        <div *cdkVirtualFor="let item of collaborateurList; templateCacheSize: 0" class="example-item">
-            <a href="/" class="item.pseudo"> <img src="{{item.img}}" /> {{item.pseudo}} </a>
+        <div *cdkVirtualFor="let item of collaborateurList; templateCacheSize: 0" class="example-item" >
+            <a href="/" class="item.pseudo"> <img [src]="item.img" /> {{item.pseudo}} </a>
         </div>
     </cdk-virtual-scroll-viewport>
 
