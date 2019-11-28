@@ -95,6 +95,9 @@ export class IdeeService {
         return this.http.get(this.URL + '/membre/' + idPosteur);
         //return this._idees.filter(element => { if (element.originalPosteur._id == idPosteur) { return element; } });
     }
+    recupererIdeesByCategorie(idCategorie: number) {
+        return this.http.get(this.URL + '/categorie/' + idCategorie);
+    }
 
     recupererIdeesByPosteurBouchon(idPosteur: number): Array<IdeeModel> {       // historique idee du posteur
         return this._idees.filter(element => { if (element.originalPosteur._id == idPosteur) { return element; } });
