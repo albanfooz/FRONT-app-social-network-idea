@@ -23,8 +23,6 @@ export class PageIdeaComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.id = this.route.snapshot.params['ideaId'];
     this.sub = this.ideeService.recupererById(this.id).subscribe((response: IdeeModelFromDB) => {
-      console.log(response);
-
       this.idee = {
         id: response.id,
         titre: response.titre,

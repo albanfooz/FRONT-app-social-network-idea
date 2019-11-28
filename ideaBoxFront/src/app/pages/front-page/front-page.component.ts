@@ -39,12 +39,7 @@ export class FrontPageComponent implements OnInit, OnDestroy {
           _image: 'https://picsum.photos/800/400?random=' + idee.id,
           createdAt: new Date(idee.createdAt)
         };
-        console.log(ideeMap);
-
-
-
         this.idees.push(ideeMap);
-        console.log(this.idees);
       });
     });
     /*

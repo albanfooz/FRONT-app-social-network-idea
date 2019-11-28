@@ -28,7 +28,6 @@ export class PageMembreComponent implements OnInit {
         _id: membreFromDb.id,
         _pseudo: membreFromDb.login
       };
-      console.log(this.membre);
     });
 
     //   this.idees = this.ideeService.recupererIdeesByPosteur(this.id);

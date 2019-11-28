@@ -14,14 +14,14 @@ import { MembreService } from 'src/app/services/MembreService';
 })
 export class PageAjoutIdeeComponent {
   creationIdeeForm = this.fb.group({
-    _titre: [null, Validators.required],
-    _categorie: [null, Validators.required],
+    titre: [null, Validators.required],
+    categorie: [null, Validators.required],
     _image: null,
-    _content: ['', Validators.required]
+    description: ['', Validators.required]
   });
   // RichTextEditor
   Editor = ClassicEditor;
-  lengthOfContent = 0;
+  lengthOfDescription = 0;
 
   hasUnitNumber = false;
   constructor(private fb: FormBuilder, private iService: IdeeService, private router: Router, private categorieService: CategorieService, private membreService: MembreService) { }
@@ -44,6 +44,6 @@ export class PageAjoutIdeeComponent {
   }
 
   onUpdate() {
-    this.lengthOfContent = this.creationIdeeForm.value._content.length;
+    this.lengthOfDescription = this.creationIdeeForm.value.description.length;
   }
 }
