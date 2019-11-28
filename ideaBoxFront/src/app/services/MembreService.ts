@@ -42,6 +42,10 @@ export class MembreService {
   recupererMembreById(id: number) {
     return this.http.get(this.URL + '/p' + id);
   }
+
+  recupererMembrebyMembreId(id: number) {
+    return this.http.get(this.URL + '/m' + id);
+  }
   recupererAllMembres() { //useless
     return this.http.get(this.URL);
   }

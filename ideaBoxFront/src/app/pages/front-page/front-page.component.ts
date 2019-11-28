@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IdeeService } from 'src/app/services/IdeeService';
 import { IdeeModel } from 'src/app/models/IdeeModel';
 import { MembreModelDTO } from 'src/app/models/MembreModelDTO';
 import { MembreService } from 'src/app/services/MembreService';
 import { IdeeModelFromDB } from 'src/app/models/IdeeModelDTO';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { MembreModel } from 'src/app/models/MembreModel';
 
 @Component({
@@ -12,46 +12,54 @@ import { MembreModel } from 'src/app/models/MembreModel';
   templateUrl: './front-page.component.html',
   styleUrls: ['./front-page.component.css']
 })
-export class FrontPageComponent implements OnInit {
+export class FrontPageComponent implements OnInit, OnDestroy {
 
   idees: Array<IdeeModel> = [];
-  observables: Array<Observable<Object>>;
+  sub: Subscription;
+  membreSubs: Array<Subscription>;
   constructor(private ideeService: IdeeService, private membreService: MembreService) { }
-
   ngOnInit() {
     let tempIdees: Array<IdeeModelFromDB>;
-    // this.observables.push(this.ideeService.recupererAllIdees());
-    let obs = this.ideeService.recupererAllIdees();
 
-    //this.observables[0].subscribe(response => {
-    obs.subscribe(response => {
-      tempIdees = response as Array<IdeeModelFromDB>;
-      tempIdees.forEach(idee => {
-        /*this.observables.push(this.membreService.recupererMembreById(idee.id));
-        let membreTemp: MembreModel;
-        this.observables[this.observables.length - 1].subscribe(response2 =>{
 
-        }
-        )*/
-        let t = {
+    this.sub = this.ideeService.recupererAllIdees().subscribe((response: Array<IdeeModelFromDB>) => {
+      response.forEach(idee => {
+        let ideeMap: IdeeModel;
+
+
+
+        ideeMap = {
           id: idee.id,
           titre: idee.titre,
           categorie: { _id: idee.categorieId, _categorie: 'TODO', _icone: 'computer' },
-          originalPosteur: { _id: idee.id, _pseudo: 'hmmm' },
+          originalPosteur: { _id: idee.membreId, _pseudo: 'temp' },
           description: idee.description + ' ',
           score: idee.score,
           _image: 'https://picsum.photos/800/400?random=' + idee.id,
           createdAt: new Date(idee.createdAt)
         };
+        console.log(ideeMap);
 
 
-        console.log(t);
 
-        this.idees.push(t);
+        this.idees.push(ideeMap);
+        console.log(this.idees);
       });
-      // i = this.membreService.recupererMembreById(tempIdees.membreId })
-
     });
+    /*
+     let obsMembre = this.membreService.recupererMembrebyMembreId(idee.membreId);
+        obsMembre.subscribe((response2: MembreModelDTO) => {
+          console.log('membreId ' + idee.membreId + ' ');
+          console.log(response2);
+        });
+        */
+
+  }
+
+  ngOnDestroy() {
+
+    this.sub.unsubscribe;
+
   }
 
 }
