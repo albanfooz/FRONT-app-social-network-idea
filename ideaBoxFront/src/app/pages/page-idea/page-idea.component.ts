@@ -38,7 +38,7 @@ export class PageIdeaComponent implements OnInit, OnDestroy {
 
   }
   ngOnDestroy() {
-    throw new Error("Method not implemented.");
+    this.sub.unsubscribe();
   }
 
 }
