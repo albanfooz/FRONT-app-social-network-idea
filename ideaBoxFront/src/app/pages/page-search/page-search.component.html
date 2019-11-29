@@ -1,1 +1,1 @@
-<app-idee-list [ideesList]="resultidees"></app-idee-list>
+<app-idee-list *ngIf="resultidees.length !== 0" [ideesList]="resultidees"></app-idee-list>

@@ -1,7 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IdeeService } from '../../../services/IdeeService';
 import { Router } from '@angular/router';
 import { InvokeFunctionExpr } from '@angular/compiler';
+import { IdeeModelFromDB } from 'src/app/models/IdeeModelDTO';
+import { IdeeModel } from 'src/app/models/IdeeModel';
+import { CategorieService } from 'src/app/services/CategorieService';
+import { MembreService } from 'src/app/services/MembreService';
+import { Subscription } from 'rxjs';
 
 export interface IDialogData {
 
@@ -13,14 +18,16 @@ export interface IDialogData {
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.css']
 })
-export class SearchbarComponent implements OnInit {
+export class SearchbarComponent implements OnInit, OnDestroy {
 
-  constructor(private ids: IdeeService, private router: Router) {
+  sub: Subscription;
+
+  constructor(private ids: IdeeService, private categorieService: CategorieService, private membreService: MembreService, private router: Router) {
 
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
-  ideas = this.ids.idees;
+  idees: Array<IdeeModel> = [];
 
   searchinput: string;
   isOpen = false;
@@ -45,6 +52,27 @@ export class SearchbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.sub = this.ids.recupererAllIdees().subscribe((response: Array<IdeeModelFromDB>) => {
+      response.forEach(idee => {
+        let ideeMap: IdeeModel;
+        ideeMap = {
+          id: idee.id,
+          titre: idee.titre,
+          categorie: this.categorieService.recupererById(idee.categorieId),
+          originalPosteur: this.membreService.recupererMembreByIdBouchon(idee.membreId),
+          description: idee.description + ' ',
+          score: idee.score,
+          _image: 'https://picsum.photos/800/400?random=' + idee.id,
+          createdAt: new Date(idee.createdAt)
+        };
+        this.idees.push(ideeMap);
+      });
+    });
+  }
+
+  ngOnDestroy() {
+
+    this.sub.unsubscribe();
   }
 
   cancelBlur() {
@@ -63,7 +91,7 @@ export class SearchbarComponent implements OnInit {
       this.cancelBlur();
 
       const list = document.getElementById('resultList');
-      const firstElement = list.firstChild.nextSibling/*.firstChild.firstChild.nextSibling.firstChild*/;
+      const firstElement = list.firstChild.nextSibling;
       const input = document.getElementById('searchfocus');
 
       document.onkeydown = (e) => {
