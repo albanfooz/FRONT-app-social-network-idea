@@ -1,0 +1,17 @@
+.mat-icon-button {
+    padding: 0;
+    height: 50px;
+    min-height: 50px;
+    min-width: 80px;
+    max-width: 400px;
+    flex-shrink: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #909090;
+    font-size: 17px;
+}
+
+.mat-icon {
+    font-size: 27px;
+}
+

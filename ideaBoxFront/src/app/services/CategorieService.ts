@@ -29,7 +29,7 @@ export class CategorieService {
         this._pastille.push({
             _id: 4,
             _categorie: 'Entraide',
-            _icone: 'people_outline'
+            _icone: 'group'
         });
         this._pastille.push({
             _id: 5,

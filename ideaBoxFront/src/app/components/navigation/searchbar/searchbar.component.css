@@ -71,3 +71,12 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   color:grey;
   font-style: italic;
 }
+.resultText {
+
+  text-overflow: ellipsis;
+}
+
+.mat-list-item:focus {
+
+  background-color: lightskyblue;
+}

@@ -1,4 +1,4 @@
-<mat-card class="profil-card">
+<mat-card *ngIf="membre !== null" class="profil-card">
     <mat-card-header>
         <img mat-card-avatar [src]="membre._profilePic" class="profilPic">
         <mat-card-title>{{membre._pseudo}}</mat-card-title>
@@ -25,9 +25,13 @@
     <mat-divider></mat-divider>
     <mat-tab-group dynamicHeight mat-stretch-tabs>
         <mat-tab label="Postes">
-            <app-idee-list [ideesList]="idees"></app-idee-list>
+            <app-idee-list *ngIf="idees.length != 0" [ideesList]="idees"></app-idee-list>
         </mat-tab>
-        <mat-tab label="Commentaires"> <code>Historique commentaires</code> </mat-tab>
+        <mat-tab label="Commentaires">
+            <mat-card *ngFor="let comment of commentairesOfMembre; let i=index" class="commentaire-card">
+                <app-commentaire [comment]="comment"></app-commentaire>
+            </mat-card>
+        </mat-tab>
         <mat-tab label="Likes"> <code>(Perso) Historique idées likées</code> </mat-tab>
         <mat-tab label="Collaborations"> <code>(Perso) Historique en tant que collaborateurs</code> </mat-tab>
     </mat-tab-group>

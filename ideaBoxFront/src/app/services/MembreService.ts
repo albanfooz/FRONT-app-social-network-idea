@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
 import { MembreModel } from '../models/MembreModel';
+import { HttpClient } from '@angular/common/http';
+import { MembreModelDTO } from '../models/MembreModelDTO';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MembreService {
+
+  private URL = 'http://localhost:7000/profils';
   devs: Array<MembreModel> = [
     {
       _id: 1,
@@ -28,7 +32,8 @@ export class MembreService {
     }
   ];
   membres: Array<MembreModel> = this.devs;
-  constructor() {
+  membresDTO: Array<MembreModelDTO> = [];
+  constructor(private http: HttpClient) {
     for (let index = 5; index < 15; index++) {
       this.membres.push(
         {
@@ -40,8 +45,18 @@ export class MembreService {
     }
   }
 
-  recupererMembreById(id: number) {
+  recupererMembreByIdBouchon(id: number) {
     return this.membres.find(({ _id }) => _id == id);
+  }
+  recupererMembreById(id: number) {
+    return this.http.get(this.URL + '/p' + id);
+  }
+
+  recupererMembrebyMembreId(id: number) {
+    return this.http.get(this.URL + '/m' + id);
+  }
+  recupererAllMembres() { //useless
+    return this.http.get(this.URL);
   }
 
 }

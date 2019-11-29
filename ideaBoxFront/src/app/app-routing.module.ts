@@ -13,6 +13,7 @@ import { CommentaireComponent } from './components/commentaire/commentaire.compo
 import { PageCategorieComponent } from './pages/page-categorie/page-categorie.component';
 import { PageMembreComponent } from './pages/page-membre/page-membre.component';
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
+import { PageSearchComponent } from './pages/page-search/page-search.component';
 
 const routes: Routes = [
   { path: '', component: FrontPageComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'profil/:membreId', component: PageMembreComponent },
   { path: 'ajout-idee', component: PageAjoutIdeeComponent },
   { path: 'commentaire', component: CommentaireComponent },
+  { path: 'search/:searchContent', component: PageSearchComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

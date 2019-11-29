@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CommentaireModel } from 'src/app/models/CommentaireModel';
-import { CommentaireService } from 'src/app/services/CommentaireService';
+
 
 @Component({
   selector: 'app-commentaire',
@@ -11,9 +11,8 @@ export class CommentaireComponent implements OnInit {
   isCommentable: boolean = false;
 
   openComment: Function;
-  commentaire: CommentaireModel;
-  commentaires: Array<CommentaireModel>;
-  constructor(private commentService: CommentaireService) { }
+  @Input() comment: CommentaireModel;
+  constructor() { }
 
   ngOnInit() {
     this.openComment = this.open.bind(this);

@@ -1,9 +1,11 @@
-<mat-toolbar>
-    <mat-toolbar-row>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example">
-            {{categorie._icone}}</mat-icon>
-        <span>{{categorie._categorie}}</span>
-        <span class="example-spacer"></span>
-    </mat-toolbar-row>
-</mat-toolbar>
-<app-idee-list [ideesList]="idees"></app-idee-list>
+<div style="height: calc(100% - 64px) !important;">
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example">
+                {{categorie._icone}}</mat-icon>
+            <span>{{categorie._categorie}}</span>
+            <span class="example-spacer"></span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <app-idee-list *ngIf="idees.length != 0" [ideesList]="idees"></app-idee-list>
+</div>

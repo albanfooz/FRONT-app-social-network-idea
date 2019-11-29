@@ -5,8 +5,7 @@
     <!-- SIDE MENU -->
 
     <div *ngIf="posmenu == 'side'">
-        <a mat-list-item [routerLink]="['/inscription']" routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }">
+        <a mat-list-item [routerLink]="['/inscription']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
             Inscription</a>
         <a mat-list-item (click)="openDialog()">Connexion</a>
     </div>
@@ -14,8 +13,7 @@
     <!-- TOP MENU -->
 
     <div *ngIf="posmenu == 'top'">
-        <a mat-button [routerLink]="['/inscription']" routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }">
+        <a mat-button [routerLink]="['/inscription']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
             Inscription</a>
         <a mat-button (click)="openDialog()">Connexion</a>
     </div>
@@ -30,10 +28,8 @@
 
     <div *ngIf="posmenu == 'side'">
         <button mat-list-item [matMenuTriggerFor]="menu">
-            <img id="pp"
-                src="https://sites.nicholas.duke.edu/clarklab/files/2011/01/default_profile-d80441a6f25a9a0aac354978c65c8fa9.jpg"
-                alt="profile picture" />
-            Profil
+            <img id="pp" src="membre._profilepic" alt="profile picture" />
+            {{membre._pseudo}}
             <mat-icon>arrow_drop_down</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
@@ -57,18 +53,16 @@
     <div *ngIf="posmenu == 'top'">
         <button mat-button [matMenuTriggerFor]="menu">
             <mat-icon>arrow_drop_down</mat-icon>
-            Profil
-            <img id="pp"
-                src="https://sites.nicholas.duke.edu/clarklab/files/2011/01/default_profile-d80441a6f25a9a0aac354978c65c8fa9.jpg"
-                alt="profile picture" />
+            {{membre._pseudo}}
+            <img id="pp" [src]="membre._profilePic" alt="profile picture" />
         </button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item>
+            <a mat-menu-item [routerLink]="['/profil', membre._id]" routerLinkActive="router-link-active">
                 <mat-icon>account_circle</mat-icon>Voir profil
-            </button>
-            <button mat-menu-item>
+            </a>
+            <a mat-menu-item [routerLink]="['/profil', membre._id]" routerLinkActive="router-link-active">
                 <mat-icon>edit</mat-icon>Modifier profil
-            </button>
+            </a>
             <button mat-menu-item>
                 <mat-icon>settings</mat-icon>Préférences
             </button>

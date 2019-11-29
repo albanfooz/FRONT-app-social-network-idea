@@ -1,26 +1,23 @@
 <div class="direction">
+
     <form id="search">
         <button *ngIf="!isOpen" (click)="setFocus()" mat-icon-button>
             <mat-icon>search</mat-icon>
         </button>
-        <button *ngIf="isOpen" (click)="search.value='';searchinput='';isOpen=false" mat-icon-button>
+        <button *ngIf="isOpen" (click)="isOpen=false" mat-icon-button>
             <mat-icon>close</mat-icon>
         </button>
-        <input #search id="searchfocus" name="search" type="search" placeholder="Rechercher..."
-            class="{{isOpen?'ouvert':'ferme'}}" (blur)="isBlurActive?setFocus():''" [(ngModel)]="searchinput"
-            (keyup.enter)="openDialog()" autocomplete="off">
-        <button mat-icon-button *ngIf="isOpen" (click)="openDialog()">
+        <input #search id="searchfocus" name="search" type="search" placeholder="Rechercher..." class="{{isOpen?'ouvert':'ferme'}}" (blur)="isBlurActive?setFocus():''" [(ngModel)]="searchinput" (keyup.enter)='submit()' autocomplete="off" (keydown)="NavWithArrows($event)">
+        <button mat-icon-button *ngIf="isOpen" (click)="submit()">
             <mat-icon>search</mat-icon>
         </button>
     </form>
 
-    <mat-nav-list id="resultList" *ngIf="searchinput!=NULL && searchinput!=''" (mouseover)="cancelBlur()"
-        (mouseout)="activeBlur()">
-        <mat-list-item *ngFor="let idea of ideas | filter:searchinput">
-            <a matLine [routerLink]="['/idea/'+idea._id]" (click)="setFocus();searchinput=''">
-                <span class="resultTitle">{{idea._titre}} </span>
-
-                <span class="resultAuthor"> {{idea._originalPosteur}}</span>
+    <mat-nav-list id="resultList" *ngIf="searchinput!=NULL && searchinput!=''" (mouseover)="cancelBlur()" (mouseout)="activeBlur()">
+        <mat-list-item *ngFor="let idea of idees | filter:searchinput" tabindex="1" (keydown.enter)="gotolink(idea.id)">
+            <a matLine [routerLink]="['/idea/'+idea.id]" (click)="setFocus()">
+                <span class="resultTitle">{{idea.titre}} </span>
+                <span class="resultAuthor"> {{idea.originalPosteur._pseudo}}</span>
             </a>
         </mat-list-item>
     </mat-nav-list>

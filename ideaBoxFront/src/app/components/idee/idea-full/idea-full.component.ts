@@ -17,7 +17,7 @@ export class IdeaFullComponent implements OnInit {
   public openComment() {
     // reroute sur la même idée (en soit : useless sur idee full)
     //this.router.navigateByUrl('idea/' + this.idee._id);
-    setTimeout(() => { document.getElementById('texteCom').focus(); }, 10);
+    //setTimeout(() => { document.getElementById('texteCom').focus(); }, 10);
   }
 }
 

@@ -10,3 +10,15 @@
     margin: 5px auto 10px auto;
     min-width: 340px;
 }
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+.show-scroll-to-top {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}

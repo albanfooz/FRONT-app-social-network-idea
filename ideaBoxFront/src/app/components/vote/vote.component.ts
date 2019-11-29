@@ -24,13 +24,15 @@ export class VoteComponent implements OnInit {
       positif: this.social.vote,
       idMembre: 1
     });
+    this.social.vote ? this.score++ : this.score--;
   }
   dislike() {
     this.social.vote === false ? this.social.vote = null : this.social.vote = false;
-    const obs = this.voteService.ajouter({
+    this.voteService.ajouter({
       positif: this.social.vote,
       idMembre: 1
     });
+    this.social.vote === false ? this.score-- : this.score++;
     //FIXME : réparer l'url
     //obs.subscribe((resultat) => { console.log(resultat); });
   }

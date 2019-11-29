@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { IdeeModel } from 'src/app/models/IdeeModel';
+import { interval as observableInterval } from 'rxjs';
+import { takeWhile, scan, tap } from 'rxjs/operators';
+import { timeout } from 'q';
 
 @Component({
   selector: 'app-idee-list',
@@ -7,6 +10,8 @@ import { IdeeModel } from 'src/app/models/IdeeModel';
   styleUrls: ['./idee-list.component.css']
 })
 export class IdeeListComponent implements OnInit {
+
+  windowScrolled = false;
 
   scrollDistance = 1;
   scrollThrottle = 150;
@@ -37,11 +42,25 @@ export class IdeeListComponent implements OnInit {
   onScrollDown() {
 
     this.refreshDisplayedIdees();
-    console.log('Displayed Ideas = ' + this.nbrIdees);
   }
   ngOnInit() {
 
     this.refreshDisplayedIdees();
   }
 
+  toTop(el) {
+
+    setTimeout(() => { this.windowScrolled = false; }, 700);
+    this.smoothScroll(el);
+  }
+
+  smoothScroll(el) {
+    const duration = 600;
+    const interval = 5;
+    const move = el.scrollTop * interval / duration;
+    observableInterval(interval).pipe(
+      scan((acc, curr) => acc - move, el.scrollTop),
+      tap(position => el.scrollTop = position),
+      takeWhile(val => val > 0)).subscribe();
+  }
 }

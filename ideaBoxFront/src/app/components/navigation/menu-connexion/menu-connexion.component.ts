@@ -4,6 +4,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { IDialogData } from '../searchbar/searchbar.component';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MembreService } from 'src/app/services/MembreService';
 
 @Component({
   selector: 'app-menu-connexion',
@@ -15,8 +16,9 @@ export class MenuConnexionComponent implements OnInit {
   @Input() posmenu: string;
 
   public estConnecte = this.cookie.get('Login');
+  membre = this.membreService.recupererMembreByIdBouchon(2);
 
-  constructor(public cookie: CookieService, public dialog: MatDialog, public router: Router) {
+  constructor(public cookie: CookieService, public dialog: MatDialog, public router: Router, private membreService: MembreService) {
   }
 
   ngOnInit() {
@@ -31,7 +33,7 @@ export class MenuConnexionComponent implements OnInit {
 
   openDialog(): void {
     this.dialog.open(ConnexionPopupComponent, {
-      width: '250px'
+      width: '300px'
     });
   }
 }

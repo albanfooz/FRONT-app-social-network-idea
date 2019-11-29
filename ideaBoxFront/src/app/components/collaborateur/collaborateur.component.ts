@@ -12,14 +12,13 @@ export class CollaborateurComponent {
   private nombreCollaborateurs;
 
   constructor(public dialog: MatDialog) {
-    this.nombreCollaborateurs = 10;
+    this.nombreCollaborateurs = Math.floor((Math.random() * 50) + 1);
   }
 
   openDialog() {
     const dialogRef = this.dialog.open(PopupListCollaborateursComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
     });
   }
 }

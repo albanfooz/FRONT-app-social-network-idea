@@ -7,16 +7,22 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <strong><input matInput placeholder="Titre" formControlName="_titre"></strong>
-            <mat-error *ngIf="creationIdeeForm.controls['_titre'].hasError('required')">
+            <strong><input matInput placeholder="Titre" formControlName="titre"></strong>
+            <mat-error *ngIf="creationIdeeForm.controls['titre'].hasError('required')">
               Le titre est <strong>requis</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Catégorie" formControlName="_categorie">
-            <mat-error *ngIf="creationIdeeForm.controls['_categorie'].hasError('required')">
+
+            <mat-select placeholder="Categorie" formControlName="categorie">
+              <mat-option *ngFor="let categorie of categorieService.pastille" [value]="categorie">
+                {{categorie._categorie}}
+              </mat-option>
+            </mat-select>
+
+            <mat-error *ngIf="creationIdeeForm.controls['categorie'].hasError('required')">
               La catégorie est <strong>requise</strong>
             </mat-error>
           </mat-form-field>
@@ -29,17 +35,12 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="row">
-        <div class="col ">
-          <ckeditor class="ckeditor-idee" formControlName="_content" [editor]="Editor" (keyup)="onUpdate($event)"
-            [config]="{
+      <ckeditor class="ckeditor-idee" formControlName="description" [editor]="Editor" (keyup)="onUpdate($event)" [config]="{
               toolbar: ['heading','|', 'bold', 'italic','link', 'bulletedList', 'numberedList','|',  'blockQuote','MediaEmbed','undo','redo' ],
              placeholder: 'Taper une description ici ...'
-             
              }"></ckeditor>
-        </div>
-      </div>
-      <p>Nombre de Caracteres : {{lengthOfContent}}</p>
+
+      <p>Nombre de Caracteres : {{lengthOfDescription}}</p>
       <p>Seul les 512 premiers carateres seront affichés dans l'aperçu.</p>
 
     </mat-card-content>
