@@ -19,7 +19,6 @@ export class CollaborateurComponent {
     const dialogRef = this.dialog.open(PopupListCollaborateursComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
     });
   }
 }
