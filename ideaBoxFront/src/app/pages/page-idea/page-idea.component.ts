@@ -26,8 +26,8 @@ export class PageIdeaComponent implements OnInit, OnDestroy {
       this.idee = {
         id: response.id,
         titre: response.titre,
-        categorie: this.categorieService.recupererById(response.id),
-        originalPosteur: this.membreService.recupererMembreByIdBouchon(response.id),
+        categorie: this.categorieService.recupererById(response.categorieId),
+        originalPosteur: this.membreService.recupererMembreByIdBouchon(response.membreId),
         description: response.description + ' ',
         score: response.score,
         _image: 'https://picsum.photos/800/400?random=' + response.id,
