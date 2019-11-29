@@ -1,3 +1,3 @@
-<mat-card *ngFor="let comment of commentService._comments; let i=index" class="commentaire-card">
+<div *ngFor="let comment of commentService._comments; let i=index" class="commentaire-card">
     <app-commentaire [comment]="comment"></app-commentaire>
-</mat-card>
+</div>
