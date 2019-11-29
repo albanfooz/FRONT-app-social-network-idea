@@ -1,14 +1,12 @@
 <mat-card class="input-card">
 
     <section class="entete">
-        <img mat-card-avatar
-            src="https://secure.download.dm.origin.com/production/avatar/prod/userAvatar/18048778/416x416.JPEG" />alban_fooz_dev
+        <img mat-card-avatar src="https://secure.download.dm.origin.com/production/avatar/prod/userAvatar/18048778/416x416.JPEG" />alban_fooz_dev
     </section>
     <form (ngSubmit)="creation()">
         <div class="inputCom">
             <mat-form-field>
-                <input type="text" id="texteCom" #searchElement matInput placeholder="Votre commentaire"
-                    name="commentaire._contenu" [(ngModel)]="commentaire._contenu">
+                <input type="text" id="texteCom" #searchElement matInput placeholder="Votre commentaire" name="commentaire._contenu" [(ngModel)]="commentaire._contenu">
             </mat-form-field>
         </div>
         <button mat-button type="submit">Envoyer</button>
