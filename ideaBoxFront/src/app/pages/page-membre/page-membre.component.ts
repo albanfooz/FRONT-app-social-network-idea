@@ -8,6 +8,9 @@ import { MembreModelDTO } from 'src/app/models/MembreModelDTO';
 import { Subscription } from 'rxjs';
 import { CategorieService } from 'src/app/services/CategorieService';
 import { IdeeModelFromDB } from 'src/app/models/IdeeModelDTO';
+import { CommentaireComponent } from 'src/app/components/commentaire/commentaire.component';
+import { CommentaireService } from 'src/app/services/CommentaireService';
+import { CommentaireModel } from 'src/app/models/CommentaireModel';
 
 @Component({
   selector: 'app-page-membre',
@@ -19,12 +22,14 @@ export class PageMembreComponent implements OnInit, OnDestroy {
   membre: MembreModel = null;
   idees: Array<IdeeModel> = [];
   sub: Subscription;
+  commentairesOfMembre: Array<CommentaireModel> = [];
 
-  constructor(private route: ActivatedRoute, private membreService: MembreService, private ideeService: IdeeService, private categorieService: CategorieService) { }
+  constructor(private route: ActivatedRoute, private membreService: MembreService, private ideeService: IdeeService, private categorieService: CategorieService, private commentService: CommentaireService) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params['membreId'];
     //this.membre = this.membreService.recupererMembreByIdBouchon(this.id);
+    this.commentairesOfMembre.push(this.commentService._comments.find(({ _membre }) => (_membre._id == this.id)));
     this.membre = this.membreService.recupererMembreByIdBouchon(this.id);
 
 

@@ -14,10 +14,10 @@
     </form>
 
     <mat-nav-list id="resultList" *ngIf="searchinput!=NULL && searchinput!=''" (mouseover)="cancelBlur()" (mouseout)="activeBlur()">
-        <mat-list-item *ngFor="let idea of ideas | filter:searchinput" tabindex="1" (keydown.enter)="gotolink(idea._id)">
-            <a matLine [routerLink]="['/idea/'+idea._id]" (click)="setFocus()">
-                <span class="resultTitle">{{idea._titre}} </span>
-                <span class="resultAuthor"> {{idea._originalPosteur._pseudo}}</span>
+        <mat-list-item *ngFor="let idea of idees | filter:searchinput" tabindex="1" (keydown.enter)="gotolink(idea.id)">
+            <a matLine [routerLink]="['/idea/'+idea.id]" (click)="setFocus()">
+                <span class="resultTitle">{{idea.titre}} </span>
+                <span class="resultAuthor"> {{idea.originalPosteur._pseudo}}</span>
             </a>
         </mat-list-item>
     </mat-nav-list>
